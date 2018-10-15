@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using Entitas;
+using System;
+using Object = UnityEngine.Object;
+using Entitas.Unity;
 
 public class InitializePlayerSystem : IInitializeSystem {
 
@@ -14,7 +17,6 @@ public class InitializePlayerSystem : IInitializeSystem {
         var entity = _contexts.game.CreateEntity();
         entity.isPlayer = true;
         _viewService.LoadAsset(_contexts, entity);
-
-
+        entity.AddInitialPosition(Vector3.zero);
     }
 }

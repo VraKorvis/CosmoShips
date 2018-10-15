@@ -371,8 +371,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07820a20b9643b946ad66fb3743d8b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSetup: {fileID: 11400000, guid: 6182d74baabc1014b9cd1908b4ae78f4, type: 2}
-  shipsSetup: {fileID: 11400000, guid: 5ef24c5480d92e44283b6d217f69c266, type: 2}
+  _gameSetup: {fileID: 11400000, guid: 6182d74baabc1014b9cd1908b4ae78f4, type: 2}
+  _shipsSetup: {fileID: 11400000, guid: 5ef24c5480d92e44283b6d217f69c266, type: 2}
 --- !u!4 &2037392856
 Transform:
   m_ObjectHideFlags: 0
