@@ -15,7 +15,7 @@ MonoBehaviour:
   - type: Player
     health: 1000
     shootSpeed: 800
-    mooveSpeed: 5
+    mooveSpeed: 10
     mobility: 15
   shipsStatsMultipliers:
   - type: Enemy
