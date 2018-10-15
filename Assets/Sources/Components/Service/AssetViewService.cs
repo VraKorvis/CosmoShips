@@ -15,7 +15,11 @@ public class AssetViewService : IViewService {
         //Object.Instantiate(Resources.Load<GameObject>(string.Format("Prefabs/{0}", assetName)), _root);
     }
     public void LoadAsset(Contexts contexts, GameEntity entity) {
-        
+        entity.AddResource(_contexts.game.shipsSetup.value.playerShips[0]);
+        entity.AddBaseShipStats(_contexts.game.gameSetup.value.baseShipsStats[0]);
+
+        entity.AddInitialPosition(Vector3.zero);
+
         var viewObject = Object.Instantiate(entity.resource.prefab);
 
         if (viewObject == null)

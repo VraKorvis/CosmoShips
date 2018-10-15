@@ -3,11 +3,11 @@ using Entitas;
 
 public class RootSystem : Feature {
 
-    public RootSystem(Contexts contexts) {
+    public RootSystem(Contexts contexts, Services services) {
        
         Add(new LogHealthSystem(contexts));
-        Add(new InitializePlayerSystem(contexts));
-        Add(new InstantiateViewSystem(contexts));
+        Add(new InitializePlayerSystem(contexts, services));
+        Add(new InstantiateViewSystem(contexts, services));
 
         Add(new InputSystem(contexts));
         Add(new MoveSystem(contexts));

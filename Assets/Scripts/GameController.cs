@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour {
 
         CreateServices(contexts, services);
 
-        _systems = new RootSystem(contexts);
+        _systems = new RootSystem(contexts, services);
         _systems.Initialize();
     }
 
