@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
     public GameSetup _gameSetup;
     public ShipsSetup _shipsSetup;
 
-    public Services services;
+    public Services _services;
 
     private Systems _systems;
 
@@ -15,9 +15,9 @@ public class GameController : MonoBehaviour {
         contexts.game.SetGameSetup(_gameSetup);
         contexts.game.SetShipsSetup(_shipsSetup);
 
-        CreateServices(contexts, services);
+        CreateServices(contexts, _services);
 
-        _systems = new RootSystem(contexts, services);
+        _systems = new RootSystem(contexts, _services);
         _systems.Initialize();
     }
 
@@ -26,7 +26,8 @@ public class GameController : MonoBehaviour {
     }
 
     private void CreateServices(Contexts contexts, Services services) {
-        services.viewService = new AssetViewService(contexts);       
+        _services = new Services();
+        _services.viewService = new AssetViewService(contexts);       
     }
 
 }

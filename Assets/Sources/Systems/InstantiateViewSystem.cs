@@ -2,6 +2,8 @@
 using Entitas;
 using System.Collections.Generic;
 using Entitas.Unity;
+using System;
+using Object = UnityEngine.Object;
 
 public class InstantiateViewSystem : ReactiveSystem<GameEntity> {
 
@@ -24,7 +26,25 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity> {
 
     protected override void Execute(List<GameEntity> entities) {
         foreach (var entity in entities) {
-            _viewService.LoadAsset(_contexts, entity);
+           
+            var viewObject = Object.Instantiate(entity.resource.prefab);
+
+            if (viewObject == null)
+                throw new NullReferenceException("Prefabs not found!");
+
+            entity.AddView(viewObject);
+
+            var rigidbody = viewObject.GetComponent<IRigidbody>();
+            if (rigidbody != null)
+                entity.AddRigidbody(rigidbody);
+
+            entity.AddPosition(viewObject.transform.position);
+           
+            viewObject.Link(entity, _contexts.game);
+
+            if (entity.hasInitialPosition) {
+                viewObject.transform.position = entity.initialPosition.value;
+            }
         }
     }
 
