@@ -8,21 +8,23 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int BaseShipStats = 0;
-    public const int GameSetup = 1;
-    public const int Health = 2;
-    public const int InitialPosition = 3;
-    public const int Player = 4;
-    public const int Position = 5;
-    public const int Resource = 6;
-    public const int Rigidbody = 7;
-    public const int Rotation = 8;
-    public const int ShipsSetup = 9;
-    public const int View = 10;
+    public const int Asset = 0;
+    public const int BaseShipStats = 1;
+    public const int GameSetup = 2;
+    public const int Health = 3;
+    public const int InitialPosition = 4;
+    public const int Player = 5;
+    public const int Position = 6;
+    public const int Resource = 7;
+    public const int Rigidbody = 8;
+    public const int Rotation = 9;
+    public const int ShipsSetup = 10;
+    public const int View = 11;
 
-    public const int TotalComponents = 11;
+    public const int TotalComponents = 12;
 
     public static readonly string[] componentNames = {
+        "Asset",
         "BaseShipStats",
         "GameSetup",
         "Health",
@@ -37,6 +39,7 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(AssetComponent),
         typeof(BaseShipStats),
         typeof(GameSetupComponent),
         typeof(HealthComponent),
