@@ -27,7 +27,9 @@ public class GameSetupEditor : Editor {
             var element = _listBaseShips.serializedProperty.GetArrayElementAtIndex(index);
             rect.y += 2;
             SerializedProperty propertyType = element.FindPropertyRelative("type");
-            EditorGUI.LabelField(rect, propertyType.stringValue, EditorStyles.boldLabel);
+            if (propertyType.objectReferenceValue != null) {
+                EditorGUI.LabelField(rect, propertyType.objectReferenceValue.name.ToString(), EditorStyles.boldLabel);
+            }
             EditorGUI.PropertyField(new Rect(rect.x, rect.y + 15, rect.width - 60, EditorGUIUtility.singleLineHeight), propertyType, new GUIContent("Type"));
             EditorGUI.PropertyField(new Rect(rect.x, rect.y + 30, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("health"), new GUIContent("Health"));
             EditorGUI.PropertyField(new Rect(rect.x, rect.y + 45, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("shootSpeed"), new GUIContent("ShootSpeed"));
@@ -43,12 +45,14 @@ public class GameSetupEditor : Editor {
         _listStatsShipsMultiply.drawHeaderCallback += (Rect rect) => { EditorGUI.LabelField(rect, "                         Ships Stats Multiply           ", EditorStyles.boldLabel); };
 
         _listStatsShipsMultiply.elementHeight = _elementHeight;
-        _listStatsShipsMultiply.drawElementCallback += delegate (Rect rect, int index, bool isActive, bool isFocused) {
+        _listStatsShipsMultiply.drawElementCallback += (Rect rect, int index, bool isActive, bool isFocused) => {
 
             var element = _listStatsShipsMultiply.serializedProperty.GetArrayElementAtIndex(index);
             rect.y += 2;
             SerializedProperty propertyType = element.FindPropertyRelative("type");
-            EditorGUI.LabelField(rect, propertyType.stringValue, EditorStyles.boldLabel);
+            if (propertyType.objectReferenceValue != null) {
+                EditorGUI.LabelField(rect, propertyType.objectReferenceValue.name.ToString(), EditorStyles.boldLabel);
+            }            
             EditorGUI.PropertyField(new Rect(rect.x, rect.y + 15, rect.width - 60, EditorGUIUtility.singleLineHeight), propertyType, new GUIContent("Type"));
             EditorGUI.PropertyField(new Rect(rect.x, rect.y + 30, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("health"), new GUIContent("Health"));
             EditorGUI.PropertyField(new Rect(rect.x, rect.y + 45, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("shootSpeed"), new GUIContent("ShootSpeed"));
