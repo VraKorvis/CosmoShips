@@ -63,6 +63,7 @@
     <Compile Include="Assets\Libraries\DesperateDevs\Compile.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GameSetup.cs" />
+    <Compile Include="Assets\Scripts\LevelSetup.cs" />
     <Compile Include="Assets\Scripts\Ship.cs" />
     <Compile Include="Assets\Scripts\ShipsSetup.cs" />
     <Compile Include="Assets\Sources\Components\AssetComponent.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets\Sources\Components\View\UnityRigidbody.cs" />
     <Compile Include="Assets\Sources\Components\ViewComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Components\GameSetupComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Components\LevelSetupComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Components\ShipsSetupComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Contexts.cs" />
     <Compile Include="Assets\Sources\Generated\Feature.cs" />
@@ -90,6 +92,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameGameSetupComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameHealthComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameInitialPositionComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameLevelSetupComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePlayerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameResourceComponent.cs" />
