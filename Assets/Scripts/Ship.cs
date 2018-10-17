@@ -6,7 +6,7 @@ using System;
 public class BaseShip {
     
     //[Header("Player")]
-    public GameObject type;
+    public String type;
     public int health;
     // [Header("shoot/ms")]
     public int shootSpeed;
@@ -20,7 +20,7 @@ public class BaseShip {
 public class ShipMultipliers {
     
     //[Header("Player")]
-    public GameObject type;    
+    public String type;    
     public int health;
     // [Header("shoot/ms")]
     public int shootSpeed;
