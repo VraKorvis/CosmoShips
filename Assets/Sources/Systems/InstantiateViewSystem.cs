@@ -5,7 +5,7 @@ using Entitas.Unity;
 using System;
 using Object = UnityEngine.Object;
 
-public class InstantiateViewSystem : ReactiveSystem<GameEntity>, IInitializeSystem {
+public class InstantiateViewSystem : ReactiveSystem<GameEntity> {
 
     // ______________________just for test and check working commit github!!!!!!!!!!!!
     private IViewService _viewService;
@@ -22,10 +22,6 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
     protected override bool Filter(GameEntity entity) {
         return entity.hasResource;
-    }
-
-    public void Initialize() {
-
     }
 
     protected override void Execute(List<GameEntity> entities) {
@@ -52,5 +48,4 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         }
     }
 
-    
 }
