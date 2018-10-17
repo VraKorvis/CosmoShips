@@ -86,12 +86,7 @@ ModelImporter:
     4300026: ED_2_2
     4300028: Body
     4300030: BB
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: D
-    second: {fileID: 2100000, guid: 630999342feac7a418b5653c84c84bf5, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

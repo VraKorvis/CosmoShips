@@ -4,7 +4,6 @@ using Entitas;
 using Entitas.Unity;
 using UnityEngine;
 using Object = UnityEngine.Object;
-
 public class AssetViewService : IViewService {
     
     protected readonly Contexts _contexts;
