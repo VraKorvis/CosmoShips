@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Name: ShipStats
   m_EditorClassIdentifier: 
   baseShipsStats:
-  - type: {fileID: 1382100308199930, guid: fb8d64663d8382f4a80b05db63188fc8, type: 2}
+  - type: {fileID: 1720195736285514, guid: d17643fff8cee9f48b0856f296fa75c6, type: 2}
     health: 1000
     shootSpeed: 800
     mooveSpeed: 20
     mobility: 15
-  - type: {fileID: 1720195736285514, guid: d17643fff8cee9f48b0856f296fa75c6, type: 2}
-    health: 0
-    shootSpeed: 0
-    mooveSpeed: 0
+  - type: {fileID: 1529978536826614, guid: a85cd5ee6e177ad4694880374519a9a7, type: 2}
+    health: 1500
+    shootSpeed: 500
+    mooveSpeed: 10
     mobility: 0
   shipsStatsMultipliers:
   - type: {fileID: 1860647747461376, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}

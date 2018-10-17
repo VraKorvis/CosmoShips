@@ -4,15 +4,17 @@
 # =============== #
 Temp/
 Library/
+ProjectSettings/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 ExportedObj/
 obj/
+.vs/
 *.svd
 *.userprefs
-/*.csproj
+*.csproj
 *.pidb
 *.suo
 /*.sln

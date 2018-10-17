@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: ShipsSetup
   m_EditorClassIdentifier: 
   playerShips:
-  - {fileID: 1382100308199930, guid: fb8d64663d8382f4a80b05db63188fc8, type: 2}
+  - {fileID: 1712260533418104, guid: c60fb67b609184e479bba26e39f5277a, type: 2}
   - {fileID: 1860647747461376, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}
