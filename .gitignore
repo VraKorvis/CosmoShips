@@ -4,6 +4,7 @@
 
 /ProjectSettings
 /.vs
-/Library
-/Temp
 /obj
+/Library
+/Packages
+/Temp
