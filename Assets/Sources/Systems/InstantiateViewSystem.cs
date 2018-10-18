@@ -6,8 +6,7 @@ using System;
 using Object = UnityEngine.Object;
 
 public class InstantiateViewSystem : ReactiveSystem<GameEntity>, IInitializeSystem {
-
-    // ______________________just for test and check working commit github!!!!!!!!!!!!
+    
     private IViewService _viewService;
     private Contexts _contexts;
 
