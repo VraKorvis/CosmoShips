@@ -8,24 +8,23 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Asset = 0;
-    public const int BaseShipStats = 1;
-    public const int GameSetup = 2;
-    public const int Health = 3;
-    public const int InitialPosition = 4;
-    public const int LevelSetup = 5;
-    public const int Player = 6;
-    public const int Position = 7;
-    public const int Resource = 8;
-    public const int Rigidbody = 9;
-    public const int Rotation = 10;
-    public const int ShipsSetup = 11;
+    public const int BaseShipStats = 0;
+    public const int GameSetup = 1;
+    public const int Health = 2;
+    public const int InitialPosition = 3;
+    public const int LevelSetup = 4;
+    public const int Player = 5;
+    public const int Position = 6;
+    public const int Resource = 7;
+    public const int Rigidbody = 8;
+    public const int Rotation = 9;
+    public const int ShipsSetup = 10;
+    public const int ShipsStatsMultipliers = 11;
     public const int View = 12;
 
     public const int TotalComponents = 13;
 
     public static readonly string[] componentNames = {
-        "Asset",
         "BaseShipStats",
         "GameSetup",
         "Health",
@@ -37,11 +36,11 @@ public static class GameComponentsLookup {
         "Rigidbody",
         "Rotation",
         "ShipsSetup",
+        "ShipsStatsMultipliers",
         "View"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(AssetComponent),
         typeof(BaseShipStats),
         typeof(GameSetupComponent),
         typeof(HealthComponent),
@@ -53,6 +52,7 @@ public static class GameComponentsLookup {
         typeof(RigidbodyComponent),
         typeof(RotationComponent),
         typeof(ShipsSetupComponent),
+        typeof(ShipsStatsMultipliersComponent),
         typeof(ViewComponent)
     };
 }

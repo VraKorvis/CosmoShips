@@ -25,8 +25,7 @@ public class ShipMultipliers {
     // [Header("shoot/ms")]
     public int shootSpeed;
     // [Header("unit")]
-    public int mooveSpeed;
-    [Range(0, 100)]
+    public int mooveSpeed;    
     public int mobility;
     public int weaponDamage;
 }

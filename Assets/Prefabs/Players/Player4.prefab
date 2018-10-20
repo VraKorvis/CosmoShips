@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4936927391582926}
   - component: {fileID: 33256806792567836}
   - component: {fileID: 23180320413431768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ED_2_6_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4690326560556400}
   - component: {fileID: 33162440565763254}
   - component: {fileID: 23783120314911730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: E_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4979514935451972}
   - component: {fileID: 33460993750921800}
   - component: {fileID: 23756825169936234}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4232169418535550}
   - component: {fileID: 33095770090472382}
   - component: {fileID: 23987662819487474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: W_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4218494324478284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4129283198824596}
   - component: {fileID: 33646460221134248}
   - component: {fileID: 23765549171788308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ED_2_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4345174168823062}
   - component: {fileID: 33023856235615634}
   - component: {fileID: 23162716220693386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: W_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 4798070101299804}
   - component: {fileID: 33817372976749472}
   - component: {fileID: 23812233421735596}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 114288581182555884}
   - component: {fileID: 54566544211580970}
   - component: {fileID: 64478360319577072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4210769869455836}
   - component: {fileID: 33023784028165804}
   - component: {fileID: 23007114733479866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EP_2_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4839933765011586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1712260533418104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3690114, y: 1.5840769, z: 0.7159531}
+  m_LocalPosition: {x: 3.797233, y: -2.6001966, z: 0.7159531}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children:
   - {fileID: 4839933765011586}

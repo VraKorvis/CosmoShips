@@ -29,7 +29,7 @@ public class LevelSetupEdit : Editor {
 }
 
 //[ExecuteInEditMode]
-[CreateAssetMenu(menuName = "LVL", fileName = "lvlSetup")]
+//[CreateAssetMenu(menuName = "LVL", fileName = "lvlSetup")]
 [Game, Unique]
 public class LevelSetup : MonoBehaviour {
 

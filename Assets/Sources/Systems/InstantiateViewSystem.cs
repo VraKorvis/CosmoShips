@@ -5,9 +5,8 @@ using Entitas.Unity;
 using System;
 using Object = UnityEngine.Object;
 
-public class InstantiateViewSystem : ReactiveSystem<GameEntity>, IInitializeSystem {
-
-    // ______________________just for test and check working commit github!!!!!!!!!!!!
+public class InstantiateViewSystem : ReactiveSystem<GameEntity> {
+   
     private IViewService _viewService;
     private Contexts _contexts;
 
@@ -24,10 +23,6 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         return entity.hasResource;
     }
 
-    public void Initialize() {
-
-    }
-
     protected override void Execute(List<GameEntity> entities) {
         foreach (var entity in entities) {
            
@@ -40,15 +35,10 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
             var rigidbody = viewObject.GetComponent<IRigidbody>();
             if (rigidbody != null)
-                entity.AddRigidbody(rigidbody);
-
-            entity.AddPosition(viewObject.transform.position);
+                entity.AddRigidbody(rigidbody);           
            
-            viewObject.Link(entity, _contexts.game);
+            viewObject.Link(entity, _contexts.game);            
 
-            if (entity.hasInitialPosition) {
-                viewObject.transform.position = entity.initialPosition.value;
-            }
         }
     }
 

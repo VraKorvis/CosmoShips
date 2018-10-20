@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4432421894767800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4811478399856128}
   - component: {fileID: 33953246990972034}
   - component: {fileID: 23514197594744360}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: W_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4827571281793548}
   - component: {fileID: 33310686213518372}
   - component: {fileID: 23379759419106668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: W_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 114804405789756884}
   - component: {fileID: 54997224588009144}
   - component: {fileID: 64971649167061080}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4844588864636122}
   - component: {fileID: 33701001958495528}
   - component: {fileID: 23940136343290328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4057729861470490}
   - component: {fileID: 33251542138427856}
   - component: {fileID: 23028401805747186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4373360336519062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 4129050920683062}
   - component: {fileID: 33691281584225798}
   - component: {fileID: 23659715248225118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: E_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 4485794574740976}
   - component: {fileID: 33635194046724786}
   - component: {fileID: 23486115064279372}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EP_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,8 +181,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1382100308199930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.80976796, y: -1.9622899, z: 0}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalPosition: {x: 2.46, y: -2.82, z: 0}
+  m_LocalScale: {x: 0.03, y: 0.005, z: 0.005}
   m_Children:
   - {fileID: 4432421894767800}
   - {fileID: 4373360336519062}

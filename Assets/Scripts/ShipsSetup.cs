@@ -6,4 +6,13 @@ using UnityEngine;
 public class ShipsSetup : ScriptableObject   {
     [SerializeField]
     public GameObject[] playerShips;
+
+    public int Count() {
+        return playerShips != null ? playerShips.Length : 0;
+    }
+
+    public GameObject this[int index] {
+        get { return playerShips[index]; }
+    }
+
 }

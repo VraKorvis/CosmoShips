@@ -1,7 +1,7 @@
 ﻿using Entitas;
 
 public interface IViewService {
-    void LoadAsset(Contexts contexts, GameEntity entity, string assetName);
-    void LoadAsset(Contexts contexts, GameEntity entity);
+    void LoadAsset(GameEntity entity, string assetName);
+    void LoadAsset(GameEntity entity, int shipsIndex, int shipMultipliersIndex);
 
 }

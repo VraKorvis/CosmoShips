@@ -12,14 +12,20 @@ public class AssetViewService : IViewService {
         _contexts = contexts;
     }
 
-    public void LoadAsset(Contexts contexts, GameEntity entity, string assetName) {
+    public void LoadAsset(GameEntity entity, string assetName) {
         //Object.Instantiate(Resources.Load<GameObject>(string.Format("Prefabs/{0}", assetName)), _root);
     }
-    public void LoadAsset(Contexts contexts, GameEntity entity) {
-
-        entity.AddResource(contexts.game.shipsSetup.value.playerShips[0]);
-        entity.AddBaseShipStats(_contexts.game.gameSetup.value.baseShipsStats[0]);
-        entity.AddHealth(entity.baseShipStats.baseShip.health);
+    /// <summary>
+    /// Ship loading from game setup(ships stats asset)
+    /// </summary>
+    /// <param name="entity">entity who need add components</param>
+    /// <param name="shipsIndex">ship number (player1, player2,..., player5, etc)</param>
+    public void LoadAsset(GameEntity entity, int shipsIndex, int shipMultipliersIndex) {
+        BaseShip ship = _contexts.game.gameSetup.value.baseShipsStats[shipsIndex];
+        ShipMultipliers shipMultipliers = _contexts.game.gameSetup.value.shipsStatsMultipliers[shipMultipliersIndex];
+        entity.AddBaseShipStats(ship);
+        entity.AddShipsStatsMultipliers(shipMultipliers);
+        entity.AddResource(ship.type);        
 
     }
 }
