@@ -37,16 +37,6 @@ MonoBehaviour:
     shootSpeed: 950
     mooveSpeed: 28
     mobility: 35
-  - type: {fileID: 1860647747461376, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}
-    health: 1000
-    shootSpeed: 500
-    mooveSpeed: 10
-    mobility: 0
-  - type: {fileID: 1860647747461376, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}
-    health: 1000
-    shootSpeed: 500
-    mooveSpeed: 10
-    mobility: 0
   shipsStatsMultipliers:
   - type: {fileID: 1382100308199930, guid: 01a5544e053cff046aafc6641c739e95, type: 2}
     health: 5

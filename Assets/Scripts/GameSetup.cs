@@ -79,14 +79,13 @@ public class GameSetup : ScriptableObject {
     [SerializeField]
     public List<ShipMultipliers> shipsStatsMultipliers;
 
-    //void OnEnable() {
-    //    if (baseShipsStats == null) {
-    //        baseShipsStats = new List<BaseShip>();
-    //    }
-    //    if (shipsStatsMultipliers == null) {
-    //        shipsStatsMultipliers = new List<ShipMultipliers>();
-    //    }
-    //}
+    public int Count() {
+        return baseShipsStats != null ? baseShipsStats.Count : 0;
+    }
+
+    public BaseShip this[int index] {
+        get { return baseShipsStats[index]; }
+    }
 }
 
 
