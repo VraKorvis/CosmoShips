@@ -14,6 +14,7 @@ public class BaseShip {
     public int mooveSpeed;
     [Range(0, 100)]
     public int mobility;
+    public bool isShow;
 }
 
 [Serializable]
