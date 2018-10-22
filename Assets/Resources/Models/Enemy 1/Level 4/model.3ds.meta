@@ -71,7 +71,12 @@ ModelImporter:
     4300020: W_2
     4300022: W_3
     4300024: BB
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: D
+    second: {fileID: 2100000, guid: 5c0ee925b1af0a9458a20d7f07aef73f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -96,6 +96,24 @@ ModelImporter:
     4300030: BB
     4300032: W_1
     4300034: W_2
+    6400000: BB
+    6400002: Body
+    6400004: E_1_1
+    6400006: E_1_11
+    6400008: E_1_11_1
+    6400010: E_1_11_2
+    6400012: E_1_11_3
+    6400014: E_1_11_4
+    6400016: E_1_11_5
+    6400018: E_1_12
+    6400020: EP_1_1
+    6400022: EP_1_1_1
+    6400024: EP_1_1_2
+    6400026: EP_1_1_3
+    6400028: EP_1_1_4
+    6400030: EP_1_1_5
+    6400032: W_1
+    6400034: W_2
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -129,7 +147,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

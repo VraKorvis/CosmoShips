@@ -86,6 +86,22 @@ ModelImporter:
     4300026: ED_2_2
     4300028: Body
     4300030: BB
+    6400000: BB
+    6400002: Body
+    6400004: E_1
+    6400006: E_1_1
+    6400008: E_1_2
+    6400010: E_1_3
+    6400012: ED_2_1
+    6400014: ED_2_2
+    6400016: EP_2_6
+    6400018: EP_2_6_1
+    6400020: EP_2_6_2
+    6400022: EP_2_6_3
+    6400024: W_1
+    6400026: W_2
+    6400028: W_3
+    6400030: W_4
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -124,7 +140,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

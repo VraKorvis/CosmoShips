@@ -102,6 +102,11 @@ public class GameSetup : ScriptableObject {
     public BaseShip this[int index] {
         get { return baseShipsStats[index]; }
     }
+
+    public ShipMultipliers GetItem(int index) {
+        return shipsStatsMultipliers[index];
+    }
+
 }
 
 
