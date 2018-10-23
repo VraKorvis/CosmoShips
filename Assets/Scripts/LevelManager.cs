@@ -15,7 +15,7 @@ public static class LevelManager {
     //}
 
     public static IEnumerator Loadlvl(Slider slider, int currentLvl) {
-        var s = SceneManager.LoadSceneAsync(1);
+        var s = SceneManager.LoadSceneAsync(sceneID);
         while (!s.isDone) {
             float progress = s.progress/0.9f;
             slider.value = progress;

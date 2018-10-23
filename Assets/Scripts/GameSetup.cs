@@ -9,11 +9,14 @@ using static UnityEditorInternal.ReorderableList;
 [CustomEditor(typeof(GameSetup))]
 public class GameSetupEditor : Editor {
 
-    private static float _elementHeight = 120;
+    private static float _elementHeightForBaseShipList = 120;
+    private static float _elementHeightForStatsMultiply = 140;
     private static float _elementHeightIfHide = 20;
     private static float _lineSpacing = 18;
     private ReorderableList _listBaseShipsStats;
+    private ReorderableList _listBaseShipsStatsEnemy;
     private ReorderableList _listShipsMultiplyStats;
+
 
     void OnEnable() {
         _listBaseShipsStats = new ReorderableList(serializedObject,
@@ -22,6 +25,19 @@ public class GameSetupEditor : Editor {
         _listBaseShipsStats.drawHeaderCallback += (Rect rect) => { EditorGUI.LabelField(rect, "                         Base Ships Stats           ", EditorStyles.boldLabel); };
 
         SetUpAndDrawReorderableList(_listBaseShipsStats);
+        _listBaseShipsStats.elementHeightCallback += (index) => {
+            return _listBaseShipsStats.serializedProperty.GetArrayElementAtIndex(index).isExpanded ? _elementHeightForBaseShipList : _elementHeightIfHide;
+        };
+
+        _listBaseShipsStatsEnemy = new ReorderableList(serializedObject,
+                     serializedObject.FindProperty("baseShipStatsEnemy"),
+                     true, true, true, true);
+        _listBaseShipsStatsEnemy.drawHeaderCallback += (Rect rect) => { EditorGUI.LabelField(rect, "                        Enemy Base Ships Stats           ", EditorStyles.boldLabel); };
+
+        SetUpAndDrawReorderableList(_listBaseShipsStatsEnemy);
+        _listBaseShipsStatsEnemy.elementHeightCallback += (index) => {
+            return _listBaseShipsStatsEnemy.serializedProperty.GetArrayElementAtIndex(index).isExpanded ? _elementHeightForBaseShipList : _elementHeightIfHide;
+        };
 
         _listShipsMultiplyStats = new ReorderableList(serializedObject,
                 serializedObject.FindProperty("shipsStatsMultipliers"),
@@ -30,6 +46,9 @@ public class GameSetupEditor : Editor {
         _listShipsMultiplyStats.drawHeaderCallback += (Rect rect) => { EditorGUI.LabelField(rect, "                         Ships Stats Multiply           ", EditorStyles.boldLabel); };
 
         SetUpAndDrawReorderableList(_listShipsMultiplyStats);
+        _listShipsMultiplyStats.elementHeightCallback += (index) => {
+            return _listShipsMultiplyStats.serializedProperty.GetArrayElementAtIndex(index).isExpanded ? _elementHeightForStatsMultiply : _elementHeightIfHide;
+        };
 
     }
 
@@ -48,8 +67,8 @@ public class GameSetupEditor : Editor {
             if (propertyType.objectReferenceValue != null) {
                 propertyName = propertyType.objectReferenceValue.name.ToString();
             }
-            element.isExpanded = EditorGUI.Foldout(new Rect(rect.x + 15, rect.y + 2, rect.width, 10),
-                element.isExpanded, propertyName == null ? new GUIContent("Add new Element(player)") : new GUIContent(propertyName), false);
+            element.isExpanded = EditorGUI.Foldout(new Rect(rect.x + 15, rect.y + 2, rect.width/4, 10),
+                element.isExpanded, propertyName == null ? new GUIContent("Add player/enemy prefab") : new GUIContent(propertyName), false);
 
             if (element.isExpanded) {
                 EditorGUI.PropertyField(new Rect(rect.x, rect.y + 18, rect.width - 60, EditorGUIUtility.singleLineHeight), propertyType, new GUIContent("Type"));
@@ -59,13 +78,10 @@ public class GameSetupEditor : Editor {
                 EditorGUI.PropertyField(new Rect(rect.x, rect.y + 90, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("mobility"), new GUIContent("Mobility"));
                 SerializedProperty weaponDamage = element.FindPropertyRelative("weaponDamage");
                 if (weaponDamage != null) {
-                    EditorGUI.PropertyField(new Rect(rect.x, rect.y + 90, rect.width - 60, EditorGUIUtility.singleLineHeight), weaponDamage, new GUIContent("WeaponDamage"));
+                    EditorGUI.PropertyField(new Rect(rect.x, rect.y + 108, rect.width - 60, EditorGUIUtility.singleLineHeight), weaponDamage, new GUIContent("WeaponDamage"));
                 }
             }
-        };
-        list.elementHeightCallback += (index) => {
-            return list.serializedProperty.GetArrayElementAtIndex(index).isExpanded ? _elementHeight : _elementHeightIfHide;
-        };
+        };       
     }
 
     public static bool DoLayoutListWithFoldout(ReorderableList list, string label = null) {
@@ -81,6 +97,7 @@ public class GameSetupEditor : Editor {
         serializedObject.Update();        
         EditorGUILayout.Space();
         DoLayoutListWithFoldout(_listBaseShipsStats);
+        DoLayoutListWithFoldout(_listBaseShipsStatsEnemy);
         DoLayoutListWithFoldout(_listShipsMultiplyStats);
         serializedObject.ApplyModifiedProperties();
         EditorApplication.update.Invoke();
@@ -92,6 +109,8 @@ public class GameSetupEditor : Editor {
 public class GameSetup : ScriptableObject {
     [SerializeField]
     public List<BaseShip> baseShipsStats;
+    [SerializeField]
+    public List<BaseShip> baseShipStatsEnemy;
     [SerializeField]
     public List<ShipMultipliers> shipsStatsMultipliers;
 

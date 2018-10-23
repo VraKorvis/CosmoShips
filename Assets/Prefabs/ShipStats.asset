@@ -42,8 +42,147 @@ MonoBehaviour:
     mooveSpeed: 28
     mobility: 35
     isShow: 0
+  baseShipStatsEnemy:
+  - type: {fileID: 1465201573435514, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}
+    health: 500
+    shootSpeed: 1000
+    mooveSpeed: 10
+    mobility: 11
+    isShow: 0
+  - type: {fileID: 1086015995381812, guid: 7c805000d24fa7247b0ddacdb562a532, type: 2}
+    health: 600
+    shootSpeed: 900
+    mooveSpeed: 15
+    mobility: 17
+    isShow: 0
+  - type: {fileID: 1703773952689662, guid: 1b6064356042ccd4d8e47e4c15bad519, type: 2}
+    health: 700
+    shootSpeed: 800
+    mooveSpeed: 20
+    mobility: 17
+    isShow: 0
+  - type: {fileID: 1876522873569922, guid: b6b73ecc2ce73634db8fbdf6911997da, type: 2}
+    health: 800
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 20
+    isShow: 0
+  - type: {fileID: 1331197689573856, guid: 58e4f7dc086312e4384e5d6ca387106f, type: 2}
+    health: 1200
+    shootSpeed: 400
+    mooveSpeed: 30
+    mobility: 25
+    isShow: 0
+  - type: {fileID: 1060604429922222, guid: 384a645a0efc2eb4f8024a0650887cf7, type: 2}
+    health: 3000
+    shootSpeed: 500
+    mooveSpeed: 10
+    mobility: 15
+    isShow: 0
+  - type: {fileID: 1605642038901032, guid: c3f8c95e6a23b4641834665bc558e4b5, type: 2}
+    health: 1000
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 9
+    isShow: 0
+  - type: {fileID: 1302371942421628, guid: b042778ff1ec09f489e432791f0c4037, type: 2}
+    health: 1000
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 9
+    isShow: 0
+  - type: {fileID: 1991516623035886, guid: 6ebe008988bccad4bb2926fc412b9e40, type: 2}
+    health: 1000
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 9
+    isShow: 0
+  - type: {fileID: 1704103675275300, guid: c1623e089fe55ef4d80b7f8d2d7424b3, type: 2}
+    health: 1000
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 9
+    isShow: 0
+  - type: {fileID: 1242526204210254, guid: 44fcd36e55cc28449a4c4a103c819ba1, type: 2}
+    health: 1000
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 9
+    isShow: 0
+  - type: {fileID: 1259566640875826, guid: dbeffb8f38849f545b39fd696810760e, type: 2}
+    health: 1000
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 9
+    isShow: 0
+  - type: {fileID: 1914027702847480, guid: 4baf6bd9ae16fad4a9bd4c8510de87d8, type: 2}
+    health: 1000
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 9
+    isShow: 0
+  - type: {fileID: 1987466697436934, guid: faacaf2cf760abc4981747a3436515d1, type: 2}
+    health: 200
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 48
+    isShow: 0
+  - type: {fileID: 1427143631256082, guid: c8006236f1395fe40ae3b3b6d9e19047, type: 2}
+    health: 300
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 37
+    isShow: 0
+  - type: {fileID: 1037833343887414, guid: 715372a061aefeb488874fac856e7c08, type: 2}
+    health: 500
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 30
+    isShow: 0
+  - type: {fileID: 1580153852833622, guid: e314307326d039848b794f0ef421c28c, type: 2}
+    health: 500
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 27
+    isShow: 0
+  - type: {fileID: 1945601641985700, guid: 82b30ab86fd992d4fba37c8ebf3bca57, type: 2}
+    health: 1000
+    shootSpeed: 700
+    mooveSpeed: 25
+    mobility: 9
+    isShow: 0
   shipsStatsMultipliers:
   - type: {fileID: 1382100308199930, guid: 01a5544e053cff046aafc6641c739e95, type: 2}
+    health: 5
+    shootSpeed: 5
+    mooveSpeed: 1
+    mobility: 1
+    weaponDamage: 6
+  - type: {fileID: 1720195736285514, guid: d17643fff8cee9f48b0856f296fa75c6, type: 2}
+    health: 5
+    shootSpeed: 5
+    mooveSpeed: 1
+    mobility: 1
+    weaponDamage: 6
+  - type: {fileID: 1529978536826614, guid: a85cd5ee6e177ad4694880374519a9a7, type: 2}
+    health: 5
+    shootSpeed: 5
+    mooveSpeed: 1
+    mobility: 1
+    weaponDamage: 6
+  - type: {fileID: 1712260533418104, guid: c60fb67b609184e479bba26e39f5277a, type: 2}
+    health: 5
+    shootSpeed: 5
+    mooveSpeed: 1
+    mobility: 1
+    weaponDamage: 6
+  - type: {fileID: 1029081255643130, guid: 9a459f3f16e105940a1a6c9b2677bddf, type: 2}
+    health: 5
+    shootSpeed: 5
+    mooveSpeed: 1
+    mobility: 1
+    weaponDamage: 6
+  - type: {fileID: 1465201573435514, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}
     health: 5
     shootSpeed: 5
     mooveSpeed: 1
