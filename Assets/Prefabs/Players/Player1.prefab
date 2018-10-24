@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 4120464965167110}
   - component: {fileID: 114804405789756884}
   - component: {fileID: 54997224588009144}
+  - component: {fileID: 136232894467012338}
   m_Layer: 9
   m_Name: Player1
   m_TagString: Untagged
@@ -180,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1382100308199930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3341177, y: 3.5755868, z: -1}
+  m_LocalPosition: {x: -1.4943868, y: -1.3195957, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4432421894767800}
@@ -551,7 +552,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &114804405789756884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -564,3 +565,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 54997224588009144}
+--- !u!136 &136232894467012338
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1382100308199930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35449025
+  m_Height: 1.4548374
+  m_Direction: 1
+  m_Center: {x: -0.030865729, y: -0.016612351, z: -0.000000029802322}

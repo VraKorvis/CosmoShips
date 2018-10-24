@@ -188,3 +188,9 @@ MonoBehaviour:
     mooveSpeed: 1
     mobility: 1
     weaponDamage: 6
+  - type: {fileID: 0}
+    health: 5
+    shootSpeed: 5
+    mooveSpeed: 1
+    mobility: 1
+    weaponDamage: 6

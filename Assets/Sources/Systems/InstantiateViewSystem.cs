@@ -33,7 +33,7 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity> {
 
             entity.AddView(viewObject);
 
-            var rigidbody = viewObject.GetComponent<IRigidbody>();
+            UnityRigidbody rigidbody = viewObject.GetComponent<UnityRigidbody>();
             if (rigidbody != null)
                 entity.AddRigidbody(rigidbody);           
            

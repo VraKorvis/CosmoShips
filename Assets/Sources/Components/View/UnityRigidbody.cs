@@ -23,4 +23,10 @@ public class UnityRigidbody : MonoBehaviour, IRigidbody {
         get { return _rigidbody.rotation; }
         set { _rigidbody.rotation = value; }
     }
+
+    public Rigidbody rigidBody {
+        get {
+            return _rigidbody;
+        }
+    }
 }

@@ -22,7 +22,15 @@ public class GameController : MonoBehaviour {
     }
 
     private void Update() {
+        //_systems.Execute();
+    }
+
+    private void FixedUpdate() {
         _systems.Execute();
+    }
+
+    private void LateUpdate() {
+        
     }
 
     private void CreateServices(Contexts contexts, Services services) {

@@ -58,11 +58,14 @@ public class GameSetupEditor : Editor {
 
             var element = list.serializedProperty.GetArrayElementAtIndex(index);
             rect.y += 2;
-            if (element.FindPropertyRelative("type") == null) {
+
+            SerializedProperty propertyType = element.FindPropertyRelative("type");            
+
+            if (propertyType == null) {
                 element.isExpanded = false;
                 return;
             }
-            SerializedProperty propertyType = element.FindPropertyRelative("type");
+
             string propertyName = null;
             if (propertyType.objectReferenceValue != null) {
                 propertyName = propertyType.objectReferenceValue.name.ToString();
@@ -96,9 +99,9 @@ public class GameSetupEditor : Editor {
     public override void OnInspectorGUI() {
         serializedObject.Update();        
         EditorGUILayout.Space();
-        DoLayoutListWithFoldout(_listBaseShipsStats);
-        DoLayoutListWithFoldout(_listBaseShipsStatsEnemy);
-        DoLayoutListWithFoldout(_listShipsMultiplyStats);
+        ReorderableListUtility.DoLayoutListWithFoldout(_listBaseShipsStats);
+        ReorderableListUtility.DoLayoutListWithFoldout(_listBaseShipsStatsEnemy);
+        ReorderableListUtility.DoLayoutListWithFoldout(_listShipsMultiplyStats);
         serializedObject.ApplyModifiedProperties();
         EditorApplication.update.Invoke();
     }

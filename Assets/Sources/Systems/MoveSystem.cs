@@ -20,12 +20,15 @@ public class MoveSystem : IExecuteSystem {
             var mooveSpeed = playerEntity.baseShipStats.baseShip.mooveSpeed;
             var mooveSpeedMultiply = playerEntity.shipsStatsMultipliers.shipMultipliers.mooveSpeed;
 
-            Vector3 newPosition = _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply *Time.deltaTime ;
-                      
-            playerTransform.Translate(newPosition);
-            
+            Vector3 newPosition = playerTransform.position + _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply *Time.deltaTime ;
+
+            //playerTransform.Translate(newPosition);
+
             // Vector3 posLErp = Vector3.Lerp(playerTransform.position, playerTransform.position+ newPosition, mooveSpeedMultiply*Time.deltaTime);
             // playerTransform.position = posLErp;
+
+            playerEntity.rigidbody.value.rigidBody.MovePosition(newPosition);
+
 
         }
 
