@@ -15,9 +15,9 @@ MonoBehaviour:
   - type: {fileID: 1382100308199930, guid: 01a5544e053cff046aafc6641c739e95, type: 2}
     health: 1500
     shootSpeed: 600
-    mooveSpeed: 12
-    mobility: 20
-    isShow: 0
+    mooveSpeed: 20
+    mobility: 40
+    isShow: 1
   - type: {fileID: 1720195736285514, guid: d17643fff8cee9f48b0856f296fa75c6, type: 2}
     health: 900
     shootSpeed: 900
@@ -27,7 +27,7 @@ MonoBehaviour:
   - type: {fileID: 1529978536826614, guid: a85cd5ee6e177ad4694880374519a9a7, type: 2}
     health: 700
     shootSpeed: 1000
-    mooveSpeed: 24
+    mooveSpeed: 10
     mobility: 30
     isShow: 0
   - type: {fileID: 1712260533418104, guid: c60fb67b609184e479bba26e39f5277a, type: 2}
@@ -183,12 +183,6 @@ MonoBehaviour:
     mobility: 1
     weaponDamage: 6
   - type: {fileID: 1465201573435514, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}
-    health: 5
-    shootSpeed: 5
-    mooveSpeed: 1
-    mobility: 1
-    weaponDamage: 6
-  - type: {fileID: 0}
     health: 5
     shootSpeed: 5
     mooveSpeed: 1

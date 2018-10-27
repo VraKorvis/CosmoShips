@@ -17,9 +17,13 @@ public class RotateSystem : IExecuteSystem {
         if (playerEntity != null) {
 
             var playerTransform = playerEntity.view.value.transform;
-            Vector3 rotate = _contexts.input.input.value * playerEntity.baseShipStats.baseShip.mooveSpeed *Time.deltaTime;
+            Vector3 rotate = _contexts.input.input.value * playerEntity.baseShipStats.baseShip.mooveSpeed * Time.deltaTime;
             playerTransform.rotation = Quaternion.Euler(playerTransform.rotation.x, rotate.y * 0.6f, playerTransform.rotation.z);
 
+            Rigidbody rb = playerEntity.rigidbody.value.rigidBody;
+
+            // rb.MoveRotation(Quaternion.Euler(0, 30f * _contexts.input.input.value.x, 0f));
+            playerTransform.rotation = Quaternion.Euler(0, -30f * _contexts.input.input.value.x, 0f);
 
         }
     }

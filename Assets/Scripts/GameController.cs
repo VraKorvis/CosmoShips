@@ -3,8 +3,9 @@ using UnityEngine;
 using Entitas;
 
 public class GameController : MonoBehaviour {
-    public GameSetup _gameSetup;
-    public ShipsSetup _shipsSetup;
+
+    public CurrentGameSetup _currentGameSetup;
+    public GameSetup _gameSetup;    
 
     public Services _services;
 
@@ -12,8 +13,8 @@ public class GameController : MonoBehaviour {
 
     private void Start() {
         var contexts = Contexts.sharedInstance;
-        contexts.game.SetGameSetup(_gameSetup);
-        contexts.game.SetShipsSetup(_shipsSetup);
+        contexts.game.SetGameSetup(_gameSetup);       
+        contexts.game.SetCurrentGameSetup(_currentGameSetup);
 
         CreateServices(contexts, _services);
 
@@ -22,11 +23,11 @@ public class GameController : MonoBehaviour {
     }
 
     private void Update() {
-        //_systems.Execute();
+        _systems.Execute();
     }
 
     private void FixedUpdate() {
-        _systems.Execute();
+        //_systems.Execute();
     }
 
     private void LateUpdate() {

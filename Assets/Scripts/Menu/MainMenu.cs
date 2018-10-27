@@ -5,12 +5,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour {    
-    
+public class MainMenu : MonoBehaviour {
+
+    public CurrentGameSetup _currentGameSetup;
+
     public Slider slider;
     public Button startbtn;
     public GameObject shipPanel;
-    public GameObject shipStatsPanel;
     public ShipsStatsUI shipsStatUI;
    
     public GameSetup gameSetup;
@@ -20,6 +21,7 @@ public class MainMenu : MonoBehaviour {
     public GameObject[] shipPrefab;
     [HideInInspector]
     public GameObject currentShip;
+    [HideInInspector]
     public ShipRotate shipRotate;
 
     public GameObject viewPosition;
@@ -47,7 +49,7 @@ public class MainMenu : MonoBehaviour {
         UpdateShipStatsUI(currentIndexship);
     }
     private void Start() {
-        shipRotate = GetComponent<ShipRotate>();
+       shipRotate = shipPanel.GetComponent<ShipRotate>();
         shipRotate.ship = currentShip;
         startbtn.onClick.AddListener(() => StartGame());
         prevbtn.onClick.AddListener(() => Prev());
@@ -57,6 +59,7 @@ public class MainMenu : MonoBehaviour {
     private void StartGame() {
         slider.gameObject.SetActive(true);
         startbtn.gameObject.SetActive(false);
+        _currentGameSetup.shipID = currentIndexship;
         StartCoroutine(LevelManager.Loadlvl(slider, LevelManager.sceneID));
     }
 

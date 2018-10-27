@@ -70,6 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4199994191869212}
+  - component: {fileID: 54866617207173288}
   m_Layer: 0
   m_Name: Enemy1.5
   m_TagString: Untagged
@@ -827,3 +828,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088740918619046}
   m_Mesh: {fileID: 4300006, guid: 2a12731ec51557b40ac9cb62f33597ec, type: 3}
+--- !u!54 &54866617207173288
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331197689573856}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 94
+  m_CollisionDetection: 0

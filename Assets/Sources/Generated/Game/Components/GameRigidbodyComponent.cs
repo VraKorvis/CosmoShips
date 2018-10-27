@@ -11,14 +11,14 @@ public partial class GameEntity {
     public RigidbodyComponent rigidbody { get { return (RigidbodyComponent)GetComponent(GameComponentsLookup.Rigidbody); } }
     public bool hasRigidbody { get { return HasComponent(GameComponentsLookup.Rigidbody); } }
 
-    public void AddRigidbody(IRigidbody newValue) {
+    public void AddRigidbody(UnityRigidbody newValue) {
         var index = GameComponentsLookup.Rigidbody;
         var component = CreateComponent<RigidbodyComponent>(index);
         component.value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceRigidbody(IRigidbody newValue) {
+    public void ReplaceRigidbody(UnityRigidbody newValue) {
         var index = GameComponentsLookup.Rigidbody;
         var component = CreateComponent<RigidbodyComponent>(index);
         component.value = newValue;

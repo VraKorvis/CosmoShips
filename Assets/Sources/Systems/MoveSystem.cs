@@ -15,7 +15,7 @@ public class MoveSystem : IExecuteSystem {
     public void Execute() {
         var playerEntity = _contexts.game.playerEntity;
         if (playerEntity != null) {
-
+            
             var playerTransform = playerEntity.view.value.transform;
             var mooveSpeed = playerEntity.baseShipStats.baseShip.mooveSpeed;
             var mooveSpeedMultiply = playerEntity.shipsStatsMultipliers.shipMultipliers.mooveSpeed;
@@ -27,7 +27,13 @@ public class MoveSystem : IExecuteSystem {
             // Vector3 posLErp = Vector3.Lerp(playerTransform.position, playerTransform.position+ newPosition, mooveSpeedMultiply*Time.deltaTime);
             // playerTransform.position = posLErp;
 
-            playerEntity.rigidbody.value.rigidBody.MovePosition(newPosition);
+            Rigidbody rb = playerEntity.rigidbody.value.rigidBody;
+            rb.transform.position += _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.fixedDeltaTime;
+
+            //rb.constraints = RigidbodyConstraints.FreezeRotation;
+            
+
+            //rb.MovePosition(rb.position+ _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.fixedDeltaTime);
 
 
         }

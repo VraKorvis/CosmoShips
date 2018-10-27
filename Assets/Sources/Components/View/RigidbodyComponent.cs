@@ -2,5 +2,5 @@
 
 [Game]
 public sealed class RigidbodyComponent : IComponent {
-    public IRigidbody value;
+    public UnityRigidbody value;
 }

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-public class UnityRigidbody : MonoBehaviour, IRigidbody {
+[RequireComponent(typeof(Rigidbody))]
+public class UnityRigidbody : MonoBehaviour {
     [SerializeField]
     public Rigidbody _rigidbody;
 
