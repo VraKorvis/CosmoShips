@@ -18,12 +18,15 @@ public class RotateSystem : IExecuteSystem {
 
             var playerTransform = playerEntity.view.value.transform;
             Vector3 rotate = _contexts.input.input.value * playerEntity.baseShipStats.baseShip.mooveSpeed * Time.deltaTime;
-            playerTransform.rotation = Quaternion.Euler(playerTransform.rotation.x, rotate.y * 0.6f, playerTransform.rotation.z);
+            
+            playerTransform.rotation = Quaternion.Euler(35f * _contexts.input.input.value.y, 0.0f, 0.0f);
 
-            Rigidbody rb = playerEntity.rigidbody.value.rigidBody;
-
-            // rb.MoveRotation(Quaternion.Euler(0, 30f * _contexts.input.input.value.x, 0f));
-            playerTransform.rotation = Quaternion.Euler(0, -30f * _contexts.input.input.value.x, 0f);
+            //doesnt work without phisix (isKinematic = true)
+            //if phisix = on, move in fixedupdate
+            //Rigidbody rb = playerEntity.rigidbody.value.rigidBody;
+            // rb.rotation = Quaternion.Euler(30f * _contexts.input.input.value.y, 0.0f, 0.0f); 
+            //or
+            // rb.MoveRotation(Quaternion.Euler(30f * _contexts.input.input.value.x, 0.0f, 0f));
 
         }
     }

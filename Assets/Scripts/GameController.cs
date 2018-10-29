@@ -5,7 +5,9 @@ using Entitas;
 public class GameController : MonoBehaviour {
 
     public CurrentGameSetup _currentGameSetup;
-    public GameSetup _gameSetup;    
+    public GameSetup _gameSetup;
+
+    public WeaponSetup _weaponSetup;
 
     public Services _services;
 
@@ -15,7 +17,7 @@ public class GameController : MonoBehaviour {
         var contexts = Contexts.sharedInstance;
         contexts.game.SetGameSetup(_gameSetup);       
         contexts.game.SetCurrentGameSetup(_currentGameSetup);
-
+        contexts.game.SetWeaponSetup(_weaponSetup);
         CreateServices(contexts, _services);
 
         _systems = new RootSystem(contexts, _services);

@@ -13,5 +13,10 @@ public class RootSystem : Feature {
         Add(new MoveSystem(contexts));
 
         Add(new RotateSystem(contexts));
+
+        Add(new PlayerShootSystem(contexts));
+
+        Add(new InitializeLaserRaysSystem(contexts));
+       // Add(new InitializeRocketsSystem(contexts));
     }
 }

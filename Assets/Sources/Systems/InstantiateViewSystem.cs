@@ -40,6 +40,7 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity> {
             viewObject.Link(entity, _contexts.game);            
 
         }
+
     }
 
     

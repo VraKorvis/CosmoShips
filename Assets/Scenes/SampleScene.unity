@@ -397,6 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentGameSetup: {fileID: 11400000, guid: 7d99ac9ae7c4d3f42bb0672650bd740b, type: 2}
   _gameSetup: {fileID: 11400000, guid: 6182d74baabc1014b9cd1908b4ae78f4, type: 2}
+  _weaponSetup: {fileID: 11400000, guid: e1f6430cabd3214439bfdc629bcc2758, type: 2}
 --- !u!4 &2037392856
 Transform:
   m_ObjectHideFlags: 0

@@ -116,5 +116,6 @@ public class ShipRotate : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnEndDrag(PointerEventData eventData) {
         Debug.Log("OnEndDrag + " + eventData);
+
     }
 }

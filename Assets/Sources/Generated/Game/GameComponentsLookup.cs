@@ -13,17 +13,21 @@ public static class GameComponentsLookup {
     public const int GameSetup = 2;
     public const int Health = 3;
     public const int InitialPosition = 4;
-    public const int LevelSetup = 5;
-    public const int Player = 6;
-    public const int Position = 7;
-    public const int Resource = 8;
-    public const int Rigidbody = 9;
-    public const int Rotation = 10;
-    public const int ShipsSetup = 11;
-    public const int ShipsStatsMultipliers = 12;
-    public const int View = 13;
+    public const int Laser = 5;
+    public const int LevelSetup = 6;
+    public const int Player = 7;
+    public const int PlayerShoot = 8;
+    public const int Position = 9;
+    public const int Resource = 10;
+    public const int Rigidbody = 11;
+    public const int RocketLauncher = 12;
+    public const int Rotation = 13;
+    public const int ShipsSetup = 14;
+    public const int ShipsStatsMultipliers = 15;
+    public const int View = 16;
+    public const int WeaponSetup = 17;
 
-    public const int TotalComponents = 14;
+    public const int TotalComponents = 18;
 
     public static readonly string[] componentNames = {
         "BaseShipStats",
@@ -31,15 +35,19 @@ public static class GameComponentsLookup {
         "GameSetup",
         "Health",
         "InitialPosition",
+        "Laser",
         "LevelSetup",
         "Player",
+        "PlayerShoot",
         "Position",
         "Resource",
         "Rigidbody",
+        "RocketLauncher",
         "Rotation",
         "ShipsSetup",
         "ShipsStatsMultipliers",
-        "View"
+        "View",
+        "WeaponSetup"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -48,14 +56,18 @@ public static class GameComponentsLookup {
         typeof(GameSetupComponent),
         typeof(HealthComponent),
         typeof(InitialPositionComponent),
+        typeof(LaserComponent),
         typeof(LevelSetupComponent),
         typeof(PlayerComponent),
+        typeof(PlayerShootComponent),
         typeof(PositionComponent),
         typeof(ResourceComponent),
         typeof(RigidbodyComponent),
+        typeof(RocketLauncherComponent),
         typeof(RotationComponent),
         typeof(ShipsSetupComponent),
         typeof(ShipsStatsMultipliersComponent),
-        typeof(ViewComponent)
+        typeof(ViewComponent),
+        typeof(WeaponSetupComponent)
     };
 }

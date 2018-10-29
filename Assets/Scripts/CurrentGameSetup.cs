@@ -2,15 +2,15 @@
 using UnityEditor;
 using UnityEngine;
 
-//[CustomEditor(typeof(CurrentGameSetup))]
-//public class CurrentGameSetupEditor : Editor {
-//    void OnInspecotrGui() {
-//       // serializedObject.Update();
-//        //EditorGUILayout.Space();       
-//        //serializedObject.ApplyModifiedProperties();
-//        //EditorApplication.update.Invoke();
-//    }
-//}
+[CustomEditor(typeof(CurrentGameSetup))]
+public class CurrentGameSetupEditor : Editor {
+    void OnInspecotrGui() {
+        // serializedObject.Update();
+        //EditorGUILayout.Space();       
+        //serializedObject.ApplyModifiedProperties();
+        //EditorApplication.update.Invoke();
+    }
+}
 
 [CreateAssetMenu(menuName = "Setup/CurrentGame", fileName = "CurrentGame")]
 [Game, Unique]
@@ -20,5 +20,9 @@ public class CurrentGameSetup : ScriptableObject {
     public int lvlID;
     [SerializeField]
     public int shipID;
+    [SerializeField]
+    public int rocketID;
+    [SerializeField]
+    public int laserID;
        
 }
