@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Game]
+[Game, Bullets, Enemies]
 public sealed class RigidbodyComponent : IComponent {
     public UnityRigidbody value;
 }

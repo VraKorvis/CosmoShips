@@ -16,7 +16,10 @@ public class RootSystem : Feature {
 
         Add(new PlayerShootSystem(contexts));
 
-        Add(new InitializeLaserRaysSystem(contexts));
-       // Add(new InitializeRocketsSystem(contexts));
+        Add(new AddViewFromObjectPoolSystem(contexts));
+
+        Add(new ProcessShootSystem(contexts));
+
+
     }
 }

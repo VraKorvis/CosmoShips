@@ -15,11 +15,33 @@ public class InputSystem : IExecuteSystem, IInitializeSystem {
     }
 
     public void Execute() {
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
+        //var horizontal = Input.GetAxis("Horizontal");
+        //var vertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(horizontal, vertical, 0.0f);
+        //Vector3 movement = new Vector3(horizontal, vertical, 0.0f);
+        //_contexts.input.ReplaceInput(movement);
+
+        var moveX = Input.GetAxisRaw("Horizontal");
+        var moveY = Input.GetAxisRaw("Vertical");
+
+        //_contexts.input.CreateEntity()
+        //         .AddMoveInput(new Vector3(moveX, moveY))
+        //         .AddInputOwner(PLAYER1_ID);
+
+        Vector3 movement = new Vector3(moveX, moveY, 0.0f);
         _contexts.input.ReplaceInput(movement);
+
+        if (Input.GetAxisRaw("Fire1") != 0) {
+            //_contexts.input.CreateEntity()
+            //         .IsShootInput(true)
+            //         .AddInputOwner(PLAYER1_ID);
+
+            _contexts.input.inputEntity.isShootInput = true;
+        } else {
+            _contexts.input.inputEntity.isShootInput = false;
+        }
+
+        //_contexts.input.isSlowMotion = Input.GetAxisRaw("Fire2") != 0;
 
     }
 

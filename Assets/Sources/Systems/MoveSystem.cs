@@ -28,7 +28,7 @@ public class MoveSystem : IExecuteSystem {
             // playerTransform.position = posLErp;
 
             Rigidbody rb = playerEntity.rigidbody.value.rigidBody;
-            rb.transform.position += _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.fixedDeltaTime;
+            rb.transform.position += _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.deltaTime;
 
             //rb.constraints = RigidbodyConstraints.FreezeRotation;
             
