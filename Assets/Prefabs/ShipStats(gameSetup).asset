@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed043db11b49bea4084e5aedb74c338b, type: 3}
-  m_Name: ShipStats
+  m_Name: ShipStats(gameSetup)
   m_EditorClassIdentifier: 
   baseShipsStats:
   - type: {fileID: 1382100308199930, guid: 01a5544e053cff046aafc6641c739e95, type: 2}

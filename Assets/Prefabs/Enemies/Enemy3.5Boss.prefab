@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4517066171932922}
   - component: {fileID: 33754144538246934}
   - component: {fileID: 23179110617709914}
+  - component: {fileID: 64066947962247798}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -84,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4947959737249360}
   - component: {fileID: 54942826803161686}
+  - component: {fileID: 114589303188172142}
   m_Layer: 0
   m_Name: Enemy3.5Boss
   m_TagString: Untagged
@@ -110,15 +112,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1589679708932782}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
+  m_LocalRotation: {x: -0, y: -0.9423335, z: -0.33467528, w: 0}
+  m_LocalPosition: {x: 0, y: 0.000086545944, z: -0.0028266907}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_Children:
   - {fileID: 4730428051585252}
   - {fileID: 4517066171932922}
   m_Father: {fileID: 4947959737249360}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 320.89398, y: 180.00002, z: 0}
 --- !u!4 &4517066171932922
 Transform:
   m_ObjectHideFlags: 1
@@ -152,7 +154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1945601641985700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 5.042579, y: 2.4246447, z: -5.003384}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4124024500190688}
@@ -257,5 +259,31 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 94
+  m_Constraints: 110
   m_CollisionDetection: 0
+--- !u!64 &64066947962247798
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1216805821975428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: b8535b50bb5766044aa4882bcf3a57e1, type: 3}
+--- !u!114 &114589303188172142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945601641985700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c819ba3742b470548a116d118220d334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 54942826803161686}

@@ -15,6 +15,8 @@ MonoBehaviour:
   path: 
   levels:
   - name: Level1
-    background: {fileID: 0}
+    background: {fileID: 1484671346845242, guid: a3c2e58afeec3d640a7bd500799c452c,
+      type: 2}
   - name: Level2
-    background: {fileID: 0}
+    background: {fileID: 1156800268559622, guid: 3278b08380e6b42478f12141c57c5093,
+      type: 2}

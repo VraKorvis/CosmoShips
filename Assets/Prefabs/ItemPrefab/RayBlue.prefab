@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212702667434857994}
   - component: {fileID: 114594045936892910}
   - component: {fileID: 114899101639676182}
-  - component: {fileID: 114104897555993558}
   - component: {fileID: 114695465316800436}
   - component: {fileID: 54321314573553030}
+  - component: {fileID: 65077761683066674}
   m_Layer: 0
   m_Name: RayBlue
   m_TagString: Untagged
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1327280743194778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3341177, y: 4.134587, z: -0.775}
+  m_LocalPosition: {x: 2.743385, y: 0.27532884, z: -0.775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,17 +60,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &114104897555993558
-MonoBehaviour:
+--- !u!65 &65077761683066674
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1327280743194778}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1682994404, guid: 527299aabb65dc8489861d4a159c4466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 0.34, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114594045936892910
 MonoBehaviour:
   m_ObjectHideFlags: 1

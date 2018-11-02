@@ -59,7 +59,7 @@ public class GameSetupEditor : Editor {
             var element = list.serializedProperty.GetArrayElementAtIndex(index);
             rect.y += 2;
 
-            SerializedProperty propertyType = element.FindPropertyRelative("type");            
+            SerializedProperty propertyType = element.FindPropertyRelative("type");
 
             if (propertyType == null) {
                 element.isExpanded = false;
@@ -70,34 +70,25 @@ public class GameSetupEditor : Editor {
             if (propertyType.objectReferenceValue != null) {
                 propertyName = propertyType.objectReferenceValue.name.ToString();
             }
-            element.isExpanded = EditorGUI.Foldout(new Rect(rect.x + 15, rect.y + 2, rect.width/4, 10),
+            element.isExpanded = EditorGUI.Foldout(new Rect(rect.x + 15, rect.y + 2, rect.width / 4, 10),
                 element.isExpanded, propertyName == null ? new GUIContent("Add player/enemy prefab") : new GUIContent(propertyName), false);
 
             if (element.isExpanded) {
                 EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing, rect.width - 60, EditorGUIUtility.singleLineHeight), propertyType, new GUIContent("Type"));
-                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing*2, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("health"), new GUIContent("Health"));
-                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing*3, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("shootSpeed"), new GUIContent("ShootSpeed"));
-                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing*4, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("mooveSpeed"), new GUIContent("MooveSpeed"));
-                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing*5, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("mobility"), new GUIContent("Mobility"));
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing * 2, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("health"), new GUIContent("Health"));
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing * 3, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("shootSpeed"), new GUIContent("ShootSpeed"));
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing * 4, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("mooveSpeed"), new GUIContent("MooveSpeed"));
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing * 5, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("mobility"), new GUIContent("Mobility"));
                 SerializedProperty weaponDamage = element.FindPropertyRelative("weaponDamage");
                 if (weaponDamage != null) {
                     EditorGUI.PropertyField(new Rect(rect.x, rect.y + 108, rect.width - 60, EditorGUIUtility.singleLineHeight), weaponDamage, new GUIContent("WeaponDamage"));
                 }
             }
-        };       
-    }
-
-    public static bool DoLayoutListWithFoldout(ReorderableList list, string label = null) {
-        var property = list.serializedProperty;
-        property.isExpanded = EditorGUILayout.Foldout(property.isExpanded, label != null ? label : property.displayName);
-        if (property.isExpanded) {
-            list.DoLayoutList();
-        }
-        return property.isExpanded;
+        };
     }
 
     public override void OnInspectorGUI() {
-        serializedObject.Update();        
+        serializedObject.Update();
         EditorGUILayout.Space();
         ReorderableListUtility.DoLayoutListWithFoldout(_listBaseShipsStats);
         ReorderableListUtility.DoLayoutListWithFoldout(_listBaseShipsStatsEnemy);
@@ -107,7 +98,7 @@ public class GameSetupEditor : Editor {
     }
 }
 
-[CreateAssetMenu(menuName = "Stats/ShipStats", fileName = "ShipStats")]
+[CreateAssetMenu(menuName = "Setup/GameSetup", fileName = "ShipStats(GameSetup)")]
 [Game, Unique]
 public class GameSetup : ScriptableObject {
     [SerializeField]

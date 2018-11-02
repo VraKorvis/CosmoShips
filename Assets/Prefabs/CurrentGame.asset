@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Name: CurrentGame
   m_EditorClassIdentifier: 
   lvlID: 1
-  shipID: 2
+  shipID: 4
+  rocketID: 1
+  laserID: 2
