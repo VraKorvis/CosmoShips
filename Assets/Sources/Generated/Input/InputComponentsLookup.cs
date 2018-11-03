@@ -8,17 +8,23 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
-    public const int Input = 0;
-    public const int ShootInput = 1;
+    public const int Collider = 0;
+    public const int Collision = 1;
+    public const int Input = 2;
+    public const int ShootInput = 3;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 4;
 
     public static readonly string[] componentNames = {
+        "Collider",
+        "Collision",
         "Input",
         "ShootInput"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(ColliderComponent),
+        typeof(CollisionComponent),
         typeof(InputComponent),
         typeof(ShootInputComponent)
     };

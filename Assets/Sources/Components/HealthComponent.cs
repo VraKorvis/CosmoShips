@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Game]
+[Game, Bullets, Enemies]
 public class HealthComponent : IComponent {
     public float value;
 }

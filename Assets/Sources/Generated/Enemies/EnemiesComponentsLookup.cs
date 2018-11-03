@@ -8,18 +8,27 @@
 //------------------------------------------------------------------------------
 public static class EnemiesComponentsLookup {
 
-    public const int OutOfScreen = 0;
-    public const int Rigidbody = 1;
+    public const int Destroy = 0;
+    public const int Health = 1;
+    public const int OutOfScreen = 2;
+    public const int Rigidbody = 3;
+    public const int ViewObjectPool = 4;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
+        "Destroy",
+        "Health",
         "OutOfScreen",
-        "Rigidbody"
+        "Rigidbody",
+        "ViewObjectPool"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(DestroyComponent),
+        typeof(HealthComponent),
         typeof(OutOfScreenComponent),
-        typeof(RigidbodyComponent)
+        typeof(RigidbodyComponent),
+        typeof(ViewObjectPoolComponent)
     };
 }

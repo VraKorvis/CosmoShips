@@ -12,6 +12,8 @@ public sealed class DestroyEntitySystem : IExecuteSystem {
        // var collector = group.CreateCollector(GroupEvent.Added);
     }
 
+
+    //TODO
     public void Execute(List<Entity> entities) {
         //foreach (var e in entities) {
         //    foreach (var pool in _pools) {

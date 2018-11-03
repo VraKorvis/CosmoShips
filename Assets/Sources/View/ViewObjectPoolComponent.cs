@@ -4,7 +4,7 @@ using UnityEngine;
 using Entitas;
 using DesperateDevs.Utils;
 
-[Game, Bullets]
+[Game, Bullets, Enemies]
 public sealed class ViewObjectPoolComponent : IComponent {
     public ObjectPool<GameObject> pool;
 }

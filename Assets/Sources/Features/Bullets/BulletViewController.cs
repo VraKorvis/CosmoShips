@@ -24,8 +24,7 @@ public class BulletViewController : PoolableViewController, IBulletController {
     Vector3 movement;
 
     void OnEnable() {
-        // _rotation = _minRotation + (_baseRotation * new Random(0).Next(0, 1));
-       
+        // _rotation = _minRotation + (_baseRotation * new Random(0).Next(0, 1));       
     }
 
     void Update() {

@@ -20,7 +20,7 @@ public class MoveSystem : IExecuteSystem {
             var mooveSpeed = playerEntity.baseShipStats.baseShip.mooveSpeed;
             var mooveSpeedMultiply = playerEntity.shipsStatsMultipliers.shipMultipliers.mooveSpeed;
 
-            Vector3 newPosition = playerTransform.position + _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply *Time.deltaTime ;
+            Vector3 newPosition = playerTransform.position + _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.deltaTime ;
 
             //playerTransform.Translate(newPosition);
 

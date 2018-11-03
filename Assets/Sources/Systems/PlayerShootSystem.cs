@@ -8,7 +8,6 @@ using Object = UnityEngine.Object;
 
 public class PlayerShootSystem : ReactiveSystem<InputEntity>, IInitializeSystem {
 
-
     private Contexts _contexts;
 
     ObjectPool<GameObject> _bulletsObjectPool;
@@ -49,6 +48,7 @@ public class PlayerShootSystem : ReactiveSystem<InputEntity>, IInitializeSystem 
                 bullet.AddViewObjectPool(_bulletsObjectPool);                
                 bullet.isRay = true;
                 bullet.isBullet = true;
+                bullet.AddHealth(1);
                
                 
             }

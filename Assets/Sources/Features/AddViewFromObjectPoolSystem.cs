@@ -4,40 +4,49 @@ using Entitas;
 using UnityEngine;
 using Entitas.Unity;
 
-public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity>, IInitializeSystem {
 
-    Contexts _contexts;
+
+public interface IAddViewFromObjectPool : IEntity, IViewObjectPoolEntity { }
+
+
+public partial class BulletsEntity : IAddViewFromObjectPool { }
+
+public partial class EnemiesEntity : IAddViewFromObjectPool { }
+
+public sealed class AddViewFromObjectPoolSystem : MultiReactiveSystem<IAddViewFromObjectPool, Contexts>, IInitializeSystem {
+      
     Transform _container;
 
-    public AddViewFromObjectPoolSystem(Contexts contexts) : base(contexts.bullets) {       
-        _contexts = contexts;
-    }
+    public AddViewFromObjectPoolSystem(Contexts contexts) : base(contexts) {  }
+  
 
     public void Initialize() {
-        _container = new GameObject(_contexts.bullets.contextInfo.name + " Views (Pooled)").transform;
+        _container = new GameObject(Contexts.sharedInstance.bullets.contextInfo.name + " Views (Pooled)").transform;
     }
 
-    protected override ICollector<BulletsEntity> GetTrigger(IContext<BulletsEntity> context) {
-       return context.CreateCollector(BulletsMatcher.ViewObjectPool);
+    protected override ICollector[] GetTrigger(Contexts contexts) {
+        throw new NotImplementedException();
     }
 
-    protected override bool Filter(BulletsEntity entity) {        
-        return entity.hasViewObjectPool;
-    }
+    protected override bool Filter(IAddViewFromObjectPool entity) {
+        throw new NotImplementedException();
+    }   
 
-    protected override void Execute(List<BulletsEntity> entities) {
+    protected override void Execute(List<IAddViewFromObjectPool> entities) {
         
         foreach (var e in entities) {
             GameObject gameObject = e.viewObjectPool.pool.Get();
             gameObject.SetActive(true);
             gameObject.transform.SetParent(_container, false);            
-            gameObject.Link(e, _contexts.bullets);
-            e.AddViewBullet(gameObject.GetComponent<IViewController>());
+            gameObject.Link(e, Contexts.sharedInstance.bullets);
+         //   e.AddViewBullet(gameObject.GetComponent<IViewController>());
             var urb = gameObject.GetComponent<UnityRigidbody>();
             if (urb!=null) {
-                e.AddRigidbody(urb);
-                e.rigidbody.value._rigidbody.transform.position = _contexts.game.playerEntity.rigidbody.value._rigidbody.transform.position;
+           //     e.AddRigidbody(urb);
+           //     e.rigidbody.value._rigidbody.transform.position = Contexts.sharedInstance.game.playerEntity.rigidbody.value._rigidbody.transform.position;
             }
         }
     }
+
+
 }

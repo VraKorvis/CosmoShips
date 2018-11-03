@@ -10,29 +10,32 @@ public static class GameComponentsLookup {
 
     public const int BaseShipStats = 0;
     public const int CurrentGameSetup = 1;
-    public const int GameSetup = 2;
-    public const int Health = 3;
-    public const int InitialPosition = 4;
-    public const int Laser = 5;
-    public const int LevelSetup = 6;
-    public const int Player = 7;
-    public const int PlayerShoot = 8;
-    public const int Position = 9;
-    public const int Resource = 10;
-    public const int Rigidbody = 11;
-    public const int RocketLauncher = 12;
-    public const int Rotation = 13;
-    public const int ShipsSetup = 14;
-    public const int ShipsStatsMultipliers = 15;
-    public const int View = 16;
-    public const int ViewObjectPool = 17;
-    public const int WeaponSetup = 18;
+    public const int Destroy = 2;
+    public const int GameSetup = 3;
+    public const int Health = 4;
+    public const int InitialPosition = 5;
+    public const int Laser = 6;
+    public const int LevelSetup = 7;
+    public const int Player = 8;
+    public const int PlayerShoot = 9;
+    public const int Position = 10;
+    public const int Resource = 11;
+    public const int Rigidbody = 12;
+    public const int RocketLauncher = 13;
+    public const int Rotation = 14;
+    public const int ShipsSetup = 15;
+    public const int ShipsStatsMultipliers = 16;
+    public const int View = 17;
+    public const int ViewObjectPool = 18;
+    public const int WeaponCharacteristic = 19;
+    public const int WeaponSetup = 20;
 
-    public const int TotalComponents = 19;
+    public const int TotalComponents = 21;
 
     public static readonly string[] componentNames = {
         "BaseShipStats",
         "CurrentGameSetup",
+        "Destroy",
         "GameSetup",
         "Health",
         "InitialPosition",
@@ -49,12 +52,14 @@ public static class GameComponentsLookup {
         "ShipsStatsMultipliers",
         "View",
         "ViewObjectPool",
+        "WeaponCharacteristic",
         "WeaponSetup"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(BaseShipStats),
         typeof(CurrentGameSetupComponent),
+        typeof(DestroyComponent),
         typeof(GameSetupComponent),
         typeof(HealthComponent),
         typeof(InitialPositionComponent),
@@ -71,6 +76,7 @@ public static class GameComponentsLookup {
         typeof(ShipsStatsMultipliersComponent),
         typeof(ViewComponent),
         typeof(ViewObjectPoolComponent),
+        typeof(WeaponCharacteristicComponent),
         typeof(WeaponSetupComponent)
     };
 }
