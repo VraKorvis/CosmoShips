@@ -6,7 +6,6 @@ public class CollisionEmitter : MonoBehaviour {
 
     public string targetTag;
 
-
     // OnCollisionEnter вызывается, когда этот collider/rigidbody начал соприкосновение с другим rigidbody/collider.
 
     // В отличие от OnTriggerEnter, в OnCollisionEnter передаётся класс Collision, 
@@ -27,17 +26,13 @@ public class CollisionEmitter : MonoBehaviour {
     }
 
     //for !iskinematic
-    private void OnTriggerEnter(Collider other) {
-       
+    private void OnTriggerEnter(Collider other) {   
         if (!string.IsNullOrEmpty(targetTag) && other.gameObject.CompareTag(targetTag)) {
 
-            var goLink = gameObject.GetEntityLink();
-            var targetLink = other.gameObject.GetEntityLink();
-          
+            var self = gameObject.GetEntityLink();
+            var targetLink = other.gameObject.transform.parent.gameObject.GetEntityLink();
             var colliderEntity = Contexts.sharedInstance.input.CreateEntity();
-          
-            colliderEntity.AddCollider(goLink.entity, targetLink.entity);
-
+            colliderEntity.AddCollider(self.entity, targetLink.entity);
         }
     }
 }

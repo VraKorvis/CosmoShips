@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Bullets]
-public class ViewBulletComponent : IComponent {
+[Bullets, Enemies]
+public class ViewControllComponent : IComponent {
     public IViewController controller;
 }

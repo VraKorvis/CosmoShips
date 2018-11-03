@@ -147,6 +147,8 @@ GameObject:
   - component: {fileID: 4139646144523296}
   - component: {fileID: 54159196234150458}
   - component: {fileID: 114940967673809588}
+  - component: {fileID: 114481416863566012}
+  - component: {fileID: 114726737888341332}
   m_Layer: 0
   m_Name: Enemy2.2
   m_TagString: Enemy
@@ -1698,6 +1700,28 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300024, guid: d1c25836769abbc4397c51bfc15991f7, type: 3}
+--- !u!114 &114481416863566012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302371942421628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114726737888341332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302371942421628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4152daaae8ad5eb44bc710325f242b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114940967673809588
 MonoBehaviour:
   m_ObjectHideFlags: 1

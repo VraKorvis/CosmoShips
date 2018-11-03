@@ -119,9 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc410793fa5a68e4da171f7fc3c4baef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minRotation: {x: 11, y: 11, z: 11}
-  _baseRotation: {x: 11, y: 11, z: 11}
-  _randomRotationFactor: 10
+  _minRotation: {x: 0, y: 5, z: 0}
+  _baseRotation: {x: 0, y: 5, z: 0}
+  _randomRotationFactor: 3
 --- !u!212 &212702667434857994
 SpriteRenderer:
   m_ObjectHideFlags: 1

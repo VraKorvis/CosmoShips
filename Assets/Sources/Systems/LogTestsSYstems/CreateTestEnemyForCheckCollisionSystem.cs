@@ -16,11 +16,11 @@ public class CreateTestEnemyForCheckCollisionSystem : ReactiveSystem<EnemiesEnti
     }
     
     protected override ICollector<EnemiesEntity> GetTrigger(IContext<EnemiesEntity> context) {
-        return context.CreateCollector(EnemiesMatcher.Health);
+        return context.CreateCollector(EnemiesMatcher.Enemy);
     }
 
     protected override bool Filter(EnemiesEntity entity) {
-        return entity.hasHealth;
+        return entity.isEnemy;
     }
 
     public void Initialize() {
@@ -29,14 +29,17 @@ public class CreateTestEnemyForCheckCollisionSystem : ReactiveSystem<EnemiesEnti
         _enemyObjectPool = new ObjectPool<GameObject>(() => Object.Instantiate(enemyPrefab));
 
         var enemyEntity = _contexts.enemies.CreateEntity();
-        enemyEntity.AddHealth(1000);
+        
         enemyEntity.AddViewObjectPool(_enemyObjectPool);
-        // enemyEntity.AddRigidbody();
+        enemyEntity.isEnemy = true;
+        enemyEntity.AddHealth(1000);      
 
     }
 
     protected override void Execute(List<EnemiesEntity> entities) {
-        
+        foreach (var e in entities) {
+           // Debug.Log("change or create enemy : " + e); //worked
+        }
     }
 
   

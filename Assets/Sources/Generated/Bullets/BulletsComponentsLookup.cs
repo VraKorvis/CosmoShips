@@ -15,7 +15,7 @@ public static class BulletsComponentsLookup {
     public const int Position = 4;
     public const int Ray = 5;
     public const int Rigidbody = 6;
-    public const int ViewBullet = 7;
+    public const int ViewControll = 7;
     public const int ViewObjectPool = 8;
 
     public const int TotalComponents = 9;
@@ -28,7 +28,7 @@ public static class BulletsComponentsLookup {
         "Position",
         "Ray",
         "Rigidbody",
-        "ViewBullet",
+        "ViewControll",
         "ViewObjectPool"
     };
 
@@ -40,7 +40,7 @@ public static class BulletsComponentsLookup {
         typeof(PositionComponent),
         typeof(RayComponent),
         typeof(RigidbodyComponent),
-        typeof(ViewBulletComponent),
+        typeof(ViewControllComponent),
         typeof(ViewObjectPoolComponent)
     };
 }

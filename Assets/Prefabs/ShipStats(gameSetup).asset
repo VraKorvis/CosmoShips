@@ -43,7 +43,7 @@ MonoBehaviour:
     mobility: 35
     isShow: 0
   baseShipStatsEnemy:
-  - type: {fileID: 1465201573435514, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}
+  - type: {fileID: 1091153394127212, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}
     health: 500
     shootSpeed: 1000
     mooveSpeed: 10

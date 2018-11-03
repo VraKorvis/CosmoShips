@@ -12,17 +12,21 @@ public class ProcessCollisionSystem : ReactiveSystem<InputEntity> {
     }
 
     protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context) {
-        return context.CreateCollector(InputMatcher.Collision);
+        return context.CreateCollector(InputMatcher.AllOf(InputMatcher.Collider));
     }
 
-    protected override bool Filter(InputEntity entity) {
-        return entity.hasCollision;
+    protected override bool Filter(InputEntity entity) {       
+        return entity.hasCollider;
     }   
-
     
     protected override void Execute(List<InputEntity> entities) {
+        //Debug.Log("Hit");
         foreach (var e in entities) {
-         //   e.collision.self-1
+            // Debug.Log("entity collider : " + e);
+            var bulletHealth = e.collider.self as IHealthEntity;
+            bulletHealth.ReplaceHealth(bulletHealth.health.value - 1);
+            var newEnemyHealth = (e.collider.other as IHealthEntity).health.value - 10;
+            (e.collider.other as IHealthEntity).ReplaceHealth(newEnemyHealth);
 
         }
     }

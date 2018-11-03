@@ -38,6 +38,8 @@ GameObject:
   - component: {fileID: 4754635443288312}
   - component: {fileID: 54287018616861348}
   - component: {fileID: 114159859780052842}
+  - component: {fileID: 114863041215982802}
+  - component: {fileID: 114867916719305216}
   m_Layer: 0
   m_Name: Enemy3.4
   m_TagString: Enemy
@@ -287,3 +289,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 54287018616861348}
+--- !u!114 &114863041215982802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1037833343887414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114867916719305216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1037833343887414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4152daaae8ad5eb44bc710325f242b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

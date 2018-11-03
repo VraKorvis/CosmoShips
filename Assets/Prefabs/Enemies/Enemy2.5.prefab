@@ -87,6 +87,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4889927048687636}
   - component: {fileID: 114855503223989248}
+  - component: {fileID: 114178327524145506}
+  - component: {fileID: 114863432527415778}
   - component: {fileID: 54296101753206336}
   m_Layer: 0
   m_Name: Enemy2.5
@@ -859,6 +861,17 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300010, guid: c2f8ecc6d7c60b64ca8970ffdf4085d8, type: 3}
+--- !u!114 &114178327524145506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242526204210254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114855503223989248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -871,3 +884,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 54296101753206336}
+--- !u!114 &114863432527415778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242526204210254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4152daaae8ad5eb44bc710325f242b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

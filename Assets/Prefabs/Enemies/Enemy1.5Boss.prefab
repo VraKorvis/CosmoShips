@@ -56,6 +56,8 @@ GameObject:
   - component: {fileID: 4499136050979664}
   - component: {fileID: 54779655585309480}
   - component: {fileID: 114081138381011986}
+  - component: {fileID: 114213995621806096}
+  - component: {fileID: 114818237039901340}
   m_Layer: 0
   m_Name: Enemy1.5Boss
   m_TagString: Enemy
@@ -1016,3 +1018,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 0}
+--- !u!114 &114213995621806096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060604429922222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114818237039901340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060604429922222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4152daaae8ad5eb44bc710325f242b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -21,7 +21,7 @@ public class LogCollisionSystem : ReactiveSystem<InputEntity> {
 
     protected override void Execute(List<InputEntity> entities) {
         foreach (var e in entities) {
-            Debug.Log("context info : " + e.contextInfo + "hit the enemy : " + e.collider.other);
+         //  Debug.Log("context info : " + e.contextInfo.name + "   hit the enemy : " + e.collider.other);
 
         }
     }
