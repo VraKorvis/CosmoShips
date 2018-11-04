@@ -4,8 +4,7 @@ using UnityEngine;
 [Serializable]
 public class Level  {
        
-    public string name; 
-    public Nexus nexus; 
+    public string name;    
     public GameObject background;
 
 }

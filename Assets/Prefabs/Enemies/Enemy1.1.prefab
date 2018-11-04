@@ -125,10 +125,9 @@ GameObject:
   - component: {fileID: 4414933361493272}
   - component: {fileID: 33027030136790840}
   - component: {fileID: 23982770857789656}
-  - component: {fileID: 64550487111600062}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,9 +159,10 @@ GameObject:
   - component: {fileID: 4672607240147050}
   - component: {fileID: 33401464778581808}
   - component: {fileID: 23610157186931348}
+  - component: {fileID: 64002500583698400}
   m_Layer: 0
   m_Name: BB
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -643,12 +643,12 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!64 &64550487111600062
+--- !u!64 &64002500583698400
 MeshCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1708597639973748}
+  m_GameObject: {fileID: 1914147248800576}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -656,7 +656,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300012, guid: ff82122eacc877c448bece039b519777, type: 3}
+  m_Mesh: {fileID: 4300014, guid: ff82122eacc877c448bece039b519777, type: 3}
 --- !u!114 &114311756541759186
 MonoBehaviour:
   m_ObjectHideFlags: 1

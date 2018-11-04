@@ -10,7 +10,7 @@ public class LevelSetupEdit : Editor {
 
     private ReorderableList _levels;
 
-    private static float _elementHeight = 80;
+    private static float _elementHeight = 60;
     private static float _elementHeightIfHide = 20;
 
     private void OnEnable() {
@@ -38,9 +38,8 @@ public class LevelSetupEdit : Editor {
 
            
             if (element.isExpanded) {                
-                EditorGUI.PropertyField(new Rect(rect.x, rect.y + 18, rect.width - 60, EditorGUIUtility.singleLineHeight), propertyType, new GUIContent("Name"));
-                EditorGUI.PropertyField(new Rect(rect.x, rect.y + 36, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("nexus"), new GUIContent("Nexus"));
-                EditorGUI.PropertyField(new Rect(rect.x, rect.y + 54, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("background"), new GUIContent("Background"));
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y + 18, rect.width - 10, EditorGUIUtility.singleLineHeight), propertyType, new GUIContent("Name"));                
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y + 36, rect.width - 10, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("background"), new GUIContent("Background"));
             }
         };
 

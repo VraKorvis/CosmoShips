@@ -74,7 +74,7 @@ public class GameSetupEditor : Editor {
                 element.isExpanded, propertyName == null ? new GUIContent("Add player/enemy prefab") : new GUIContent(propertyName), false);
 
             if (element.isExpanded) {
-                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing, rect.width - 60, EditorGUIUtility.singleLineHeight), propertyType, new GUIContent("Type"));
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing, rect.width -10, EditorGUIUtility.singleLineHeight), propertyType, new GUIContent("Type"));
                 EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing * 2, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("health"), new GUIContent("Health"));
                 EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing * 3, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("shootSpeed"), new GUIContent("ShootSpeed"));
                 EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing * 4, rect.width - 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("mooveSpeed"), new GUIContent("MooveSpeed"));
