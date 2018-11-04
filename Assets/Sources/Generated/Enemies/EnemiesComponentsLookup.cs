@@ -13,10 +13,11 @@ public static class EnemiesComponentsLookup {
     public const int Health = 2;
     public const int OutOfScreen = 3;
     public const int Rigidbody = 4;
-    public const int ViewControll = 5;
-    public const int ViewObjectPool = 6;
+    public const int View = 5;
+    public const int ViewControll = 6;
+    public const int ViewObjectPool = 7;
 
-    public const int TotalComponents = 7;
+    public const int TotalComponents = 8;
 
     public static readonly string[] componentNames = {
         "Destroy",
@@ -24,6 +25,7 @@ public static class EnemiesComponentsLookup {
         "Health",
         "OutOfScreen",
         "Rigidbody",
+        "View",
         "ViewControll",
         "ViewObjectPool"
     };
@@ -34,6 +36,7 @@ public static class EnemiesComponentsLookup {
         typeof(HealthComponent),
         typeof(OutOfScreenComponent),
         typeof(RigidbodyComponent),
+        typeof(ViewComponent),
         typeof(ViewControllComponent),
         typeof(ViewObjectPoolComponent)
     };

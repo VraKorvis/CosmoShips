@@ -10,10 +10,10 @@ public partial class BulletsEntity {
 
     static readonly OutOfScreenComponent outOfScreenComponent = new OutOfScreenComponent();
 
-    public bool isOutOfScreen {
+    public bool flagOutOfScreen {
         get { return HasComponent(BulletsComponentsLookup.OutOfScreen); }
         set {
-            if (value != isOutOfScreen) {
+            if (value != flagOutOfScreen) {
                 var index = BulletsComponentsLookup.OutOfScreen;
                 if (value) {
                     var componentPool = GetComponentPool(index);

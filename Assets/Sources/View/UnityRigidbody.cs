@@ -25,9 +25,9 @@ public class UnityRigidbody : MonoBehaviour {
         set { _rigidbody.rotation = value; }
     }
 
-    public Rigidbody rigidBody {
+    public Rigidbody RigidBody {
         get {
-            return _rigidbody;
+            return this._rigidbody;
         }
     }
 }

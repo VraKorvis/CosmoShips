@@ -11,14 +11,14 @@ public partial class BulletsEntity {
     public ViewControllComponent viewControll { get { return (ViewControllComponent)GetComponent(BulletsComponentsLookup.ViewControll); } }
     public bool hasViewControll { get { return HasComponent(BulletsComponentsLookup.ViewControll); } }
 
-    public void AddViewControll(IViewController newController) {
+    public void AddViewControll(IPoolableViewController newController) {
         var index = BulletsComponentsLookup.ViewControll;
         var component = CreateComponent<ViewControllComponent>(index);
         component.controller = newController;
         AddComponent(index, component);
     }
 
-    public void ReplaceViewControll(IViewController newController) {
+    public void ReplaceViewControll(IPoolableViewController newController) {
         var index = BulletsComponentsLookup.ViewControll;
         var component = CreateComponent<ViewControllComponent>(index);
         component.controller = newController;

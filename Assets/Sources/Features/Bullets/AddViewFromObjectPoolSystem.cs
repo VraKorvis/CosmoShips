@@ -29,14 +29,17 @@ public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity>,
         foreach (var e in entities) {
             GameObject gameObject = e.viewObjectPool.pool.Get();
             gameObject.SetActive(true);
-            gameObject.transform.SetParent(_container, false);            
+            gameObject.transform.SetParent(_container, false);
+            e.AddView(gameObject);
             gameObject.Link(e, Contexts.sharedInstance.bullets);
-            e.AddViewControll(gameObject.GetComponent<IViewController>());
+          
             var urb = gameObject.GetComponent<UnityRigidbody>();
             if (urb!=null) {
                 e.AddRigidbody(urb);
                 e.rigidbody.value._rigidbody.transform.position = Contexts.sharedInstance.game.playerEntity.rigidbody.value._rigidbody.transform.position;
             }
+            var viewController = gameObject.GetComponent<IPoolableViewController>();
+            e.AddViewControll(viewController);
         }
     }
 

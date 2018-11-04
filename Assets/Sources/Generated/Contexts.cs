@@ -72,6 +72,14 @@ public partial class Contexts {
             View,
             game.GetGroup(GameMatcher.View),
             (e, c) => ((ViewComponent)c).value));
+        enemies.AddEntityIndex(new Entitas.EntityIndex<EnemiesEntity, UnityEngine.GameObject>(
+            View,
+            enemies.GetGroup(EnemiesMatcher.View),
+            (e, c) => ((ViewComponent)c).value));
+        bullets.AddEntityIndex(new Entitas.EntityIndex<BulletsEntity, UnityEngine.GameObject>(
+            View,
+            bullets.GetGroup(BulletsMatcher.View),
+            (e, c) => ((ViewComponent)c).value));
     }
 }
 
@@ -79,6 +87,14 @@ public static class ContextsExtensions {
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithView(this GameContext context, UnityEngine.GameObject value) {
         return ((Entitas.EntityIndex<GameEntity, UnityEngine.GameObject>)context.GetEntityIndex(Contexts.View)).GetEntities(value);
+    }
+
+    public static System.Collections.Generic.HashSet<EnemiesEntity> GetEntitiesWithView(this EnemiesContext context, UnityEngine.GameObject value) {
+        return ((Entitas.EntityIndex<EnemiesEntity, UnityEngine.GameObject>)context.GetEntityIndex(Contexts.View)).GetEntities(value);
+    }
+
+    public static System.Collections.Generic.HashSet<BulletsEntity> GetEntitiesWithView(this BulletsContext context, UnityEngine.GameObject value) {
+        return ((Entitas.EntityIndex<BulletsEntity, UnityEngine.GameObject>)context.GetEntityIndex(Contexts.View)).GetEntities(value);
     }
 }
 //------------------------------------------------------------------------------

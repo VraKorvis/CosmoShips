@@ -2,7 +2,7 @@
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 
-[Game]
+[Game, Enemies, Bullets]
 public class ViewComponent : IComponent {
     [EntityIndex]
     public GameObject value;

@@ -27,7 +27,7 @@ public class MoveSystem : IExecuteSystem {
             // Vector3 posLErp = Vector3.Lerp(playerTransform.position, playerTransform.position+ newPosition, mooveSpeedMultiply*Time.deltaTime);
             // playerTransform.position = posLErp;
 
-            Rigidbody rb = playerEntity.rigidbody.value.rigidBody;
+            Rigidbody rb = playerEntity.rigidbody.value.RigidBody;
             rb.transform.position += _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.deltaTime;
 
             //rb.constraints = RigidbodyConstraints.FreezeRotation;

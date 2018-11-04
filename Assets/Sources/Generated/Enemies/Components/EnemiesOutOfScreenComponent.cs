@@ -10,10 +10,10 @@ public partial class EnemiesEntity {
 
     static readonly OutOfScreenComponent outOfScreenComponent = new OutOfScreenComponent();
 
-    public bool isOutOfScreen {
+    public bool flagOutOfScreen {
         get { return HasComponent(EnemiesComponentsLookup.OutOfScreen); }
         set {
-            if (value != isOutOfScreen) {
+            if (value != flagOutOfScreen) {
                 var index = EnemiesComponentsLookup.OutOfScreen;
                 if (value) {
                     var componentPool = GetComponentPool(index);

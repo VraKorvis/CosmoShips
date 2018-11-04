@@ -30,10 +30,11 @@ public class RootSystem : Feature {
         //Debug
         Add(new LogHealthSystem(contexts));
         Add(new CreateTestEnemyForCheckCollisionSystem(contexts)); 
-        Add(new CheckHealthSystem(contexts));
+        Add(new MultiCheckHealthSystem(contexts));
 
         //Destroy
-        Add(new DestroyEntitySystem());
+        Add(new MultiDestroySystem(contexts));
+        Add(new BulletOutOfScreenSystem(contexts));
            
 
     }

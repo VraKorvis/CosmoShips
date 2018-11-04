@@ -15,21 +15,21 @@ public class ProcessCollisionSystem : ReactiveSystem<InputEntity> {
         return context.CreateCollector(InputMatcher.AllOf(InputMatcher.Collider));
     }
 
-    protected override bool Filter(InputEntity entity) {       
+    protected override bool Filter(InputEntity entity) {
         return entity.hasCollider;
-    }   
-    
+    }
+
     protected override void Execute(List<InputEntity> entities) {
         //Debug.Log("Hit");
         foreach (var e in entities) {
             // Debug.Log("entity collider : " + e);
-            var bulletHealth = e.collider.self as IHealthEntity;
-            bulletHealth.ReplaceHealth(bulletHealth.health.value - 1);
-            var newEnemyHealth = (e.collider.other as IHealthEntity).health.value - 10;
-            (e.collider.other as IHealthEntity).ReplaceHealth(newEnemyHealth);
-
+            var self = (IHealthEntity)e.collider.self;
+            self.ReplaceHealth(self.health.value - 1);
+            var other = (IHealthEntity)e.collider.other;
+            var newEnemyHealth = other.health.value - ((BulletsEntity)self).damage.value;
+            other.ReplaceHealth(newEnemyHealth);
         }
     }
 
-  
+
 }

@@ -16,21 +16,23 @@ public static class GameComponentsLookup {
     public const int InitialPosition = 5;
     public const int Laser = 6;
     public const int LevelSetup = 7;
-    public const int Player = 8;
-    public const int PlayerShoot = 9;
-    public const int Position = 10;
-    public const int Resource = 11;
-    public const int Rigidbody = 12;
-    public const int RocketLauncher = 13;
-    public const int Rotation = 14;
-    public const int ShipsSetup = 15;
-    public const int ShipsStatsMultipliers = 16;
-    public const int View = 17;
-    public const int ViewObjectPool = 18;
-    public const int WeaponCharacteristic = 19;
-    public const int WeaponSetup = 20;
+    public const int OutOfScreen = 8;
+    public const int Player = 9;
+    public const int PlayerShoot = 10;
+    public const int Position = 11;
+    public const int Resource = 12;
+    public const int Rigidbody = 13;
+    public const int RocketLauncher = 14;
+    public const int Rotation = 15;
+    public const int ShipsSetup = 16;
+    public const int ShipsStatsMultipliers = 17;
+    public const int View = 18;
+    public const int ViewControll = 19;
+    public const int ViewObjectPool = 20;
+    public const int WeaponCharacteristic = 21;
+    public const int WeaponSetup = 22;
 
-    public const int TotalComponents = 21;
+    public const int TotalComponents = 23;
 
     public static readonly string[] componentNames = {
         "BaseShipStats",
@@ -41,6 +43,7 @@ public static class GameComponentsLookup {
         "InitialPosition",
         "Laser",
         "LevelSetup",
+        "OutOfScreen",
         "Player",
         "PlayerShoot",
         "Position",
@@ -51,6 +54,7 @@ public static class GameComponentsLookup {
         "ShipsSetup",
         "ShipsStatsMultipliers",
         "View",
+        "ViewControll",
         "ViewObjectPool",
         "WeaponCharacteristic",
         "WeaponSetup"
@@ -65,6 +69,7 @@ public static class GameComponentsLookup {
         typeof(InitialPositionComponent),
         typeof(LaserComponent),
         typeof(LevelSetupComponent),
+        typeof(OutOfScreenComponent),
         typeof(PlayerComponent),
         typeof(PlayerShootComponent),
         typeof(PositionComponent),
@@ -75,6 +80,7 @@ public static class GameComponentsLookup {
         typeof(ShipsSetupComponent),
         typeof(ShipsStatsMultipliersComponent),
         typeof(ViewComponent),
+        typeof(ViewControllComponent),
         typeof(ViewObjectPoolComponent),
         typeof(WeaponCharacteristicComponent),
         typeof(WeaponSetupComponent)

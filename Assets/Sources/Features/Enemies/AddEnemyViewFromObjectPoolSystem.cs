@@ -30,8 +30,9 @@ public class AddEnemyViewFromObjectPoolSystem : ReactiveSystem<EnemiesEntity>, I
             GameObject gameObject = e.viewObjectPool.pool.Get();
             gameObject.SetActive(true);
             gameObject.transform.SetParent(_container, false);
-           gameObject.Link(e, _contexts.enemies);
-            e.AddViewControll(gameObject.GetComponent<IViewController>());
+            e.AddView(gameObject);
+            gameObject.Link(e, _contexts.enemies); 
+            
             var urb = gameObject.GetComponent<UnityRigidbody>();
             if (urb != null) {
                 e.AddRigidbody(urb);
@@ -40,6 +41,9 @@ public class AddEnemyViewFromObjectPoolSystem : ReactiveSystem<EnemiesEntity>, I
                 pos.z = -5.0f;
                 e.rigidbody.value._rigidbody.transform.position = pos;
             }
+
+            var poolViewController = gameObject.GetComponent<IPoolableViewController>();
+            e.AddViewControll(poolViewController);
         }
     }
 }

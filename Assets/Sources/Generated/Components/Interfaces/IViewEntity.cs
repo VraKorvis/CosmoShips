@@ -6,12 +6,12 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public partial interface IViewControllEntity {
+public partial interface IViewEntity {
 
-    ViewControllComponent viewControll { get; }
-    bool hasViewControll { get; }
+    ViewComponent view { get; }
+    bool hasView { get; }
 
-    void AddViewControll(IPoolableViewController newController);
-    void ReplaceViewControll(IPoolableViewController newController);
-    void RemoveViewControll();
+    void AddView(UnityEngine.GameObject newValue);
+    void ReplaceView(UnityEngine.GameObject newValue);
+    void RemoveView();
 }

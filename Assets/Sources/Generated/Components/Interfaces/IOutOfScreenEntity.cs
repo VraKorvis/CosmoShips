@@ -7,5 +7,5 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 public partial interface IOutOfScreenEntity {
-    bool isOutOfScreen { get; set; }
+    bool flagOutOfScreen { get; set; }
 }

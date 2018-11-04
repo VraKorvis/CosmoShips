@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour {
 
     private void Update() {
         _systems.Execute();
+       // _systems.Cleanup();
     }
 
     private void FixedUpdate() {
