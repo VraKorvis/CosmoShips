@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 4371135682597146}
   - component: {fileID: 54370797932774752}
   - component: {fileID: 114628211768885462}
-  - component: {fileID: 114745678910066820}
   - component: {fileID: 114695579795786200}
   m_Layer: 0
   m_Name: Enemy3.1
@@ -240,16 +239,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114745678910066820
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1636358157236592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4152daaae8ad5eb44bc710325f242b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

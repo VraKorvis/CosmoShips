@@ -18,7 +18,7 @@ public class MultiDestroySystem : MultiReactiveSystem<IDestroyableEntity, Contex
 
     protected override ICollector[] GetTrigger(Contexts contexts) {
         return new ICollector[] {
-             contexts.game.CreateCollector(GameMatcher.Destroy),
+            //contexts.game.CreateCollector(GameMatcher.Destroy),
             contexts.bullets.CreateCollector(BulletsMatcher.AnyOf(BulletsMatcher.Destroy, BulletsMatcher.OutOfScreen)),
             contexts.enemies.CreateCollector(EnemiesMatcher.AnyOf(EnemiesMatcher.Destroy))
         };
@@ -30,7 +30,7 @@ public class MultiDestroySystem : MultiReactiveSystem<IDestroyableEntity, Contex
 
     protected override void Execute(List<IDestroyableEntity> entities) {
         foreach (var e in entities) {            
-            if (e.hasViewControll) {
+            if (e.hasViewControll) {               
                 e.viewControll.controller.Hide(true);
                 e.Destroy();               
             }

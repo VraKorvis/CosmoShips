@@ -19,7 +19,9 @@ public class ProcessShootSystem : IExecuteSystem {
     public void Execute() {       
         foreach (var e in _group) {            
             var rb = e.rigidbody.value._rigidbody;
-            rb.transform.position += Vector3.right * 75 * Time.deltaTime;
+            var id = _contexts.game.currentGameSetup.value.laserID;
+            var speed = _contexts.game.weaponSetup.value.lasers[id].weaponCharacteristic.speed;
+            rb.transform.position += Vector3.right * speed * Time.deltaTime;           
         }
     }
 

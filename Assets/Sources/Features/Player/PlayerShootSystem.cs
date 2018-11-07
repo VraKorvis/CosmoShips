@@ -51,7 +51,8 @@ public class PlayerShootSystem : ReactiveSystem<InputEntity>, IInitializeSystem 
                 bullet.AddHealth(1);
                 var weaponID = _contexts.game.currentGameSetup.value.laserID;
                 var damage = _contexts.game.weaponSetup.value.lasers[weaponID].weaponCharacteristic.damage;
-                bullet.AddDamage(damage);                
+                bullet.AddDamage(damage);
+                
                
                 
             }

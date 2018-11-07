@@ -4,7 +4,7 @@ using Entitas;
 using UnityEngine;
 using Entitas.Unity;
 
-
+//TODO MultyAddViewFromObjectPool
 public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity>, IInitializeSystem {
       
     Transform _container;

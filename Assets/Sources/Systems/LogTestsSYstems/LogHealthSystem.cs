@@ -3,20 +3,32 @@ using Entitas;
 using System;
 using System.Collections.Generic;
 
-public class LogHealthSystem : ReactiveSystem<GameEntity> {   
-    public LogHealthSystem(Contexts contexts) : base(contexts.game) {}   
-    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context) {
-        return context.CreateCollector(GameMatcher.Health);
+public interface ILogHealth : IEntity, IHealthEntity { }
+public partial class GameEntity : ILogHealth { }
+public partial class BulletsEntity : ILogHealth { }
+public partial class EnemiesEntity : ILogHealth { }
+
+public class LogHealthSystem : MultiReactiveSystem<ILogHealth, Contexts> {
+    public LogHealthSystem(Contexts contexts) : base(contexts) { }
+
+    protected override ICollector[] GetTrigger(Contexts contexts) {
+        return new ICollector[] {
+            contexts.game.CreateCollector(GameMatcher.Health),
+            //contexts.bullets.CreateCollector(BulletsMatcher.Health),
+            contexts.enemies.CreateCollector(EnemiesMatcher.Health)
+        };
     }
-    protected override bool Filter(GameEntity entity) {
+
+    protected override bool Filter(ILogHealth entity) {
         return entity.hasHealth;
     }
-    protected override void Execute(List<GameEntity> entities) {
+    protected override void Execute(List<ILogHealth> entities) {
         foreach (var entity in entities) {
             var health = entity.health.value;
             Debug.Log(entity + " health: " + health);
         }
     }
 
-   
+
+
 }

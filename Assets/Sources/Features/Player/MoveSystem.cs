@@ -2,25 +2,33 @@
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 using UnityEngine;
+using System;
 
 public class MoveSystem : IExecuteSystem {
     private Contexts _contexts;
 
+    public float leftBorder;
+    public float rightBorder;
+    public float topBorder;
+    public float botBorder;
+
     //private IGroup<GameEntity> _group;
     public MoveSystem(Contexts contexts) {
         _contexts = contexts;
-        //_group = contexts.game.GetGroup(GameMatcher.View);        
+        //_group = contexts.game.GetGroup(GameMatcher.View);  
+        
     }
 
     public void Execute() {
         var playerEntity = _contexts.game.playerEntity;
-        if (playerEntity != null) {
-            
+        
+        if (playerEntity!=null) {
+
             var playerTransform = playerEntity.view.value.transform;
             var mooveSpeed = playerEntity.baseShipStats.baseShip.mooveSpeed;
             var mooveSpeedMultiply = playerEntity.shipsStatsMultipliers.shipMultipliers.mooveSpeed;
 
-            Vector3 newPosition = playerTransform.position + _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.deltaTime ;
+            Vector3 newPosition = playerTransform.position + _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.deltaTime;
 
             //playerTransform.Translate(newPosition);
 
@@ -28,10 +36,11 @@ public class MoveSystem : IExecuteSystem {
             // playerTransform.position = posLErp;
 
             Rigidbody rb = playerEntity.rigidbody.value.RigidBody;
-            rb.transform.position += _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.deltaTime;
+            Vector3 newPos = _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.deltaTime;
+            rb.transform.position += newPos;
 
             //rb.constraints = RigidbodyConstraints.FreezeRotation;
-            
+
 
             //rb.MovePosition(rb.position+ _contexts.input.input.value * mooveSpeed * mooveSpeedMultiply * Time.fixedDeltaTime);
 
