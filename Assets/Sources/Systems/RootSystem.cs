@@ -4,10 +4,11 @@ using Entitas;
 public class RootSystem : Feature {
 
     public RootSystem(Contexts contexts, Services services) {
-       
-       
+
+
 
         //Initilize
+        Add(new LvlInitSystem(contexts));
         Add(new InitializePlayerSystem(contexts, services.viewService));
         Add(new InstantiateViewSystem(contexts, services.viewService));
 

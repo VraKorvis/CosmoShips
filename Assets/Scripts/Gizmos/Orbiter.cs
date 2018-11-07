@@ -12,6 +12,7 @@ public class Orbiter : MonoBehaviour {
     public float speedRotation = 10f;
     private float rotX = 0f;
     private float rotY = 0f;
+  
     private void Awake() {
         _transform = GetComponent<Transform>();
     }
@@ -21,11 +22,9 @@ public class Orbiter : MonoBehaviour {
         float vert = Input.GetAxis("Vertical");
 
         rotX += vert * speedRotation * Time.deltaTime;
-        rotY -= horz * speedRotation * Time.deltaTime;
-       
+        rotY -= horz * speedRotation * Time.deltaTime;       
 
 		Vector3 startTEst = transform.rotation * Vector3.forward;
-
        
         float alfa = rotX;
         Quaternion YRot = Quaternion.Euler(0f, rotY, 0f);
@@ -44,7 +43,6 @@ public class Orbiter : MonoBehaviour {
         Vector3 nv = new Vector3(xn, 0, yn) * -distance;
       
         _transform.position = pivot.position + nv;
-
 
     }
 	
@@ -65,9 +63,7 @@ public class Orbiter : MonoBehaviour {
         Vector3 quantToVect = transform.rotation * Vector3.forward;
         Vector3 newPos = quantToVect * -distance;
 
-
         _transform.position = pivot.position + newPos;
-
 
     }
 
