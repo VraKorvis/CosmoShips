@@ -14,38 +14,38 @@ MonoBehaviour:
   lasers:
   - type: {fileID: 1327280743194778, guid: 4e49efe398317244b9a4b7dbe6e093ea, type: 2}
     weaponCharacteristic:
-      damage: 200
-      speed: 30
+      damage: 20
+      speed: 220
       isHoming: 0
   - type: {fileID: 1185066304227122, guid: eacb608297e655f4fa72d0cbb6ed6ab5, type: 2}
     weaponCharacteristic:
-      damage: 200
-      speed: 30
+      damage: 24
+      speed: 200
       isHoming: 0
   - type: {fileID: 1360723832232116, guid: 1ac002587cae1b94c990fac077eeb6ac, type: 2}
     weaponCharacteristic:
-      damage: 200
-      speed: 30
+      damage: 26
+      speed: 180
       isHoming: 0
   - type: {fileID: 1678786727893182, guid: 07e9090362917e742aa33b5e8ea3eb08, type: 2}
     weaponCharacteristic:
-      damage: 200
-      speed: 30
+      damage: 28
+      speed: 160
       isHoming: 0
   - type: {fileID: 1776292132504712, guid: 2acc7d0e199124542b3cb00e4e9cf99e, type: 2}
     weaponCharacteristic:
-      damage: 200
-      speed: 30
+      damage: 30
+      speed: 140
       isHoming: 0
   - type: {fileID: 1655157584903650, guid: 704c397d0fc8c43468b1dd0183dddf0b, type: 2}
     weaponCharacteristic:
-      damage: 200
-      speed: 30
+      damage: 32
+      speed: 120
       isHoming: 0
   - type: {fileID: 1285951574640934, guid: 6913a00a6bab8d944b14ae0e03d0c92d, type: 2}
     weaponCharacteristic:
-      damage: 200
-      speed: 30
+      damage: 34
+      speed: 100
       isHoming: 0
   rockets:
   - type: {fileID: 1973135885299512, guid: 2bb9ce5847323404099e8dc1e86886cb, type: 2}

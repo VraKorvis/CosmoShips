@@ -12,20 +12,23 @@ public static class InputComponentsLookup {
     public const int Collision = 1;
     public const int Input = 2;
     public const int ShootInput = 3;
+    public const int SlowMotion = 4;
 
-    public const int TotalComponents = 4;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
         "Collider",
         "Collision",
         "Input",
-        "ShootInput"
+        "ShootInput",
+        "SlowMotion"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(ColliderComponent),
         typeof(CollisionComponent),
         typeof(InputComponent),
-        typeof(ShootInputComponent)
+        typeof(ShootInputComponent),
+        typeof(SlowMotionComponent)
     };
 }

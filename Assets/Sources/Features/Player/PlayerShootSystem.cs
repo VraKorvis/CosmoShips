@@ -8,53 +8,50 @@ using Object = UnityEngine.Object;
 
 public class PlayerShootSystem : ReactiveSystem<InputEntity>, IInitializeSystem {
 
-    private Contexts _contexts;
+    private Contexts _context;
 
     ObjectPool<GameObject> _bulletsObjectPool;
 
     public PlayerShootSystem(Contexts contexts) : base(contexts.input) {
-        _contexts = contexts;
+        _context = contexts;
     }
 
     public void Initialize() {
         // Assets.Instantiate<GameObject>(Res.Bullet);
-        var weaponID = _contexts.game.currentGameSetup.value.laserID;
-        var laserPrefab = _contexts.game.weaponSetup.value.lasers[weaponID].type;    
-        _bulletsObjectPool = new ObjectPool<GameObject>(() => Object.Instantiate(laserPrefab));       
+        var lasers = _context.game.weaponSetup.value.lasers;
+        var laserID = _context.game.currentGameSetup.value.laserID;
+        var laserPrefab = lasers[laserID].type;
+        _bulletsObjectPool = new ObjectPool<GameObject>(() => Object.Instantiate(laserPrefab));
     }
 
     protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context) {
         return context.CreateCollector(InputMatcher.ShootInput);
     }
 
-    protected override bool Filter(InputEntity entity) {
+    protected override bool Filter(InputEntity entity) {  
         return entity.isShootInput;
     }
 
     protected override void Execute(List<InputEntity> entities) {
-        var playerEntity = _contexts.game.playerEntity;
+        var playerEntity = _context.game.playerEntity;
         foreach (var e in entities) {
-           
-           
-            if (e.isShootInput) {
 
-                // TODO CoolDown should be configurable
-                // e.AddBulletCoolDown(7);
+            if (!playerEntity.hasShootCoolDown) {
+                var bullet = _context.bullets.CreateEntity();
+                // TODO CoolDown should be configurable   
+                var lasers = _context.game.weaponSetup.value.lasers;
+                var laserID = _context.game.currentGameSetup.value.laserID;
+                var weaponCharact = lasers[laserID].weaponCharacteristic;
+                playerEntity.AddShootCoolDown(weaponCharact.speed/1000f);
 
-                var velX = 1;
-                var velY = 1;
-                var velocity = new Vector3(velX, velY, 0);
-                var bullet = _contexts.bullets.CreateEntity();
-                bullet.AddViewObjectPool(_bulletsObjectPool);                
+                bullet.AddViewObjectPool(_bulletsObjectPool);
+
+                var damage = weaponCharact.damage;
+                bullet.AddDamage(damage);
+
                 bullet.isRay = true;
                 bullet.isBullet = true;
                 bullet.AddHealth(1);
-                var weaponID = _contexts.game.currentGameSetup.value.laserID;
-                var damage = _contexts.game.weaponSetup.value.lasers[weaponID].weaponCharacteristic.damage;
-                bullet.AddDamage(damage);
-                
-               
-                
             }
         }
     }

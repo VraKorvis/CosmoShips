@@ -26,13 +26,14 @@ public static class GameComponentsLookup {
     public const int Rotation = 15;
     public const int ShipsSetup = 16;
     public const int ShipsStatsMultipliers = 17;
-    public const int View = 18;
-    public const int ViewControll = 19;
-    public const int ViewObjectPool = 20;
-    public const int WeaponCharacteristic = 21;
-    public const int WeaponSetup = 22;
+    public const int ShootCoolDown = 18;
+    public const int View = 19;
+    public const int ViewControll = 20;
+    public const int ViewObjectPool = 21;
+    public const int WeaponCharacteristic = 22;
+    public const int WeaponSetup = 23;
 
-    public const int TotalComponents = 23;
+    public const int TotalComponents = 24;
 
     public static readonly string[] componentNames = {
         "BaseShipStats",
@@ -53,6 +54,7 @@ public static class GameComponentsLookup {
         "Rotation",
         "ShipsSetup",
         "ShipsStatsMultipliers",
+        "ShootCoolDown",
         "View",
         "ViewControll",
         "ViewObjectPool",
@@ -79,6 +81,7 @@ public static class GameComponentsLookup {
         typeof(RotationComponent),
         typeof(ShipsSetupComponent),
         typeof(ShipsStatsMultipliersComponent),
+        typeof(ShootCoolDownComponent),
         typeof(ViewComponent),
         typeof(ViewControllComponent),
         typeof(ViewObjectPoolComponent),

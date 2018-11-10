@@ -31,17 +31,15 @@ public class InputSystem : IExecuteSystem, IInitializeSystem {
         Vector3 movement = new Vector3(moveX, moveY, 0.0f);
         _contexts.input.ReplaceInput(movement);
 
-        if (Input.GetAxisRaw("Fire1") != 0) {
-            //_contexts.input.CreateEntity()
-            //         .IsShootInput(true)
-            //         .AddInputOwner(PLAYER1_ID);
+         _contexts.input.inputEntity.isShootInput = true;
+        //if (Input.GetAxisRaw("Fire1") != 0) {
+        //    _contexts.input.inputEntity.isShootInput = true;
 
-            _contexts.input.inputEntity.isShootInput = true;
-        } else {
-            _contexts.input.inputEntity.isShootInput = false;
-        }
+        //} else {
+        //    _contexts.input.inputEntity.isShootInput = false;
+        //}
 
-        //_contexts.input.isSlowMotion = Input.GetAxisRaw("Fire2") != 0;
+        _contexts.input.isSlowMotion = Input.GetAxisRaw("Fire2") != 0;
 
     }
 

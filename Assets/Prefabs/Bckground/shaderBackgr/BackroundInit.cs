@@ -5,13 +5,21 @@ using UnityEngine;
 public class BackroundInit : MonoBehaviour {
 
     public Material material;
-    public Texture[] texture;
+    public Texture texture;
     public CurrentGameSetup currentGameSetup;
+    public LevelSetup levelSetup;
+    private AudioSource audioSource;
 
     private void Awake() {
-        int count = texture.Length-1;
-        int lvlID = currentGameSetup.lvlID > texture.Length ? Random.Range(0, count) : currentGameSetup.lvlID;
-        material.SetTexture("_Background", texture[lvlID]);
+        int lvlID = currentGameSetup.lvlID;
+        texture = levelSetup.levels[lvlID].background;
+        material.SetTexture("_Background", texture);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = levelSetup.levels[lvlID].audioClip;
+    }
+
+    private void Start() {       
+        audioSource.Play();
     }
 
 }

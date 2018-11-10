@@ -109,7 +109,7 @@ MonoBehaviour:
     mooveSpeed: 25
     mobility: 9
     isShow: 0
-  - type: {fileID: 1018302354118430, guid: dbeffb8f38849f545b39fd696810760e, type: 2}
+  - type: {fileID: 1069714824585050, guid: 93274fc5e0eebc644bdaa9c86f7ac54c, type: 2}
     health: 1000
     shootSpeed: 700
     mooveSpeed: 25

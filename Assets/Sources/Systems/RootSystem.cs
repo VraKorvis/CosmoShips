@@ -19,16 +19,22 @@ public class RootSystem : Feature {
         //Input
         Add(new InputSystem(contexts));
 
-        //Move, Rotate, SHoot, ..., etc, Physics
+        //Movement, Rotate
         Add(new MoveSystem(contexts));
         Add(new RotateSystem(contexts));
-        Add(new PlayerShootSystem(contexts));
+
+        //Shoot
+        //  Add(new PlayerShootSystem(contexts));   // botton shooting 
+        Add(new ContinuousShootSystem(contexts));   // ongoing shooting   //TODO switching in game
+        Add(new ShootCoolDownSystem(contexts));
         Add(new ProcessShootSystem(contexts));
+
+        //Collision, Physics
         Add(new ProcessCollisionSystem(contexts));
 
-        Add(new LogCollisionSystem(contexts));
 
         //Debug
+        Add(new LogCollisionSystem(contexts));
         Add(new LogHealthSystem(contexts));
         Add(new CreateTestEnemyForCheckCollisionSystem(contexts)); 
         Add(new MultiCheckHealthSystem(contexts));

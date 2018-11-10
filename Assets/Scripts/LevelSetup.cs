@@ -10,8 +10,9 @@ public class LevelSetupEdit : Editor {
 
     private ReorderableList _levels;
 
-    private static float _elementHeight = 60;
+    private static float _elementHeight = 80;
     private static float _elementHeightIfHide = 20;
+    private static float _lineSpacing = 18;
 
     private void OnEnable() {
 
@@ -36,10 +37,11 @@ public class LevelSetupEdit : Editor {
             element.isExpanded = EditorGUI.Foldout(new Rect(rect.x + 15, rect.y + 2, rect.width / 4, 10),
                 element.isExpanded, property_tmp == null ? new GUIContent("Add level") : new GUIContent(property_tmp), false);
 
-           
+            int n = 1;
             if (element.isExpanded) {                
-                EditorGUI.PropertyField(new Rect(rect.x, rect.y + 18, rect.width - 10, EditorGUIUtility.singleLineHeight), propertyType, new GUIContent("Name"));                
-                EditorGUI.PropertyField(new Rect(rect.x, rect.y + 36, rect.width - 10, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("background"), new GUIContent("Background"));
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing * n++, rect.width - 10, EditorGUIUtility.singleLineHeight), propertyType, new GUIContent("Name"));                
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing * n++, rect.width - 10, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("background"), new GUIContent("Background"));
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y + _lineSpacing * n++, rect.width - 10, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("audioClip"), new GUIContent("Music"));
             }
         };
 
@@ -67,8 +69,6 @@ public class LevelSetupEdit : Editor {
         EditorApplication.update.Invoke();
     }
 
-
-
     //public void OnSceneGUI() {
     //    LevelSetup levelSetup = (LevelSetup)target;
     //    Handles.BeginGUI();
@@ -92,5 +92,12 @@ public class LevelSetup : ScriptableObject {
     [SerializeField]
     public List<Level> levels;
 
+}
+
+[Serializable]
+public class Level {
+    public string name;
+    public Texture background;
+    public AudioClip audioClip;
 }
 
