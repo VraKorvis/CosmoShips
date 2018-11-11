@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 54981457482115794}
   - component: {fileID: 114976415338329714}
   - component: {fileID: 114934713553540960}
+  - component: {fileID: 114063711991749238}
   m_Layer: 0
   m_Name: Enemy3.5Boss
   m_TagString: Untagged
@@ -218,6 +219,20 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: b8535b50bb5766044aa4882bcf3a57e1, type: 3}
+--- !u!114 &114063711991749238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1413461857054072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f216c8310fa138f40968271d1f420046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Explosion
+  effects:
+  - {fileID: 1517291512860240, guid: b82ba0eb84f85ba4d9e11a156ba32b34, type: 2}
 --- !u!114 &114934713553540960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,6 +244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mdespawnEffects: {fileID: 114053214837102150, guid: 7c805000d24fa7247b0ddacdb562a532,
+    type: 2}
 --- !u!114 &114976415338329714
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 54922703008514664}
   - component: {fileID: 114852590499665746}
   - component: {fileID: 114783988972395894}
+  - component: {fileID: 114053214837102150}
   m_Layer: 0
   m_Name: Enemy1.2
   m_TagString: Untagged
@@ -2189,6 +2190,20 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300056, guid: 4b1b879045388054586b4c3c31939dda, type: 3}
+--- !u!114 &114053214837102150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1535381599190540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f216c8310fa138f40968271d1f420046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Explosion
+  effects:
+  - {fileID: 1517291512860240, guid: b82ba0eb84f85ba4d9e11a156ba32b34, type: 2}
 --- !u!114 &114783988972395894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2200,6 +2215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mdespawnEffects: {fileID: 114053214837102150}
 --- !u!114 &114852590499665746
 MonoBehaviour:
   m_ObjectHideFlags: 1

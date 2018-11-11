@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 54514461237481662}
   - component: {fileID: 114462939481109378}
   - component: {fileID: 114307864660817354}
+  - component: {fileID: 114914580014968656}
   m_Layer: 0
   m_Name: Enemy2.5
   m_TagString: Untagged
@@ -813,6 +814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mdespawnEffects: {fileID: 114053214837102150, guid: 7c805000d24fa7247b0ddacdb562a532,
+    type: 2}
 --- !u!114 &114462939481109378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -825,3 +828,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 54514461237481662}
+--- !u!114 &114914580014968656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1137465926486998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f216c8310fa138f40968271d1f420046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Explosion
+  effects:
+  - {fileID: 1517291512860240, guid: b82ba0eb84f85ba4d9e11a156ba32b34, type: 2}
