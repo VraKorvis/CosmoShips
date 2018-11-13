@@ -12,35 +12,35 @@ MonoBehaviour:
   m_Name: ShipStats(gameSetup)
   m_EditorClassIdentifier: 
   baseShipsStats:
-  - type: {fileID: 1365646136699654, guid: 01a5544e053cff046aafc6641c739e95, type: 2}
+  - type: {fileID: 1797942635962150, guid: 7b08042d1e3bc534c92f764be39ee252, type: 2}
     health: 1500
-    shootSpeed: 600
-    mooveSpeed: 12
-    mobility: 40
+    shootSpeed: 300
+    mooveSpeed: 13
+    mobility: 16
     isShow: 0
-  - type: {fileID: 1327813546106772, guid: d17643fff8cee9f48b0856f296fa75c6, type: 2}
+  - type: {fileID: 1415811680873274, guid: 00631721267c7e74984666980d9ba418, type: 2}
     health: 900
-    shootSpeed: 900
+    shootSpeed: 200
     mooveSpeed: 15
-    mobility: 25
+    mobility: 20
     isShow: 0
-  - type: {fileID: 1162879401431686, guid: a85cd5ee6e177ad4694880374519a9a7, type: 2}
+  - type: {fileID: 1232511731776830, guid: 3bdde27223680cf4ab1cc393694f65cd, type: 2}
     health: 700
-    shootSpeed: 1000
-    mooveSpeed: 10
-    mobility: 30
-    isShow: 0
-  - type: {fileID: 1522217588723256, guid: c60fb67b609184e479bba26e39f5277a, type: 2}
-    health: 1400
-    shootSpeed: 800
+    shootSpeed: 250
     mooveSpeed: 14
-    mobility: 23
+    mobility: 17
     isShow: 0
-  - type: {fileID: 1761486150083364, guid: 9a459f3f16e105940a1a6c9b2677bddf, type: 2}
+  - type: {fileID: 1844797496907576, guid: 90d33f13970c089449723fa10f69d547, type: 2}
+    health: 1400
+    shootSpeed: 320
+    mooveSpeed: 12
+    mobility: 10
+    isShow: 0
+  - type: {fileID: 1892232670494558, guid: 418ab14b52c73374f8afef9df5cf5d0c, type: 2}
     health: 600
-    shootSpeed: 950
-    mooveSpeed: 16
-    mobility: 35
+    shootSpeed: 150
+    mooveSpeed: 13
+    mobility: 23
     isShow: 0
   baseShipStatsEnemy:
   - type: {fileID: 1091153394127212, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}

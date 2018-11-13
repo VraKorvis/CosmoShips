@@ -71,13 +71,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554392661751686}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.57, y: 0, z: 0}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: -0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4663623232368128}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: -90, z: 90}
 --- !u!4 &4663623232368128
 Transform:
   m_ObjectHideFlags: 1
@@ -99,13 +99,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1827027199074518}
-  m_LocalRotation: {x: 0.50000006, y: -0.50000006, z: 0.5, w: 0.5}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: -0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4663623232368128}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 180, y: -90, z: 90}
 --- !u!23 &23275091868672326
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -230,8 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mdespawnEffects: {fileID: 114053214837102150, guid: 7c805000d24fa7247b0ddacdb562a532,
-    type: 2}
+  mDespawnEffects: {fileID: 114430742507573978}
 --- !u!114 &114430742507573978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,4 +256,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c819ba3742b470548a116d118220d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 54518719095542950}
+  rb: {fileID: 0}

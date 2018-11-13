@@ -22,11 +22,12 @@ GameObject:
   - component: {fileID: 212836848379367284}
   - component: {fileID: 114059639302663758}
   - component: {fileID: 54831919811423612}
-  - component: {fileID: 114730191397203322}
   - component: {fileID: 114713658267449662}
-  - component: {fileID: 65845670060761320}
+  - component: {fileID: 114730191397203322}
+  - component: {fileID: 114196489487925314}
   - component: {fileID: 114073885248560892}
   - component: {fileID: 82384869708415438}
+  - component: {fileID: 65781226530916938}
   m_Layer: 0
   m_Name: RayYellow
   m_TagString: Untagged
@@ -62,18 +63,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!65 &65845670060761320
+--- !u!65 &65781226530916938
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1285951574640934}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 0.34, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.12, y: 1.2, z: 0.14}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!82 &82384869708415438
 AudioSource:
   m_ObjectHideFlags: 1
@@ -180,6 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc410793fa5a68e4da171f7fc3c4baef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _despawnEffects: {fileID: 114636290649707510, guid: 07e9090362917e742aa33b5e8ea3eb08,
+    type: 2}
   _minRotation: {x: 0, y: 0, z: 0}
   _baseRotation: {x: 11, y: 11, z: 11}
   _randomRotationFactor: 10
@@ -198,6 +201,20 @@ MonoBehaviour:
   randomizePitch: 1
   startingPitch: 1
   timeToDecrease: 3
+--- !u!114 &114196489487925314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285951574640934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f216c8310fa138f40968271d1f420046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Sparkl
+  effects:
+  - {fileID: 1701935448740890, guid: d8feda225fce3694b82cc1a6be2f164c, type: 2}
 --- !u!114 &114713658267449662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c819ba3742b470548a116d118220d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 54831919811423612}
+  rb: {fileID: 54831919811423612}
 --- !u!114 &114730191397203322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,15 +271,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 200949217
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300032, guid: e28011039bf621840a075643c6163dea, type: 3}
+  m_Sprite: {fileID: 21300012, guid: e28011039bf621840a075643c6163dea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3, y: 0.34}
+  m_Size: {x: 0.34, y: 1.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

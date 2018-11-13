@@ -33,8 +33,8 @@ public class AddEnemyViewFromObjectPoolSystem : ReactiveSystem<EnemiesEntity>, I
             
             var urb = gameObject.GetComponent<UnityRigidbody>();
             if (urb != null) {
-                e.AddRigidbody(urb);
-                e.rigidbody.value._rigidbody.transform.position = _container.position;            
+                e.AddUnityRigidbody(urb);
+                e.unityRigidbody.value.Rigidbody.transform.position = _container.position;            
             }
 
             var poolViewController = gameObject.GetComponent<IPoolableViewController>();

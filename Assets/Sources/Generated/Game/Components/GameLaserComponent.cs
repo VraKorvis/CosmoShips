@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly LaserComponent laserComponent = new LaserComponent();
+    public LaserComponent laser { get { return (LaserComponent)GetComponent(GameComponentsLookup.Laser); } }
+    public bool hasLaser { get { return HasComponent(GameComponentsLookup.Laser); } }
 
-    public bool isLaser {
-        get { return HasComponent(GameComponentsLookup.Laser); }
-        set {
-            if (value != isLaser) {
-                var index = GameComponentsLookup.Laser;
-                if (value) {
-                    var componentPool = GetComponentPool(index);
-                    var component = componentPool.Count > 0
-                            ? componentPool.Pop()
-                            : laserComponent;
+    public void AddLaser(UnityEngine.Transform[] newPosition) {
+        var index = GameComponentsLookup.Laser;
+        var component = CreateComponent<LaserComponent>(index);
+        component.position = newPosition;
+        AddComponent(index, component);
+    }
 
-                    AddComponent(index, component);
-                } else {
-                    RemoveComponent(index);
-                }
-            }
-        }
+    public void ReplaceLaser(UnityEngine.Transform[] newPosition) {
+        var index = GameComponentsLookup.Laser;
+        var component = CreateComponent<LaserComponent>(index);
+        component.position = newPosition;
+        ReplaceComponent(index, component);
+    }
+
+    public void RemoveLaser() {
+        RemoveComponent(GameComponentsLookup.Laser);
     }
 }
 

@@ -13,27 +13,25 @@ public static class GameComponentsLookup {
     public const int Destroy = 2;
     public const int GameSetup = 3;
     public const int Health = 4;
-    public const int InitialPosition = 5;
-    public const int Laser = 6;
-    public const int LevelSetup = 7;
-    public const int OutOfScreen = 8;
-    public const int Player = 9;
-    public const int PlayerShoot = 10;
-    public const int Position = 11;
-    public const int Resource = 12;
-    public const int Rigidbody = 13;
-    public const int RocketLauncher = 14;
-    public const int Rotation = 15;
-    public const int ShipsSetup = 16;
-    public const int ShipsStatsMultipliers = 17;
-    public const int ShootCoolDown = 18;
-    public const int View = 19;
-    public const int ViewControll = 20;
-    public const int ViewObjectPool = 21;
-    public const int WeaponCharacteristic = 22;
-    public const int WeaponSetup = 23;
+    public const int Laser = 5;
+    public const int LevelSetup = 6;
+    public const int OutOfScreen = 7;
+    public const int Player = 8;
+    public const int Resource = 9;
+    public const int RocketLauncher = 10;
+    public const int Rotation = 11;
+    public const int ShipsSetup = 12;
+    public const int ShipsStatsMultipliers = 13;
+    public const int ShootCoolDown = 14;
+    public const int UnityRigidbody = 15;
+    public const int UnityTransform = 16;
+    public const int View = 17;
+    public const int ViewControll = 18;
+    public const int ViewObjectPool = 19;
+    public const int WeaponCharacteristic = 20;
+    public const int WeaponSetup = 21;
 
-    public const int TotalComponents = 24;
+    public const int TotalComponents = 22;
 
     public static readonly string[] componentNames = {
         "BaseShipStats",
@@ -41,20 +39,18 @@ public static class GameComponentsLookup {
         "Destroy",
         "GameSetup",
         "Health",
-        "InitialPosition",
         "Laser",
         "LevelSetup",
         "OutOfScreen",
         "Player",
-        "PlayerShoot",
-        "Position",
         "Resource",
-        "Rigidbody",
         "RocketLauncher",
         "Rotation",
         "ShipsSetup",
         "ShipsStatsMultipliers",
         "ShootCoolDown",
+        "UnityRigidbody",
+        "UnityTransform",
         "View",
         "ViewControll",
         "ViewObjectPool",
@@ -68,20 +64,18 @@ public static class GameComponentsLookup {
         typeof(DestroyComponent),
         typeof(GameSetupComponent),
         typeof(HealthComponent),
-        typeof(InitialPositionComponent),
         typeof(LaserComponent),
         typeof(LevelSetupComponent),
         typeof(OutOfScreenComponent),
         typeof(PlayerComponent),
-        typeof(PlayerShootComponent),
-        typeof(PositionComponent),
         typeof(ResourceComponent),
-        typeof(RigidbodyComponent),
         typeof(RocketLauncherComponent),
         typeof(RotationComponent),
         typeof(ShipsSetupComponent),
         typeof(ShipsStatsMultipliersComponent),
         typeof(ShootCoolDownComponent),
+        typeof(UnityRigidbodyComponent),
+        typeof(UnityTransformComponent),
         typeof(ViewComponent),
         typeof(ViewControllComponent),
         typeof(ViewObjectPoolComponent),

@@ -29,17 +29,9 @@ public class AssetViewService : IViewService {
         }
     }
 
-    public void LoadWeaponAsset(GameEntity entity, int laserID, int rocketID) {
-        Laser laser = _contexts.game.weaponSetup.value.lasers[laserID];
-        Rocket rocket = _contexts.game.weaponSetup.value.rockets[rocketID];
+    public GameObject LoadWeapon(GameEntity entity, int shipsIndex) {
 
-        if (rocket != null) {
-            entity.AddResource(laser.type);
-        }
-        if (laser != null) {
-            entity.AddResource(rocket.type);
-        }
-
-
+        return null;
     }
+
 }

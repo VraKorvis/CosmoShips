@@ -11,5 +11,7 @@ public interface IViewController {
     void Show(bool animated);
     void Hide(bool animated);
 
+    void Hide(bool animated, Vector3 hitPos);
+
     void Reset();
 }

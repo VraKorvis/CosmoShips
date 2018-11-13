@@ -28,7 +28,7 @@ public class PlayerShootSystem : ReactiveSystem<InputEntity>, IInitializeSystem 
         return context.CreateCollector(InputMatcher.ShootInput);
     }
 
-    protected override bool Filter(InputEntity entity) {  
+    protected override bool Filter(InputEntity entity) {
         return entity.isShootInput;
     }
 
@@ -42,14 +42,13 @@ public class PlayerShootSystem : ReactiveSystem<InputEntity>, IInitializeSystem 
                 var lasers = _context.game.weaponSetup.value.lasers;
                 var laserID = _context.game.currentGameSetup.value.laserID;
                 var weaponCharact = lasers[laserID].weaponCharacteristic;
-                playerEntity.AddShootCoolDown(weaponCharact.speed/1000f);
+                playerEntity.AddShootCoolDown(weaponCharact.speed / 1000f);
 
                 bullet.AddViewObjectPool(_bulletsObjectPool);
 
                 var damage = weaponCharact.damage;
                 bullet.AddDamage(damage);
 
-                bullet.isRay = true;
                 bullet.isBullet = true;
                 bullet.AddHealth(1);
             }

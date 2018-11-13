@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly RocketLauncherComponent rocketLauncherComponent = new RocketLauncherComponent();
+    public RocketLauncherComponent rocketLauncher { get { return (RocketLauncherComponent)GetComponent(GameComponentsLookup.RocketLauncher); } }
+    public bool hasRocketLauncher { get { return HasComponent(GameComponentsLookup.RocketLauncher); } }
 
-    public bool isRocketLauncher {
-        get { return HasComponent(GameComponentsLookup.RocketLauncher); }
-        set {
-            if (value != isRocketLauncher) {
-                var index = GameComponentsLookup.RocketLauncher;
-                if (value) {
-                    var componentPool = GetComponentPool(index);
-                    var component = componentPool.Count > 0
-                            ? componentPool.Pop()
-                            : rocketLauncherComponent;
+    public void AddRocketLauncher(UnityEngine.Vector3 newPosition) {
+        var index = GameComponentsLookup.RocketLauncher;
+        var component = CreateComponent<RocketLauncherComponent>(index);
+        component.position = newPosition;
+        AddComponent(index, component);
+    }
 
-                    AddComponent(index, component);
-                } else {
-                    RemoveComponent(index);
-                }
-            }
-        }
+    public void ReplaceRocketLauncher(UnityEngine.Vector3 newPosition) {
+        var index = GameComponentsLookup.RocketLauncher;
+        var component = CreateComponent<RocketLauncherComponent>(index);
+        component.position = newPosition;
+        ReplaceComponent(index, component);
+    }
+
+    public void RemoveRocketLauncher() {
+        RemoveComponent(GameComponentsLookup.RocketLauncher);
     }
 }
 

@@ -21,6 +21,10 @@ public class ViewController : MonoBehaviour, IViewController {
         gameObject.SetActive(false);
     }
 
+    public virtual void Hide(bool animated, Vector3 pos) {
+        gameObject.SetActive(false);
+    }
+
     public virtual void Reset() {
         gameObject.Unlink();
     }

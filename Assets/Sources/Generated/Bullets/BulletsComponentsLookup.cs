@@ -13,14 +13,13 @@ public static class BulletsComponentsLookup {
     public const int Destroy = 2;
     public const int Health = 3;
     public const int OutOfScreen = 4;
-    public const int Position = 5;
-    public const int Ray = 6;
-    public const int Rigidbody = 7;
-    public const int View = 8;
-    public const int ViewControll = 9;
-    public const int ViewObjectPool = 10;
+    public const int UnityRigidbody = 5;
+    public const int UnityTransform = 6;
+    public const int View = 7;
+    public const int ViewControll = 8;
+    public const int ViewObjectPool = 9;
 
-    public const int TotalComponents = 11;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
         "Bullet",
@@ -28,9 +27,8 @@ public static class BulletsComponentsLookup {
         "Destroy",
         "Health",
         "OutOfScreen",
-        "Position",
-        "Ray",
-        "Rigidbody",
+        "UnityRigidbody",
+        "UnityTransform",
         "View",
         "ViewControll",
         "ViewObjectPool"
@@ -42,9 +40,8 @@ public static class BulletsComponentsLookup {
         typeof(DestroyComponent),
         typeof(HealthComponent),
         typeof(OutOfScreenComponent),
-        typeof(PositionComponent),
-        typeof(RayComponent),
-        typeof(RigidbodyComponent),
+        typeof(UnityRigidbodyComponent),
+        typeof(UnityTransformComponent),
         typeof(ViewComponent),
         typeof(ViewControllComponent),
         typeof(ViewObjectPoolComponent)

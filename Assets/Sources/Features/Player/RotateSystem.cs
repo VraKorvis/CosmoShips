@@ -17,9 +17,11 @@ public class RotateSystem : IExecuteSystem {
         if (playerEntity != null) {
 
             var playerTransform = playerEntity.view.value.transform;
-            Vector3 rotate = _contexts.input.input.value * playerEntity.baseShipStats.baseShip.mooveSpeed * Time.deltaTime;
-           
-            playerTransform.rotation = Quaternion.Lerp(playerTransform.rotation, Quaternion.Euler(30f * _contexts.input.input.value.y, 0.0f, 0.0f),  12 * Time.deltaTime);
+            var mobility = (float)playerEntity.baseShipStats.baseShip.mobility;
+
+            Vector3 rotate = _contexts.input.input.value * mobility * Time.deltaTime;
+            
+            playerTransform.rotation = Quaternion.Lerp(playerTransform.rotation, Quaternion.Euler(0.0f, -1* mobility * _contexts.input.input.value.x, 0.0f), mobility * Time.deltaTime);
            
             //doesnt work without phisix (isKinematic = true)
             //if phisix = on, move in fixedupdate

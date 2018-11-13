@@ -9,8 +9,7 @@ public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity>,
       
     Transform _container;
 
-    public AddViewFromObjectPoolSystem(Contexts contexts) : base(contexts.bullets) {  }
-  
+    public AddViewFromObjectPoolSystem(Contexts contexts) : base(contexts.bullets) {  }  
 
     public void Initialize() {
         _container = new GameObject(Contexts.sharedInstance.bullets.contextInfo.name + " Views (Pooled)").transform;
@@ -35,12 +34,22 @@ public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity>,
           
             var urb = gameObject.GetComponent<UnityRigidbody>();
             if (urb!=null) {
-                e.AddRigidbody(urb);
-                e.rigidbody.value._rigidbody.transform.position = Contexts.sharedInstance.game.playerEntity.rigidbody.value._rigidbody.transform.position;
+                e.AddUnityRigidbody(urb);
+                e.unityRigidbody.value.Rigidbody.transform.position = e.unityTransform.value.position;
+                e.unityRigidbody.value.Rigidbody.transform.rotation = e.unityTransform.value.localRotation;
+                //OR
+                e.unityRigidbody.value.Rigidbody.transform.rotation = ShootingAtAnAngle(e); 
             }
             var viewController = gameObject.GetComponent<IPoolableViewController>();
             e.AddViewControll(viewController);
         }
+    }
+    //TODO IF UPDATE!
+    //make shooting with degree
+    private Quaternion ShootingAtAnAngle(BulletsEntity e) {
+       
+        Vector3 old = e.unityTransform.value.localRotation.eulerAngles;
+        return Quaternion.Euler(old.x, old.z, -old.y);
     }
 
 }

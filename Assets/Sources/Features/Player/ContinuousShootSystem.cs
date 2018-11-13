@@ -26,21 +26,26 @@ public class ContinuousShootSystem : IExecuteSystem, IInitializeSystem {
 
     public void Execute() {
         var playerEntity = _context.game.playerEntity;
-        foreach (var e in _shoots.GetEntities()) {    
+        foreach (var e in _shoots.GetEntities()) {   
+            
             if (!playerEntity.hasShootCoolDown) {
                 var bullet = _context.bullets.CreateEntity();
                 // TODO CoolDown should be configurable   
                 var lasers = _context.game.weaponSetup.value.lasers;
+
                 var laserID = _context.game.currentGameSetup.value.laserID;
                 var weaponCharact = lasers[laserID].weaponCharacteristic;
-                playerEntity.AddShootCoolDown(weaponCharact.speed/1000f);
+
+               // var weapon = Weapon
+
+                playerEntity.AddShootCoolDown(playerEntity.baseShipStats.baseShip.shootSpeed/1000f);
 
                 bullet.AddViewObjectPool(_bulletsObjectPool);
 
                 var damage = weaponCharact.damage;
                 bullet.AddDamage(damage);
 
-                bullet.isRay = true;
+               
                 bullet.isBullet = true;
                 bullet.AddHealth(1);
             }

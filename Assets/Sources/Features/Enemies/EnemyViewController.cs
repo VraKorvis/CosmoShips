@@ -10,7 +10,7 @@ public interface IEnemyController : IPoolableViewController {
 /// </summary>
 public class EnemyViewController : PoolableViewController, IEnemyController {
 
-    public EffectsPlayer mdespawnEffects;
+    public EffectsPlayer mDespawnEffects;
 
     void OnEnable() {
         // _rotation = _minRotation + (_baseRotation * new Random(0).Next(0, 1));       
@@ -18,12 +18,15 @@ public class EnemyViewController : PoolableViewController, IEnemyController {
 
     public override void Hide(bool animated) {
         if (animated) {
-            mdespawnEffects.Play(transform.position);
+            mDespawnEffects.Play(transform.position);
         }
         base.Hide(animated);
         PushToObjectPool();
         Reset();
     }
 
+    public override void Hide(bool animated, Vector3 hitPos) {
+        this.Hide(animated);
+    }
 
 }

@@ -25,7 +25,9 @@ public class RootSystem : Feature {
 
         //Shoot
         //  Add(new PlayerShootSystem(contexts));   // botton shooting 
-        Add(new ContinuousShootSystem(contexts));   // ongoing shooting   //TODO switching in game
+       // Add(new ContinuousShootSystem(contexts));   // ongoing shooting   //TODO switching in game
+        Add(new LasersShootingSystem(contexts));
+
         Add(new ShootCoolDownSystem(contexts));
         Add(new ProcessShootSystem(contexts));
 

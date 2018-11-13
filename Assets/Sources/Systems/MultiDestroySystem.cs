@@ -3,7 +3,7 @@ using System.Collections;
 using Entitas;
 using System.Collections.Generic;
 
-public interface IDestroyableEntity : IEntity, IDestroyEntity, IViewControllEntity, IOutOfScreenEntity { }
+public interface IDestroyableEntity : IEntity, IDestroyEntity, IViewControllEntity, IOutOfScreenEntity, IUnityRigidbodyEntity { }
 
 public partial class GameEntity : IDestroyableEntity { }
 public partial class BulletsEntity : IDestroyableEntity { }
@@ -29,10 +29,26 @@ public class MultiDestroySystem : MultiReactiveSystem<IDestroyableEntity, Contex
     }
 
     protected override void Execute(List<IDestroyableEntity> entities) {
-        foreach (var e in entities) {            
-            if (e.hasViewControll) {               
+        HideWithPos(entities);
+    }
+
+    private void HideWithPos(List<IDestroyableEntity> entities) {
+        foreach (var e in entities) {
+            if (e.hasViewControll) {
+                if (e.flagOutOfScreen)
+                    e.viewControll.controller.Hide(false);
+                else
+                    e.viewControll.controller.Hide(true, e.unityRigidbody.value.Rigidbody.transform.position);
+                e.Destroy();
+            }
+        }
+    }
+
+    private void HideWithoutPos(List<IDestroyableEntity> entities) {
+        foreach (var e in entities) {
+            if (e.hasViewControll) {
                 e.viewControll.controller.Hide(true);
-                e.Destroy();               
+                e.Destroy();
             }
         }
     }
