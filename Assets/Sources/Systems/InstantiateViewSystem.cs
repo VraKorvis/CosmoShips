@@ -8,12 +8,12 @@ using System.Linq;
 
 public class InstantiateViewSystem : ReactiveSystem<GameEntity> {
 
-    private IViewService _viewService;
+    private ShipConfigurationService _shipConfigurationService;
     private Contexts _contexts;
 
-    public InstantiateViewSystem(Contexts contexts, IViewService viewService) : base(contexts.game) {
+    public InstantiateViewSystem(Contexts contexts, Services services) : base(contexts.game) {
         _contexts = contexts;
-        _viewService = viewService;
+        _shipConfigurationService = services.shipConfigurationService;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context) {
@@ -39,31 +39,13 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity> {
                 entity.AddUnityRigidbody(rigidbody); //TODO Start POS
 
             viewObject.Link(entity, _contexts.game);
-            Transform[] lasersPos = viewObject.transform.GetChildsTransformsWithTag("Lasers");
-            entity.AddLaser(lasersPos);
-           // lasersPos.ToList().ForEach(p => Debug.Log(p.localEulerAngles));
 
+            // Set laser, rocket, ..., etc
+            _shipConfigurationService.SetupLasers(viewObject, entity);
+            _shipConfigurationService.SetupCenterLaser(viewObject, entity);
+            
         }
     }
-
+    
 }
 
-public static class FindChildExtension {
-    public static Vector3[] GetChildsPositionsWithTag(this Transform transform, string tagName) {
-        Func<Transform, bool> predicate = tag => tag.tag == tagName;
-        return transform.GetComponentsInChildren<Transform>().Where((t) => t.tag == tagName).Select(t => t.position).ToArray(); 
-    }
-
-    public static Transform[] GetChildsTransformsWithTag(this Transform transform, string tagName) {
-        Func<Transform, bool> predicate = tag => tag.tag == tagName;
-        return transform.GetComponentsInChildren<Transform>().Where(predicate).ToArray();
-    }
-
-    //public static Vector3[] GetChildsWithTag(this Transform transform, string tagName) {
-
-    //    return transform.GetComponentsInChildren<Transform>()
-    //        .filter(t->t.tag.equals(tagName)) 
-    //        .map(t->t.transform).toList();  
-    //}
-
-}

@@ -43,67 +43,67 @@ MonoBehaviour:
     mobility: 23
     isShow: 0
   baseShipStatsEnemy:
-  - type: {fileID: 1091153394127212, guid: 9134bdc5b9d7fe24388b7cde128a73cd, type: 2}
+  - type: {fileID: 1643944588779928, guid: c06d4b00af9fead49be6afb2e546c649, type: 2}
     health: 500
     shootSpeed: 1000
     mooveSpeed: 10
     mobility: 11
     isShow: 0
-  - type: {fileID: 1535381599190540, guid: 7c805000d24fa7247b0ddacdb562a532, type: 2}
+  - type: {fileID: 1088171698347470, guid: b49af6d1caedb4a4db17cfdab4ef9a78, type: 2}
     health: 600
     shootSpeed: 900
     mooveSpeed: 15
     mobility: 17
     isShow: 0
-  - type: {fileID: 1033276955267940, guid: 1b6064356042ccd4d8e47e4c15bad519, type: 2}
+  - type: {fileID: 1978958177527064, guid: 3164054da5adaec4f83d59d0069329da, type: 2}
     health: 700
     shootSpeed: 800
     mooveSpeed: 20
     mobility: 17
     isShow: 0
-  - type: {fileID: 1060581572262372, guid: b6b73ecc2ce73634db8fbdf6911997da, type: 2}
+  - type: {fileID: 1285061107451804, guid: aba23a317afc3594aa8a14ed27d14309, type: 2}
     health: 800
     shootSpeed: 700
     mooveSpeed: 25
     mobility: 20
     isShow: 0
-  - type: {fileID: 1246217913928092, guid: c2f8c30146cc14347bcf3e74458dcb20, type: 2}
+  - type: {fileID: 1131196932818738, guid: a2ea763a5e6deac43872dbad89227138, type: 2}
     health: 1200
     shootSpeed: 400
     mooveSpeed: 30
     mobility: 25
     isShow: 0
-  - type: {fileID: 1957772118794000, guid: 384a645a0efc2eb4f8024a0650887cf7, type: 2}
-    health: 3000
+  - type: {fileID: 1131196932818738, guid: 99f147c64a618e041afb82b3fa25d928, type: 2}
+    health: 4000
     shootSpeed: 500
     mooveSpeed: 10
     mobility: 15
     isShow: 0
-  - type: {fileID: 1835511808111282, guid: c3f8c95e6a23b4641834665bc558e4b5, type: 2}
+  - type: {fileID: 1335286680637108, guid: d9d4c43bef8735a409d16f33db34f46f, type: 2}
     health: 1000
     shootSpeed: 700
     mooveSpeed: 25
     mobility: 9
     isShow: 0
-  - type: {fileID: 1634509080363890, guid: b042778ff1ec09f489e432791f0c4037, type: 2}
+  - type: {fileID: 1335286680637108, guid: 005ccaf2125bed84c85504c324ee2e59, type: 2}
     health: 1000
     shootSpeed: 700
     mooveSpeed: 25
     mobility: 9
     isShow: 0
-  - type: {fileID: 1540991647636998, guid: 6ebe008988bccad4bb2926fc412b9e40, type: 2}
+  - type: {fileID: 1335286680637108, guid: 21a8b908cb143904aa71e09fbe8aa647, type: 2}
     health: 1000
     shootSpeed: 700
     mooveSpeed: 25
     mobility: 9
     isShow: 0
-  - type: {fileID: 1120079435429146, guid: 078f918b04e61f2478a6bfd717d1fa5f, type: 2}
+  - type: {fileID: 1335286680637108, guid: 963a20fdccbf89f4186b9098bf897971, type: 2}
     health: 1000
     shootSpeed: 700
     mooveSpeed: 25
     mobility: 9
     isShow: 0
-  - type: {fileID: 1137465926486998, guid: 44fcd36e55cc28449a4c4a103c819ba1, type: 2}
+  - type: {fileID: 1335286680637108, guid: b3f94caa0e8245b428b10ed258b72a25, type: 2}
     health: 1000
     shootSpeed: 700
     mooveSpeed: 25

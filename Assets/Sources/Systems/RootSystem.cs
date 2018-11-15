@@ -5,12 +5,10 @@ public class RootSystem : Feature {
 
     public RootSystem(Contexts contexts, Services services) {
 
-
-
         //Initilize
         Add(new LvlInitSystem(contexts));
-        Add(new InitializePlayerSystem(contexts, services.viewService));
-        Add(new InstantiateViewSystem(contexts, services.viewService));
+        Add(new InitializePlayerSystem(contexts, services));
+        Add(new InstantiateViewSystem(contexts, services));
 
         //Add ViewComponent(RigidBody), ... etc
         Add(new AddViewFromObjectPoolSystem(contexts));
@@ -34,12 +32,16 @@ public class RootSystem : Feature {
         //Collision, Physics
         Add(new ProcessCollisionSystem(contexts));
 
-
         //Debug
-        Add(new LogCollisionSystem(contexts));
-        Add(new LogHealthSystem(contexts));
-        Add(new CreateTestEnemyForCheckCollisionSystem(contexts)); 
+        //Add(new LogCollisionSystem(contexts));
+        //Add(new LogHealthSystem(contexts));
+
+        //ENemy Wave
+        Add(new CreateTestEnemyForCheckCollisionSystem(contexts));
+        
+        //Health control
         Add(new MultiCheckHealthSystem(contexts));
+        Add(new HealthChangeEventSystem(contexts));
 
         //Destroy
         Add(new MultiDestroySystem(contexts));

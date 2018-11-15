@@ -9,34 +9,38 @@
 public static class GameComponentsLookup {
 
     public const int BaseShipStats = 0;
-    public const int CurrentGameSetup = 1;
-    public const int Destroy = 2;
-    public const int GameSetup = 3;
-    public const int Health = 4;
-    public const int Laser = 5;
-    public const int LevelSetup = 6;
-    public const int OutOfScreen = 7;
-    public const int Player = 8;
-    public const int Resource = 9;
-    public const int RocketLauncher = 10;
-    public const int Rotation = 11;
-    public const int ShipsSetup = 12;
-    public const int ShipsStatsMultipliers = 13;
-    public const int ShootCoolDown = 14;
-    public const int UnityRigidbody = 15;
-    public const int UnityTransform = 16;
-    public const int View = 17;
-    public const int ViewControll = 18;
-    public const int ViewObjectPool = 19;
-    public const int WeaponCharacteristic = 20;
-    public const int WeaponSetup = 21;
+    public const int CenterLaser = 1;
+    public const int CurrentGameSetup = 2;
+    public const int Destroy = 3;
+    public const int GameHealthListener = 4;
+    public const int GameSetup = 5;
+    public const int Health = 6;
+    public const int Laser = 7;
+    public const int LevelSetup = 8;
+    public const int OutOfScreen = 9;
+    public const int Player = 10;
+    public const int Resource = 11;
+    public const int RocketLauncher = 12;
+    public const int Rotation = 13;
+    public const int ShipsSetup = 14;
+    public const int ShipsStatsMultipliers = 15;
+    public const int ShootCoolDown = 16;
+    public const int UnityRigidbody = 17;
+    public const int UnityTransform = 18;
+    public const int View = 19;
+    public const int ViewControll = 20;
+    public const int ViewObjectPool = 21;
+    public const int WeaponCharacteristic = 22;
+    public const int WeaponSetup = 23;
 
-    public const int TotalComponents = 22;
+    public const int TotalComponents = 24;
 
     public static readonly string[] componentNames = {
         "BaseShipStats",
+        "CenterLaser",
         "CurrentGameSetup",
         "Destroy",
+        "GameHealthListener",
         "GameSetup",
         "Health",
         "Laser",
@@ -60,8 +64,10 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(BaseShipStats),
+        typeof(CenterLaserComponent),
         typeof(CurrentGameSetupComponent),
         typeof(DestroyComponent),
+        typeof(GameHealthListenerComponent),
         typeof(GameSetupComponent),
         typeof(HealthComponent),
         typeof(LaserComponent),

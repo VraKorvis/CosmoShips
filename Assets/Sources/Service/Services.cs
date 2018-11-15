@@ -1,3 +1,5 @@
 ﻿public class Services {
-    public IViewService viewService;      
+    public AssetViewService assetViewService;
+    public WeaponHardwareSetUpService weaponService;
+    public ShipConfigurationService shipConfigurationService;
 }

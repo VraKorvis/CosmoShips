@@ -8,22 +8,28 @@
 //------------------------------------------------------------------------------
 public static class EnemiesComponentsLookup {
 
-    public const int Destroy = 0;
-    public const int Enemy = 1;
-    public const int Health = 2;
-    public const int OutOfScreen = 3;
-    public const int UnityRigidbody = 4;
-    public const int UnityTransform = 5;
-    public const int View = 6;
-    public const int ViewControll = 7;
-    public const int ViewObjectPool = 8;
+    public const int CenterLaser = 0;
+    public const int Destroy = 1;
+    public const int EnemiesHealthListener = 2;
+    public const int Enemy = 3;
+    public const int Health = 4;
+    public const int Laser = 5;
+    public const int OutOfScreen = 6;
+    public const int UnityRigidbody = 7;
+    public const int UnityTransform = 8;
+    public const int View = 9;
+    public const int ViewControll = 10;
+    public const int ViewObjectPool = 11;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 12;
 
     public static readonly string[] componentNames = {
+        "CenterLaser",
         "Destroy",
+        "EnemiesHealthListener",
         "Enemy",
         "Health",
+        "Laser",
         "OutOfScreen",
         "UnityRigidbody",
         "UnityTransform",
@@ -33,9 +39,12 @@ public static class EnemiesComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(CenterLaserComponent),
         typeof(DestroyComponent),
+        typeof(EnemiesHealthListenerComponent),
         typeof(EnemyComponent),
         typeof(HealthComponent),
+        typeof(LaserComponent),
         typeof(OutOfScreenComponent),
         typeof(UnityRigidbodyComponent),
         typeof(UnityTransformComponent),

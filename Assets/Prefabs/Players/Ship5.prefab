@@ -553,7 +553,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317097146204944}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.18, y: -1.69, z: -0}
+  m_LocalPosition: {x: 0.356, y: -1.421, z: -1.146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4931087525489728}
@@ -618,7 +618,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1892232670494558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1158703, y: -9.875976, z: 0}
+  m_LocalPosition: {x: 9.266118, y: 3.8674638, z: 3.308183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4660203061577358}
@@ -1712,8 +1712,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e67d0cc2eeb554186e71658c9fbe2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftBorder: -20
-  rightBorder: 20
+  leftBorder: -18
+  rightBorder: 18
   topBorder: 15
   botBorder: -15
 --- !u!114 &114827600532492522

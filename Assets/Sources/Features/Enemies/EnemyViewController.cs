@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Entitas;
 
 public interface IEnemyController : IPoolableViewController {
 }
@@ -29,4 +30,5 @@ public class EnemyViewController : PoolableViewController, IEnemyController {
         this.Hide(animated);
     }
 
+    
 }

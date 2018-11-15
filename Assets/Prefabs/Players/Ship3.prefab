@@ -1342,8 +1342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e67d0cc2eeb554186e71658c9fbe2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftBorder: -20
-  rightBorder: 20
+  leftBorder: -18
+  rightBorder: 18
   topBorder: 15
   botBorder: -15
 --- !u!114 &114738015450534524

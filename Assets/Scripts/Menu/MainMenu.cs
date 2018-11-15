@@ -37,7 +37,7 @@ public class MainMenu : MonoBehaviour {
 
         for (int i = 0; i < gameSetup.Count(); i++) {
             shipPrefab[i] = Instantiate(gameSetup[i].type);
-            shipPrefab[i].transform.SetParent(shipPanel.transform);
+            shipPrefab[i].transform.SetParent(shipPanel.transform,false);
             shipPrefab[i].transform.position = viewPosition.transform.position;
             shipPrefab[i].transform.rotation = viewPosition.transform.rotation;
             shipPrefab[i].transform.localScale = viewPosition.transform.localScale;

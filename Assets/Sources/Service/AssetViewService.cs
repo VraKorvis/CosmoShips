@@ -5,12 +5,9 @@ using Entitas.Unity;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public class AssetViewService : IViewService {
-
-    protected readonly Contexts _contexts;
-    public AssetViewService(Contexts contexts) {
-        _contexts = contexts;
-    }
+public class AssetViewService : Service {
+   
+    public AssetViewService(Contexts contexts) : base(contexts) { }
 
     /// <summary>
     /// Ship loading from game setup(ships stats asset)
@@ -29,9 +26,5 @@ public class AssetViewService : IViewService {
         }
     }
 
-    public GameObject LoadWeapon(GameEntity entity, int shipsIndex) {
-
-        return null;
-    }
 
 }

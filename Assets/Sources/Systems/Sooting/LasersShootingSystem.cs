@@ -23,13 +23,12 @@ public class LasersShootingSystem : IInitializeSystem, IExecuteSystem {
         var laserPrefab = lasers[laserID].type;
                 
         _bulletsObjectPool = new ObjectPool<GameObject>(() => Object.Instantiate(laserPrefab));
-
-        _lasersGroup = _context.game.GetGroup(GameMatcher.Laser);
+        _lasersGroup = _context.game.GetGroup(GameMatcher.AllOf(GameMatcher.Laser, GameMatcher.CenterLaser));
     }
 
     public void Execute() {
         var playerEntity = _context.game.playerEntity;
-        var positions = playerEntity.laser.position;        
+        var positions = playerEntity.laser.value;       
         
         foreach (var entity in _lasersGroup) {
 
@@ -38,7 +37,6 @@ public class LasersShootingSystem : IInitializeSystem, IExecuteSystem {
                 playerEntity.AddShootCoolDown(playerEntity.baseShipStats.baseShip.shootSpeed / 1000f);
 
                 for (int i = 0; i < positions.Length; i++) {
-
                     var bullet = _context.bullets.CreateEntity();
                     bullet.AddViewObjectPool(_bulletsObjectPool);
 
@@ -49,14 +47,12 @@ public class LasersShootingSystem : IInitializeSystem, IExecuteSystem {
 
                     var lasers = _context.game.weaponSetup.value.lasers;
                     var laserID = _context.game.currentGameSetup.value.laserID;
-                    var weaponCharact = lasers[laserID].weaponCharacteristic;
-                   
+                    var weaponCharact = lasers[laserID].weaponCharacteristic;                   
 
                     var damage = weaponCharact.damage;
-                    bullet.AddDamage(damage);
-
-                    
+                    bullet.AddDamage(damage);                    
                 }
+        
             }
 
         }

@@ -13,6 +13,8 @@ public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity>,
 
     public void Initialize() {
         _container = new GameObject(Contexts.sharedInstance.bullets.contextInfo.name + " Views (Pooled)").transform;
+        var pos = new Vector3(0,0,0.5f);
+        _container.position = pos;
     }
 
     protected override ICollector<BulletsEntity> GetTrigger(IContext<BulletsEntity> context) {
@@ -38,7 +40,7 @@ public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity>,
                 e.unityRigidbody.value.Rigidbody.transform.position = e.unityTransform.value.position;
                 e.unityRigidbody.value.Rigidbody.transform.rotation = e.unityTransform.value.localRotation;
                 //OR
-                e.unityRigidbody.value.Rigidbody.transform.rotation = ShootingAtAnAngle(e); 
+               // e.unityRigidbody.value.Rigidbody.transform.rotation = ShootingAtAnAngle(e); 
             }
             var viewController = gameObject.GetComponent<IPoolableViewController>();
             e.AddViewControll(viewController);

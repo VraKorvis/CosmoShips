@@ -9,20 +9,22 @@
 public static class BulletsComponentsLookup {
 
     public const int Bullet = 0;
-    public const int Damage = 1;
-    public const int Destroy = 2;
-    public const int Health = 3;
-    public const int OutOfScreen = 4;
-    public const int UnityRigidbody = 5;
-    public const int UnityTransform = 6;
-    public const int View = 7;
-    public const int ViewControll = 8;
-    public const int ViewObjectPool = 9;
+    public const int BulletsHealthListener = 1;
+    public const int Damage = 2;
+    public const int Destroy = 3;
+    public const int Health = 4;
+    public const int OutOfScreen = 5;
+    public const int UnityRigidbody = 6;
+    public const int UnityTransform = 7;
+    public const int View = 8;
+    public const int ViewControll = 9;
+    public const int ViewObjectPool = 10;
 
-    public const int TotalComponents = 10;
+    public const int TotalComponents = 11;
 
     public static readonly string[] componentNames = {
         "Bullet",
+        "BulletsHealthListener",
         "Damage",
         "Destroy",
         "Health",
@@ -36,6 +38,7 @@ public static class BulletsComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(BulletComponent),
+        typeof(BulletsHealthListenerComponent),
         typeof(DamageComponent),
         typeof(DestroyComponent),
         typeof(HealthComponent),

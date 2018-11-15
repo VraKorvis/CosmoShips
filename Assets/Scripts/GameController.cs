@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour {
         contexts.game.SetGameSetup(_gameSetup);       
         contexts.game.SetCurrentGameSetup(_currentGameSetup);
         contexts.game.SetWeaponSetup(_weaponSetup);
+        _services = new Services();
         CreateServices(contexts, _services);
 
         _systems = new RootSystem(contexts, _services);
@@ -37,9 +38,17 @@ public class GameController : MonoBehaviour {
         
     }
 
+    private void Configure(Contexts contexts) {
+
+        contexts.config.SetPlayerLvl(0);
+       
+    }
+
     private void CreateServices(Contexts contexts, Services services) {
-        _services = new Services();
-        _services.viewService = new AssetViewService(contexts);       
+        
+        _services.assetViewService = new AssetViewService(contexts);
+        _services.shipConfigurationService = new ShipConfigurationService(contexts);
+        _services.weaponService = new WeaponHardwareSetUpService(contexts);
     }
 
 }
