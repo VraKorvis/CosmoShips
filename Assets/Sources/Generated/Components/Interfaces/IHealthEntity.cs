@@ -11,7 +11,7 @@ public partial interface IHealthEntity {
     HealthComponent health { get; }
     bool hasHealth { get; }
 
-    void AddHealth(float newValue);
-    void ReplaceHealth(float newValue);
+    void AddHealth(float newValue, float newMax);
+    void ReplaceHealth(float newValue, float newMax);
     void RemoveHealth();
 }

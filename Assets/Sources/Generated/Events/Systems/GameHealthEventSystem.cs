@@ -30,7 +30,7 @@ public sealed class GameHealthEventSystem : Entitas.ReactiveSystem<GameEntity> {
             _listenerBuffer.Clear();
             _listenerBuffer.AddRange(e.gameHealthListener.value);
             foreach (var listener in _listenerBuffer) {
-                listener.OnHealth(e, component.value);
+                listener.OnHealth(e, component.value, component.max);
             }
         }
     }

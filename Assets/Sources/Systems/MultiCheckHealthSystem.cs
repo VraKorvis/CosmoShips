@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Entitas;
 using UnityEngine;
 
-public interface ICheckHealthEntity : IEntity, IHealthEntity, IDestroyableEntity { }
+public interface ICheckHealthEntity : IEntity, IHealthEntity, IDestroyableEntity  { }
 
 public partial class GameEntity : ICheckHealthEntity { }
 public partial class BulletsEntity : ICheckHealthEntity { }
@@ -13,6 +13,7 @@ public sealed class MultiCheckHealthSystem : MultiReactiveSystem<ICheckHealthEnt
 
     private Contexts _context;
 
+    readonly List<IEnemiesHealthListener> _listenerBuffer;
     public MultiCheckHealthSystem(Contexts context) : base(context) {
         this._context = context;
     }
@@ -35,6 +36,7 @@ public sealed class MultiCheckHealthSystem : MultiReactiveSystem<ICheckHealthEnt
             if (health <= 0) {               
                 e.flagDestroy = true;
             }
+
         }
 
     }

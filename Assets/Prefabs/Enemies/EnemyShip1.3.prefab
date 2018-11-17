@@ -157,8 +157,8 @@ GameObject:
   - component: {fileID: 54813998445923258}
   - component: {fileID: 114625859015198906}
   - component: {fileID: 114901208528802360}
+  - component: {fileID: 114882031938291714}
   - component: {fileID: 114312240823562682}
-  - component: {fileID: 114452849748351124}
   m_Layer: 0
   m_Name: EnemyShip1.3
   m_TagString: Untagged
@@ -615,17 +615,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mDespawnEffects: {fileID: 114901208528802360}
---- !u!114 &114452849748351124
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1978958177527064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09c6ffe0e3cd8d94f9e6c712cb0513f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114625859015198906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -638,6 +627,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54813998445923258}
+--- !u!114 &114882031938291714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1978958177527064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c6ffe0e3cd8d94f9e6c712cb0513f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114901208528802360
 MonoBehaviour:
   m_ObjectHideFlags: 1

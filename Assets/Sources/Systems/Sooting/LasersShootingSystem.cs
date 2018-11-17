@@ -16,7 +16,6 @@ public class LasersShootingSystem : IInitializeSystem, IExecuteSystem {
         _context = contexts;
     }
 
-
     public void Initialize() {
         var lasers = _context.game.weaponSetup.value.lasers;
         var laserID = _context.game.currentGameSetup.value.laserID;
@@ -43,7 +42,7 @@ public class LasersShootingSystem : IInitializeSystem, IExecuteSystem {
                     bullet.AddUnityTransform(positions[i]);
                   
                     bullet.isBullet = true;
-                    bullet.AddHealth(1f);
+                    bullet.AddHealth(1f, 1f);
 
                     var lasers = _context.game.weaponSetup.value.lasers;
                     var laserID = _context.game.currentGameSetup.value.laserID;

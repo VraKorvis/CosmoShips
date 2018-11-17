@@ -8,18 +8,15 @@
 //------------------------------------------------------------------------------
 public static class ConfigComponentsLookup {
 
-    public const int PlayerLvl = 0;
-    public const int PlayerLvlListener = 1;
 
-    public const int TotalComponents = 2;
+
+    public const int TotalComponents = 0;
 
     public static readonly string[] componentNames = {
-        "PlayerLvl",
-        "PlayerLvlListener"
+
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(PlayerLvlComponent),
-        typeof(PlayerLvlListenerComponent)
+
     };
 }

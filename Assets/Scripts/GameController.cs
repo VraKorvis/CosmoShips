@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour {
 
     private void Update() {
         _systems.Execute();
-       // _systems.Cleanup();
+        _systems.Cleanup();
     }
 
     private void FixedUpdate() {
@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour {
 
     private void Configure(Contexts contexts) {
 
-        contexts.config.SetPlayerLvl(0);
+       // contexts.config.SetPlayerLvl(0);
        
     }
 

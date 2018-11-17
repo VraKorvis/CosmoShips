@@ -12,7 +12,7 @@ public class RootSystem : Feature {
 
         //Add ViewComponent(RigidBody), ... etc
         Add(new AddViewFromObjectPoolSystem(contexts));
-        Add(new AddEnemyViewFromObjectPoolSystem(contexts));
+        Add(new AddEnemyViewFromObjectPoolSystem(contexts));     
 
         //Input
         Add(new InputSystem(contexts));
@@ -40,13 +40,14 @@ public class RootSystem : Feature {
         Add(new CreateTestEnemyForCheckCollisionSystem(contexts));
         
         //Health control
-        Add(new MultiCheckHealthSystem(contexts));
-        Add(new HealthChangeEventSystem(contexts));
+        Add(new MultiCheckHealthSystem(contexts));        
+
+        //Listener 
+        Add(new EnemiesEventSystems(contexts));
 
         //Destroy
         Add(new MultiDestroySystem(contexts));
-        Add(new BulletOutOfScreenSystem(contexts));
-           
+        Add(new BulletOutOfScreenSystem(contexts));           
 
     }
 }

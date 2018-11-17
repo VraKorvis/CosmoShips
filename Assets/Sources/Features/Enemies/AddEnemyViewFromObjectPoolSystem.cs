@@ -4,6 +4,7 @@ using Entitas;
 using UnityEngine;
 using Entitas.Unity;
 public class AddEnemyViewFromObjectPoolSystem : ReactiveSystem<EnemiesEntity>, IInitializeSystem {
+
     Transform _container;
     private Contexts _contexts;
 

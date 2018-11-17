@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 114534211798827488}
   - component: {fileID: 114577537785701720}
   - component: {fileID: 114309038680814040}
-  - component: {fileID: 114746970575075508}
+  - component: {fileID: 114967692241774240}
   m_Layer: 0
   m_Name: EnemyShip2.2
   m_TagString: Untagged
@@ -1486,7 +1486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mDespawnEffects: {fileID: 114309038680814040}
---- !u!114 &114746970575075508
+--- !u!114 &114967692241774240
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

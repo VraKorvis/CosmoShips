@@ -6,13 +6,13 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public partial class ConfigContext {
+public partial class GameContext {
 
-    public ConfigEntity playerLvlEntity { get { return GetGroup(ConfigMatcher.PlayerLvl).GetSingleEntity(); } }
+    public GameEntity playerLvlEntity { get { return GetGroup(GameMatcher.PlayerLvl).GetSingleEntity(); } }
     public PlayerLvlComponent playerLvl { get { return playerLvlEntity.playerLvl; } }
     public bool hasPlayerLvl { get { return playerLvlEntity != null; } }
 
-    public ConfigEntity SetPlayerLvl(int newLvl) {
+    public GameEntity SetPlayerLvl(int newLvl) {
         if (hasPlayerLvl) {
             throw new Entitas.EntitasException("Could not set PlayerLvl!\n" + this + " already has an entity with PlayerLvlComponent!",
                 "You should check if the context already has a playerLvlEntity before setting it or use context.ReplacePlayerLvl().");
@@ -44,27 +44,27 @@ public partial class ConfigContext {
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public partial class ConfigEntity {
+public partial class GameEntity {
 
-    public PlayerLvlComponent playerLvl { get { return (PlayerLvlComponent)GetComponent(ConfigComponentsLookup.PlayerLvl); } }
-    public bool hasPlayerLvl { get { return HasComponent(ConfigComponentsLookup.PlayerLvl); } }
+    public PlayerLvlComponent playerLvl { get { return (PlayerLvlComponent)GetComponent(GameComponentsLookup.PlayerLvl); } }
+    public bool hasPlayerLvl { get { return HasComponent(GameComponentsLookup.PlayerLvl); } }
 
     public void AddPlayerLvl(int newLvl) {
-        var index = ConfigComponentsLookup.PlayerLvl;
+        var index = GameComponentsLookup.PlayerLvl;
         var component = CreateComponent<PlayerLvlComponent>(index);
         component.lvl = newLvl;
         AddComponent(index, component);
     }
 
     public void ReplacePlayerLvl(int newLvl) {
-        var index = ConfigComponentsLookup.PlayerLvl;
+        var index = GameComponentsLookup.PlayerLvl;
         var component = CreateComponent<PlayerLvlComponent>(index);
         component.lvl = newLvl;
         ReplaceComponent(index, component);
     }
 
     public void RemovePlayerLvl() {
-        RemoveComponent(ConfigComponentsLookup.PlayerLvl);
+        RemoveComponent(GameComponentsLookup.PlayerLvl);
     }
 }
 
@@ -76,15 +76,15 @@ public partial class ConfigEntity {
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public sealed partial class ConfigMatcher {
+public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<ConfigEntity> _matcherPlayerLvl;
+    static Entitas.IMatcher<GameEntity> _matcherPlayerLvl;
 
-    public static Entitas.IMatcher<ConfigEntity> PlayerLvl {
+    public static Entitas.IMatcher<GameEntity> PlayerLvl {
         get {
             if (_matcherPlayerLvl == null) {
-                var matcher = (Entitas.Matcher<ConfigEntity>)Entitas.Matcher<ConfigEntity>.AllOf(ConfigComponentsLookup.PlayerLvl);
-                matcher.componentNames = ConfigComponentsLookup.componentNames;
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.PlayerLvl);
+                matcher.componentNames = GameComponentsLookup.componentNames;
                 _matcherPlayerLvl = matcher;
             }
 

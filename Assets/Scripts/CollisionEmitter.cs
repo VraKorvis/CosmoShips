@@ -41,7 +41,7 @@ public class CollisionEmitter : MonoBehaviour {
                 var colliderEntity = Contexts.sharedInstance.input.CreateEntity();
                 colliderEntity.AddCollider(self.entity, targetLink.entity);
             }catch (NullReferenceException e) {
-                new EntityReferenceException("No collison because cant GetEntityLink for object, check hierarchy");
+                new EntityReferenceException("No collison because cant GetEntityLink for object. " + e.Message);
             }
         }
     }

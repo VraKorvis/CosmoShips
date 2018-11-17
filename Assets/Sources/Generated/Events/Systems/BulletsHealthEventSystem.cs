@@ -30,7 +30,7 @@ public sealed class BulletsHealthEventSystem : Entitas.ReactiveSystem<BulletsEnt
             _listenerBuffer.Clear();
             _listenerBuffer.AddRange(e.bulletsHealthListener.value);
             foreach (var listener in _listenerBuffer) {
-                listener.OnHealth(e, component.value);
+                listener.OnHealth(e, component.value, component.max);
             }
         }
     }

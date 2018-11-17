@@ -7,5 +7,5 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 public interface IBulletsHealthListener {
-    void OnHealth(BulletsEntity entity, float value);
+    void OnHealth(BulletsEntity entity, float value, float max);
 }

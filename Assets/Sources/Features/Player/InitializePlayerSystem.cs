@@ -18,7 +18,8 @@ public class InitializePlayerSystem : IInitializeSystem {
         entity.isPlayer = true;
         int shipID = _contexts.game.currentGameSetup.value.shipID;
         _assetViewService.LoadShipAsset(entity, shipID, 0);     // TODO GETMULTIPLIERS INDEX ???   
-        entity.AddHealth(entity.baseShipStats.baseShip.health * entity.shipsStatsMultipliers.shipMultipliers.health);
+        var health = entity.baseShipStats.baseShip.health * entity.shipsStatsMultipliers.shipMultipliers.health;
+        entity.AddHealth(health, health);
     }
 
 }

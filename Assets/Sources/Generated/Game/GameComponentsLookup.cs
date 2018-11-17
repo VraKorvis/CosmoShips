@@ -19,21 +19,22 @@ public static class GameComponentsLookup {
     public const int LevelSetup = 8;
     public const int OutOfScreen = 9;
     public const int Player = 10;
-    public const int Resource = 11;
-    public const int RocketLauncher = 12;
-    public const int Rotation = 13;
-    public const int ShipsSetup = 14;
-    public const int ShipsStatsMultipliers = 15;
-    public const int ShootCoolDown = 16;
-    public const int UnityRigidbody = 17;
-    public const int UnityTransform = 18;
-    public const int View = 19;
-    public const int ViewControll = 20;
-    public const int ViewObjectPool = 21;
-    public const int WeaponCharacteristic = 22;
-    public const int WeaponSetup = 23;
+    public const int PlayerLvl = 11;
+    public const int Resource = 12;
+    public const int RocketLauncher = 13;
+    public const int Rotation = 14;
+    public const int ShipsSetup = 15;
+    public const int ShipsStatsMultipliers = 16;
+    public const int ShootCoolDown = 17;
+    public const int UnityRigidbody = 18;
+    public const int UnityTransform = 19;
+    public const int View = 20;
+    public const int ViewControll = 21;
+    public const int ViewObjectPool = 22;
+    public const int WeaponCharacteristic = 23;
+    public const int WeaponSetup = 24;
 
-    public const int TotalComponents = 24;
+    public const int TotalComponents = 25;
 
     public static readonly string[] componentNames = {
         "BaseShipStats",
@@ -47,6 +48,7 @@ public static class GameComponentsLookup {
         "LevelSetup",
         "OutOfScreen",
         "Player",
+        "PlayerLvl",
         "Resource",
         "RocketLauncher",
         "Rotation",
@@ -74,6 +76,7 @@ public static class GameComponentsLookup {
         typeof(LevelSetupComponent),
         typeof(OutOfScreenComponent),
         typeof(PlayerComponent),
+        typeof(PlayerLvlComponent),
         typeof(ResourceComponent),
         typeof(RocketLauncherComponent),
         typeof(RotationComponent),

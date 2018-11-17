@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114629063913188626}
   - component: {fileID: 114070232505771768}
   - component: {fileID: 114833150179034902}
-  - component: {fileID: 114620112344335874}
+  - component: {fileID: 114396619824522726}
   m_Layer: 0
   m_Name: EnemyShip1.6Boss
   m_TagString: Untagged
@@ -876,7 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mDespawnEffects: {fileID: 114833150179034902}
---- !u!114 &114620112344335874
+--- !u!114 &114396619824522726
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

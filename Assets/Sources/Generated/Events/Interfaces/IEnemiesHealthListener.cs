@@ -7,5 +7,5 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 public interface IEnemiesHealthListener {
-    void OnHealth(EnemiesEntity entity, float value);
+    void OnHealth(EnemiesEntity entity, float value, float max);
 }

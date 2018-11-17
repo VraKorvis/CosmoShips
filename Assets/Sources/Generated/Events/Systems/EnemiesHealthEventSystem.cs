@@ -30,7 +30,7 @@ public sealed class EnemiesHealthEventSystem : Entitas.ReactiveSystem<EnemiesEnt
             _listenerBuffer.Clear();
             _listenerBuffer.AddRange(e.enemiesHealthListener.value);
             foreach (var listener in _listenerBuffer) {
-                listener.OnHealth(e, component.value);
+                listener.OnHealth(e, component.value, component.max);
             }
         }
     }

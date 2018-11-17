@@ -9,7 +9,7 @@ public partial class GameEntity : IDestroyableEntity { }
 public partial class BulletsEntity : IDestroyableEntity { }
 public partial class EnemiesEntity : IDestroyableEntity { }
 
-public class MultiDestroySystem : MultiReactiveSystem<IDestroyableEntity, Contexts>, ICleanupSystem {
+public class MultiDestroySystem : MultiReactiveSystem<IDestroyableEntity, Contexts> {
     private Contexts _contexts;
 
     public MultiDestroySystem(Contexts contexts) : base(contexts) {
@@ -29,10 +29,10 @@ public class MultiDestroySystem : MultiReactiveSystem<IDestroyableEntity, Contex
     }
 
     protected override void Execute(List<IDestroyableEntity> entities) {
-        HideWithPos(entities);
+        HideWithHitPos(entities);
     }
 
-    private void HideWithPos(List<IDestroyableEntity> entities) {
+    private void HideWithHitPos(List<IDestroyableEntity> entities) {
         foreach (var e in entities) {
             if (e.hasViewControll) {
                 if (e.flagOutOfScreen)
@@ -44,7 +44,7 @@ public class MultiDestroySystem : MultiReactiveSystem<IDestroyableEntity, Contex
         }
     }
 
-    private void HideWithoutPos(List<IDestroyableEntity> entities) {
+    private void HideWithoutHitPos(List<IDestroyableEntity> entities) {
         foreach (var e in entities) {
             if (e.hasViewControll) {
                 e.viewControll.controller.Hide(true);
@@ -53,7 +53,4 @@ public class MultiDestroySystem : MultiReactiveSystem<IDestroyableEntity, Contex
         }
     }
 
-    public void Cleanup() {
-        //TODO
-    }
 }
