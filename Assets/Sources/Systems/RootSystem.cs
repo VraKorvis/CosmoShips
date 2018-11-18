@@ -11,8 +11,9 @@ public class RootSystem : Feature {
         Add(new InstantiateViewSystem(contexts, services));
 
         //Add ViewComponent(RigidBody), ... etc
-        Add(new AddViewFromObjectPoolSystem(contexts));
-        Add(new AddEnemyViewFromObjectPoolSystem(contexts));     
+        // Add(new AddViewFromObjectPoolSystem(contexts));
+        // Add(new AddEnemyViewFromObjectPoolSystem(contexts));
+        Add(new MultiAddViewSystem(contexts)); 
 
         //Input
         Add(new InputSystem(contexts));

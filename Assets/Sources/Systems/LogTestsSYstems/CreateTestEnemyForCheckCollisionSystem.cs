@@ -33,6 +33,8 @@ public class CreateTestEnemyForCheckCollisionSystem : ReactiveSystem<EnemiesEnti
         enemyEntity.AddViewObjectPool(_enemyObjectPool);
         enemyEntity.isEnemy = true;
         enemyEntity.AddHealth(1000, 1000);
+        enemyEntity.isAssignView = true;
+
 
     }
 

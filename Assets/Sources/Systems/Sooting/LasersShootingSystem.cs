@@ -49,7 +49,8 @@ public class LasersShootingSystem : IInitializeSystem, IExecuteSystem {
                     var weaponCharact = lasers[laserID].weaponCharacteristic;                   
 
                     var damage = weaponCharact.damage;
-                    bullet.AddDamage(damage);                    
+                    bullet.AddDamage(damage);
+                    bullet.isAssignView = true;
                 }
         
             }

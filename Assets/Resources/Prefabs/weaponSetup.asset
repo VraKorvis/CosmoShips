@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ba759e8da4e6c4db956c8d5a9df0e0, type: 3}
+  m_Name: weaponSetup
+  m_EditorClassIdentifier: 
+  lasers:
+  - type: {fileID: 1429182243763642, guid: 4e8ca4d152abd904cbc88c7b7e4f01a1, type: 2}
+    weaponCharacteristic:
+      damage: 1
+      speed: 30
+      isHoming: 0
+  rockets:
+  - type: {fileID: 1973135885299512, guid: 2bb9ce5847323404099e8dc1e86886cb, type: 2}
+    weaponCharacteristic:
+      damage: 400
+      speed: 70
+      isHoming: 0
+  - type: {fileID: 1876734865830592, guid: 61e116ccff1bff44a915a6324d1104ab, type: 2}
+    weaponCharacteristic:
+      damage: 300
+      speed: 60
+      isHoming: 1
+  - type: {fileID: 1116416996373842, guid: 82dbe3e1f2ebd724794526b403270929, type: 2}
+    weaponCharacteristic:
+      damage: 400
+      speed: 50
+      isHoming: 1

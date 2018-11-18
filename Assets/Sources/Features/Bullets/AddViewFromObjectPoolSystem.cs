@@ -5,17 +5,15 @@ using UnityEngine;
 using Entitas.Unity;
 
 //TODO MultyAddViewFromObjectPool
-public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity>, IInitializeSystem {
+public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity> {
       
     Transform _container;
 
-    public AddViewFromObjectPoolSystem(Contexts contexts) : base(contexts.bullets) {  }  
-
-    public void Initialize() {
+    public AddViewFromObjectPoolSystem(Contexts contexts) : base(contexts.bullets) {
         _container = new GameObject(Contexts.sharedInstance.bullets.contextInfo.name + " Views (Pooled)").transform;
-        var pos = new Vector3(0,0,0.5f);
+        var pos = new Vector3(0, 0, 0.5f);
         _container.position = pos;
-    }
+    }  
 
     protected override ICollector<BulletsEntity> GetTrigger(IContext<BulletsEntity> context) {
         return context.CreateCollector(BulletsMatcher.Bullet);
@@ -31,6 +29,7 @@ public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity>,
             GameObject gameObject = e.viewObjectPool.pool.Get();
             gameObject.SetActive(true);
             gameObject.transform.SetParent(_container, false);
+            ChangeMaterial(gameObject);
             e.AddView(gameObject);
             gameObject.Link(e, Contexts.sharedInstance.bullets);
           
@@ -52,6 +51,11 @@ public sealed class AddViewFromObjectPoolSystem : ReactiveSystem<BulletsEntity>,
        
         Vector3 old = e.unityTransform.value.localRotation.eulerAngles;
         return Quaternion.Euler(old.x, old.z, -old.y);
+    }
+
+    private void ChangeMaterial(GameObject go) {
+        var material = Resources.Load<Material>(Res.RayLaser + RayLaser.Red);    
+        go.GetComponent<Renderer>().sharedMaterial = material;
     }
 
 }

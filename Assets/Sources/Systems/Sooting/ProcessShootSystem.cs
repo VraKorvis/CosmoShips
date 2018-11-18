@@ -23,7 +23,7 @@ public class ProcessShootSystem : IExecuteSystem {
             var id = _context.game.currentGameSetup.value.laserID;
             var speed = _context.game.weaponSetup.value.lasers[id].weaponCharacteristic.speed;
             
-            rb.transform.position += rb.transform.up * 30 * Time.deltaTime;
+            rb.transform.position += rb.transform.up * speed * Time.deltaTime;
             
         }
     }

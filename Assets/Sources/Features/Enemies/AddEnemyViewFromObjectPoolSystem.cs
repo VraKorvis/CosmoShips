@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Entitas;
 using UnityEngine;
 using Entitas.Unity;
-public class AddEnemyViewFromObjectPoolSystem : ReactiveSystem<EnemiesEntity>, IInitializeSystem {
+public class AddEnemyViewFromObjectPoolSystem : ReactiveSystem<EnemiesEntity> {
 
     Transform _container;
     private Contexts _contexts;
@@ -13,11 +13,9 @@ public class AddEnemyViewFromObjectPoolSystem : ReactiveSystem<EnemiesEntity>, I
     public AddEnemyViewFromObjectPoolSystem(Contexts contexts) : base(contexts.enemies) {
         _contexts = contexts;
         _eventListenerBuffer = new List<IEventListener>(16);
-    }
-
-    public void Initialize() {
         _container = new GameObject(Contexts.sharedInstance.enemies.contextInfo.name + " Views (Pooled)").transform;
     }
+
 
     protected override ICollector<EnemiesEntity> GetTrigger(IContext<EnemiesEntity> context) {
         return context.CreateCollector(EnemiesMatcher.Enemy);

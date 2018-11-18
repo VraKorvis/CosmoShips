@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour {
         
         _services.assetViewService = new AssetViewService(contexts);
         _services.shipConfigurationService = new ShipConfigurationService(contexts);
-        _services.weaponService = new WeaponHardwareSetUpService(contexts);
+       
     }
 
 }

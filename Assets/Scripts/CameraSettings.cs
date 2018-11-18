@@ -18,10 +18,6 @@ public class CameraSettings : MonoBehaviour {
 
         ScreenBorder.OnReturnToCenter += StopFallow;
     }
-
-    void Start() {
-        
-    }
     
     private void Fallow(Transform playerT) {
         StartCoroutine(FallowToPlayer(playerT));
@@ -30,7 +26,7 @@ public class CameraSettings : MonoBehaviour {
     private IEnumerator FallowToPlayer(Transform playerT) {
         while (true) {
             Vector3 pos = _transform.position;
-            pos.x = Mathf.Clamp(playerT.position.x, -7, 7);
+            pos.x = Mathf.Clamp(playerT.position.x, -6, 6);
             _transform.position = Vector3.Lerp(_transform.position, pos, Time.deltaTime);
             yield return new WaitForFixedUpdate();
         }
@@ -38,11 +34,6 @@ public class CameraSettings : MonoBehaviour {
 
     private void StopFallow(Transform playerT) {
         StopCoroutine(FallowToPlayer(playerT));
-    }
-
-    // Update is called once per frame
-    void Update() {
-
     }
 
 }

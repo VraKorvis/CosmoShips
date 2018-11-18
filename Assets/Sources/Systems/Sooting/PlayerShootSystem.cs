@@ -20,7 +20,7 @@ public class PlayerShootSystem : ReactiveSystem<InputEntity>, IInitializeSystem 
         // Assets.Instantiate<GameObject>(Res.Bullet);
         var lasers = _context.game.weaponSetup.value.lasers;
         var laserID = _context.game.currentGameSetup.value.laserID;
-        var laserPrefab = lasers[laserID].type;
+        var laserPrefab = lasers[laserID].type;        
         _bulletsObjectPool = new ObjectPool<GameObject>(() => Object.Instantiate(laserPrefab));
     }
 
@@ -51,6 +51,7 @@ public class PlayerShootSystem : ReactiveSystem<InputEntity>, IInitializeSystem 
 
                 bullet.isBullet = true;
                 bullet.AddHealth(1,1);
+                bullet.isAssignView = true;
             }
         }
     }

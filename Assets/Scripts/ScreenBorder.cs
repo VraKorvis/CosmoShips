@@ -22,20 +22,16 @@ public class ScreenBorder : MonoBehaviour {
         //topBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, dist)).y;
         //botBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).y;
     }
-    // Use this for initialization
+
     void Start () {
         OnFallow(transform);
     }
 
 
     // Update is called once per frame
-    void Update () {
+    void LateUpdate () {
         Vector3 pos = transform.position;
         transform.position = new Vector3(Mathf.Clamp(pos.x, leftBorder, rightBorder), Mathf.Clamp(pos.y, botBorder, topBorder), pos.z);
     }
-
-    //private void OnDestroy() {
-    //    OnReturnToCenter(transform);
-    //}
 }
 
