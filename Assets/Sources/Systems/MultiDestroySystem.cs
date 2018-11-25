@@ -18,9 +18,9 @@ public class MultiDestroySystem : MultiReactiveSystem<IDestroyableEntity, Contex
 
     protected override ICollector[] GetTrigger(Contexts contexts) {
         return new ICollector[] {
-            //contexts.game.CreateCollector(GameMatcher.Destroy),
+            contexts.game.CreateCollector(GameMatcher.Destroy),
             contexts.bullets.CreateCollector(BulletsMatcher.AnyOf(BulletsMatcher.Destroy, BulletsMatcher.OutOfScreen)),
-            contexts.enemies.CreateCollector(EnemiesMatcher.AnyOf(EnemiesMatcher.Destroy))
+            contexts.enemies.CreateCollector(EnemiesMatcher.AnyOf(EnemiesMatcher.Destroy, EnemiesMatcher.OutOfScreen))
         };
     }
 
@@ -29,28 +29,12 @@ public class MultiDestroySystem : MultiReactiveSystem<IDestroyableEntity, Contex
     }
 
     protected override void Execute(List<IDestroyableEntity> entities) {
-        HideWithHitPos(entities);
-    }
-
-    private void HideWithHitPos(List<IDestroyableEntity> entities) {
         foreach (var e in entities) {
             if (e.hasViewControll) {
-                if (e.flagOutOfScreen)
-                    e.viewControll.controller.Hide(false);
-                else
-                    e.viewControll.controller.Hide(true, e.unityRigidbody.value.Rigidbody.transform.position);
+                e.viewControll.controller.Hide(!e.flagOutOfScreen, e.unityRigidbody.value.transform.position);
                 e.Destroy();
             }
         }
-    }
-
-    private void HideWithoutHitPos(List<IDestroyableEntity> entities) {
-        foreach (var e in entities) {
-            if (e.hasViewControll) {
-                e.viewControll.controller.Hide(true);
-                e.Destroy();
-            }
-        }
-    }
+    }     
 
 }

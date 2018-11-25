@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 64725609733822532}
   m_Layer: 0
   m_Name: BB
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 4101226210714742}
   m_Layer: 0
   m_Name: model
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,9 +342,11 @@ GameObject:
   - component: {fileID: 54115444933565230}
   - component: {fileID: 114827600532492522}
   - component: {fileID: 114643597772050980}
+  - component: {fileID: 114536317524438986}
+  - component: {fileID: 114613056461614354}
   m_Layer: 0
   m_Name: Ship5
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -618,7 +620,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1892232670494558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.266118, y: 3.8674638, z: 3.308183}
+  m_LocalPosition: {x: 13.889168, y: -11.745123, z: 3.308183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4660203061577358}
@@ -1701,6 +1703,33 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300006, guid: 546757a939c561d4b85ad20c4593d68f, type: 3}
+--- !u!114 &114536317524438986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892232670494558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e837668fc63e46d48851757050e67f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _despawnEffects: {fileID: 114613056461614354}
+  _shootVector: {x: 0, y: 1, z: 0}
+--- !u!114 &114613056461614354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892232670494558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f216c8310fa138f40968271d1f420046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  effects:
+  - {fileID: 1517291512860240, guid: b82ba0eb84f85ba4d9e11a156ba32b34, type: 2}
 --- !u!114 &114643597772050980
 MonoBehaviour:
   m_ObjectHideFlags: 1

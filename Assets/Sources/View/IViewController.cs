@@ -14,4 +14,7 @@ public interface IViewController {
     void Hide(bool animated, Vector3 hitPos);
 
     void Reset();
+
+    void InitView(GameObject viewObject, IViewableEntity e);
+
 }

@@ -20,6 +20,7 @@ public class InitializePlayerSystem : IInitializeSystem {
         _assetViewService.LoadShipAsset(entity, shipID, 0);     // TODO GETMULTIPLIERS INDEX ???   
         var health = entity.baseShipStats.baseShip.health * entity.shipsStatsMultipliers.shipMultipliers.health;
         entity.AddHealth(health, health);
+        
     }
 
 }

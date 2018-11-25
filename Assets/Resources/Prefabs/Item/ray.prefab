@@ -21,13 +21,13 @@ GameObject:
   - component: {fileID: 4949751736706358}
   - component: {fileID: 54936079334381638}
   - component: {fileID: 65312546640238704}
-  - component: {fileID: 120538131767848126}
   - component: {fileID: 114862675313867622}
   - component: {fileID: 114494373021022906}
   - component: {fileID: 114317343304173506}
   - component: {fileID: 114679330537327664}
   - component: {fileID: 114269204225644404}
   - component: {fileID: 82945526582348776}
+  - component: {fileID: 120538131767848126}
   m_Layer: 0
   m_Name: ray
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1429182243763642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.37, y: -10.2169, z: 0}
+  m_LocalPosition: {x: 3.0052576, y: 1.8823593, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +62,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!65 &65312546640238704
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -73,8 +73,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 1.1, z: 0.1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 0.06, y: 1.12, z: 0.3}
+  m_Center: {x: 0.006878987, y: 0.06, z: 0}
 --- !u!82 &82945526582348776
 AudioSource:
   m_ObjectHideFlags: 1
@@ -236,8 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: rayHit
-  effects:
-  - {fileID: 1591295904584596, guid: bc048463f5b22d64982ee36c29ad5a69, type: 2}
+  effects: []
 --- !u!120 &120538131767848126
 LineRenderer:
   m_ObjectHideFlags: 1

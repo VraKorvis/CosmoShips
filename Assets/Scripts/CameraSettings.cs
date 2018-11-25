@@ -7,16 +7,15 @@ public delegate void FallowToPlayerEvent(Transform playerT);
 public class CameraSettings : MonoBehaviour {
 
     private Transform _transform;
-    private Vector3 _defaultPos;
-
+    public float leftBorder;
+    public float rightBorder;
+    public float speedFallow;
 
     private void Awake() {
-        _transform = GetComponent<Transform>();
-        _defaultPos = _transform.position;
+        _transform = GetComponent<Transform>();       
         ScreenBorder.OnFallow += Fallow;
         // ScreenBorder.OnBorderOut2 += Fallow;
 
-        ScreenBorder.OnReturnToCenter += StopFallow;
     }
     
     private void Fallow(Transform playerT) {
@@ -25,9 +24,9 @@ public class CameraSettings : MonoBehaviour {
 
     private IEnumerator FallowToPlayer(Transform playerT) {
         while (true) {
-            Vector3 pos = _transform.position;
-            pos.x = Mathf.Clamp(playerT.position.x, -6, 6);
-            _transform.position = Vector3.Lerp(_transform.position, pos, Time.deltaTime);
+            Vector3 pos = _transform.position;            
+            pos.x = Mathf.Clamp(playerT.position.x, leftBorder, rightBorder);
+            _transform.position = Vector3.Lerp(_transform.position, pos, Time.deltaTime* speedFallow);
             yield return new WaitForFixedUpdate();
         }
     }

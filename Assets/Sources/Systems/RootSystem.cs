@@ -39,7 +39,7 @@ public class RootSystem : Feature {
 
         //ENemy Wave
         Add(new CreateTestEnemyForCheckCollisionSystem(contexts));
-        
+        Add(new GenerateWaveEnemiesSystem(contexts));
         //Health control
         Add(new MultiCheckHealthSystem(contexts));        
 

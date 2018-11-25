@@ -105,7 +105,6 @@ GameObject:
   - component: {fileID: 114765561519873100}
   - component: {fileID: 114748218799940442}
   - component: {fileID: 114942904694815696}
-  - component: {fileID: 114837386855002242}
   m_Layer: 0
   m_Name: EnemyShip1.1
   m_TagString: Enemy
@@ -832,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mDespawnEffects: {fileID: 114942904694815696}
+  _despawnEffects: {fileID: 114942904694815696}
 --- !u!114 &114765561519873100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -845,21 +844,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54531223281358446}
---- !u!114 &114837386855002242
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1643944588779928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09c6ffe0e3cd8d94f9e6c712cb0513f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthFull: {r: 0, g: 1, b: 0, a: 1}
-  healthZero: {r: 1, g: 0, b: 0, a: 1}
-  _barTransform: {fileID: 0}
-  _renderer: {fileID: 0}
 --- !u!114 &114942904694815696
 MonoBehaviour:
   m_ObjectHideFlags: 1

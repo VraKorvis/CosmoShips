@@ -14,7 +14,7 @@ MonoBehaviour:
   lasers:
   - type: {fileID: 1429182243763642, guid: 4e8ca4d152abd904cbc88c7b7e4f01a1, type: 2}
     weaponCharacteristic:
-      damage: 1
+      damage: 100
       speed: 30
       isHoming: 0
   rockets:

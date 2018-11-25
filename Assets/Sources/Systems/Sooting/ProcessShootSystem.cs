@@ -18,15 +18,27 @@ public class ProcessShootSystem : IExecuteSystem {
 
     public void Execute() {
         var playerEntity = _context.game.playerEntity;
+        ShootRay(playerEntity);
+
+    }
+
+    private void ShootRay(GameEntity playerEntity) {
+        Vector3 shootVector = ((PlayerViewController)playerEntity?.viewControll?.controller)?._shootVector ?? Vector3.up;
+
         foreach (var e in _groupLasers) {
             var rb = e.unityRigidbody.value.Rigidbody;
             var id = _context.game.currentGameSetup.value.laserID;
             var speed = _context.game.weaponSetup.value.lasers[id].weaponCharacteristic.speed;
-            
-            rb.transform.position += rb.transform.up * speed * Time.deltaTime;
-            
+
+            rb.transform.position += shootVector * speed * Time.deltaTime;
+
+
         }
+
+
+
     }
+
 
 
 }

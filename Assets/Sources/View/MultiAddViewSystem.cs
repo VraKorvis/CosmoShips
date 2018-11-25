@@ -13,6 +13,7 @@ public partial class EnemiesEntity : IViewableEntity { }
 public class MultiAddViewSystem : MultiReactiveSystem<IViewableEntity, Contexts> {
 
     private Contexts _contexts;
+
     private readonly Transform _topViewContainer = new GameObject("Views Pool").transform;
     private readonly Dictionary<string, Transform> _viewContainersMap = new Dictionary<string, Transform>();
 
@@ -45,54 +46,25 @@ public class MultiAddViewSystem : MultiReactiveSystem<IViewableEntity, Contexts>
        
         foreach (var e in entities) {
             var viewObject = e.viewObjectPool.pool.Get();
-
-          //  ChangeMaterial(viewObject);
-
             viewObject.SetActive(true);
+
             string contextName = e.contextInfo.name;
             viewObject.transform.SetParent(_viewContainersMap[contextName]);
-            e.AddView(viewObject);
-            viewObject.Link(e, _contexts.enemies);
-
-            var urb = viewObject.GetComponent<UnityRigidbody>();
-            if (urb != null) {
-                e.AddUnityRigidbody(urb);
-                if (e is EnemiesEntity) {
-                    e.unityRigidbody.value.Rigidbody.transform.position = _viewContainersMap[contextName].position;               
-                } else {
-                    e.unityRigidbody.value.Rigidbody.transform.position = e.unityTransform.value.position;
-                    e.unityRigidbody.value.Rigidbody.transform.rotation = e.unityTransform.value.localRotation;                    
-                }
-
-                
-                //OR
-                // e.unityRigidbody.value.Rigidbody.transform.rotation = ShootingAtAnAngle(e); 
-
-            }
+            e.AddView(viewObject); 
 
             var poolViewController = viewObject.GetComponent<IPoolableViewController>();
-            e.AddViewControll(poolViewController);
+            e.AddViewControll(poolViewController);                     
+
+            e.isAssignView = false;
+            poolViewController.InitView(viewObject, e);
 
             viewObject.GetComponents(_eventListenerBuffer);
             foreach (var listener in _eventListenerBuffer) {
                 listener.RegisterListeners(e);
             }
-            e.isAssignView = false;
         }
     }
 
-    //TODO IF UPDATE!
-    //make shooting with degree
-    private Quaternion ShootingAtAnAngle(BulletsEntity e) {
-
-        Vector3 old = e.unityTransform.value.localRotation.eulerAngles;
-        return Quaternion.Euler(old.x, old.z, -old.y);
-    }
-
-    private void ChangeMaterial(GameObject go) {
-        var material = Resources.Load<Material>(Res.RayLaser + RayLaser.Red);
-        go.GetComponent<Renderer>().sharedMaterial = material;
-    }
 
 
 }

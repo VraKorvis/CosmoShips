@@ -28,4 +28,6 @@ public class ViewController : MonoBehaviour, IViewController {
     public virtual void Reset() {
         gameObject.Unlink();
     }
+
+    public virtual void InitView(GameObject viewObject, IViewableEntity e) {  }
 }

@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 54033150271241928}
   - component: {fileID: 114841014082603350}
   - component: {fileID: 114110481338016408}
-  - component: {fileID: 114437089117957222}
   - component: {fileID: 114749129284088930}
   m_Layer: 0
   m_Name: EnemyShip1.4
@@ -1097,17 +1096,6 @@ MonoBehaviour:
   description: Explosion
   effects:
   - {fileID: 1517291512860240, guid: b82ba0eb84f85ba4d9e11a156ba32b34, type: 2}
---- !u!114 &114437089117957222
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1285061107451804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09c6ffe0e3cd8d94f9e6c712cb0513f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114749129284088930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1119,7 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mDespawnEffects: {fileID: 114110481338016408}
+  _despawnEffects: {fileID: 0}
 --- !u!114 &114841014082603350
 MonoBehaviour:
   m_ObjectHideFlags: 1

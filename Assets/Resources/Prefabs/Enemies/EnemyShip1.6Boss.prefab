@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114629063913188626}
   - component: {fileID: 114070232505771768}
   - component: {fileID: 114833150179034902}
-  - component: {fileID: 114396619824522726}
   m_Layer: 0
   m_Name: EnemyShip1.6Boss
   m_TagString: Untagged
@@ -875,18 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2523208161a7e134ea383332bc2d1365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mDespawnEffects: {fileID: 114833150179034902}
---- !u!114 &114396619824522726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1131196932818738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09c6ffe0e3cd8d94f9e6c712cb0513f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _despawnEffects: {fileID: 0}
 --- !u!114 &114629063913188626
 MonoBehaviour:
   m_ObjectHideFlags: 1

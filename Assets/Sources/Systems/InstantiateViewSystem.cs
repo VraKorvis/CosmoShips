@@ -32,6 +32,9 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity> {
             if (viewObject == null)
                 throw new NullReferenceException("Prefabs not found!");
 
+            var viewController = viewObject.GetComponent<IPoolableViewController>();
+            entity.AddViewControll(viewController);
+
             entity.AddView(viewObject);
 
             UnityRigidbody rigidbody = viewObject.GetComponent<UnityRigidbody>();
@@ -43,6 +46,8 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity> {
             // Set laser, rocket, ..., etc
             _shipConfigurationService.SetupLasers(viewObject, entity);
             _shipConfigurationService.SetupCenterLaser(viewObject, entity);
+
+
             
         }
     }

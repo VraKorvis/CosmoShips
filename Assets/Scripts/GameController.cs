@@ -6,8 +6,8 @@ public class GameController : MonoBehaviour {
 
     public CurrentGameSetup _currentGameSetup;
     public GameSetup _gameSetup;
-
     public WeaponSetup _weaponSetup;
+    
 
     public Services _services;
 
@@ -48,7 +48,6 @@ public class GameController : MonoBehaviour {
         
         _services.assetViewService = new AssetViewService(contexts);
         _services.shipConfigurationService = new ShipConfigurationService(contexts);
-       
     }
 
 }

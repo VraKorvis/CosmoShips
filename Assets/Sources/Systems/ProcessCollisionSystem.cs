@@ -27,9 +27,9 @@ public class ProcessCollisionSystem : ReactiveSystem<InputEntity>, ICleanupSyste
         foreach (var e in entities) {
             // Debug.Log("entity collider : " + e);
             var self = (IHealthEntity)e.collider.self;
-            self.ReplaceHealth(self.health.value - 1, self.health.max);
+            self.ReplaceHealth(self.health.value - self.health.value, self.health.max);
             var other = (IHealthEntity)e.collider.other;
-            var newEnemyHealth = other.health.value - ((BulletsEntity)self).damage.value;
+            var newEnemyHealth = other.health.value - ((IDamageEntity)self).damage.value;
             other.ReplaceHealth(newEnemyHealth, other.health.max);
         }
     }

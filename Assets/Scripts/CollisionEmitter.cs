@@ -37,7 +37,7 @@ public class CollisionEmitter : MonoBehaviour {
                 var gandPa = parent.gameObject.transform.parent;
                 // if grandPa cant get link we take parent link
                 var targetLink = gandPa?.gameObject.GetEntityLink() ?? parent.gameObject.GetEntityLink();
-               
+                
                 var colliderEntity = Contexts.sharedInstance.input.CreateEntity();
                 colliderEntity.AddCollider(self.entity, targetLink.entity);
             }catch (NullReferenceException e) {

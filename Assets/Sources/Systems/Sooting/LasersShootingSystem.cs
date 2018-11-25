@@ -27,6 +27,7 @@ public class LasersShootingSystem : IInitializeSystem, IExecuteSystem {
 
     public void Execute() {
         var playerEntity = _context.game.playerEntity;
+        if (playerEntity == null) return;
         var positions = playerEntity.laser.value;       
         
         foreach (var entity in _lasersGroup) {

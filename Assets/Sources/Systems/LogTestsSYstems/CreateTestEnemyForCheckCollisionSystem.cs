@@ -27,14 +27,19 @@ public class CreateTestEnemyForCheckCollisionSystem : ReactiveSystem<EnemiesEnti
         int enemyIndex = 1;
         var enemyPrefab = _contexts.game.gameSetup.value.baseShipStatsEnemy[enemyIndex].type;
         _enemyObjectPool = new ObjectPool<GameObject>(() => Object.Instantiate(enemyPrefab));
+        for (int i = 0; i < 1; i++) {       
 
-        var enemyEntity = _contexts.enemies.CreateEntity();
+            var enemyEntity = _contexts.enemies.CreateEntity();
+
+            enemyEntity.AddViewObjectPool(_enemyObjectPool);
+            enemyEntity.isEnemy = true;
+            enemyEntity.AddHealth(1000, 1000);
+            enemyEntity.isAssignView = true;
+            enemyEntity.AddDamage(10000);
+            enemyEntity.isAssignWay = true;
+            enemyEntity.AddWaveNumber(0);
+        }       
         
-        enemyEntity.AddViewObjectPool(_enemyObjectPool);
-        enemyEntity.isEnemy = true;
-        enemyEntity.AddHealth(1000, 1000);
-        enemyEntity.isAssignView = true;
-
 
     }
 

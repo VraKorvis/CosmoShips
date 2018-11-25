@@ -2,7 +2,7 @@
 using System.Collections;
 using Entitas;
 
-[Bullets]
+[Bullets, Enemies]
 public class DamageComponent : IComponent {
     public int value;
 }

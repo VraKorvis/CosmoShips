@@ -9,50 +9,62 @@
 public static class EnemiesComponentsLookup {
 
     public const int AssignView = 0;
-    public const int CenterLaser = 1;
-    public const int Destroy = 2;
-    public const int EnemiesHealthListener = 3;
-    public const int Enemy = 4;
-    public const int Health = 5;
-    public const int Laser = 6;
-    public const int OutOfScreen = 7;
-    public const int UnityRigidbody = 8;
-    public const int UnityTransform = 9;
-    public const int View = 10;
-    public const int ViewControll = 11;
-    public const int ViewObjectPool = 12;
+    public const int AssignWay = 1;
+    public const int CenterLaser = 2;
+    public const int Damage = 3;
+    public const int Destroy = 4;
+    public const int EnemiesHealthListener = 5;
+    public const int Enemy = 6;
+    public const int Health = 7;
+    public const int Laser = 8;
+    public const int Move = 9;
+    public const int OutOfScreen = 10;
+    public const int UnityRigidbody = 11;
+    public const int UnityTransform = 12;
+    public const int View = 13;
+    public const int ViewControll = 14;
+    public const int ViewObjectPool = 15;
+    public const int WaveNumber = 16;
 
-    public const int TotalComponents = 13;
+    public const int TotalComponents = 17;
 
     public static readonly string[] componentNames = {
         "AssignView",
+        "AssignWay",
         "CenterLaser",
+        "Damage",
         "Destroy",
         "EnemiesHealthListener",
         "Enemy",
         "Health",
         "Laser",
+        "Move",
         "OutOfScreen",
         "UnityRigidbody",
         "UnityTransform",
         "View",
         "ViewControll",
-        "ViewObjectPool"
+        "ViewObjectPool",
+        "WaveNumber"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(AssignViewComponent),
+        typeof(AssignWayComponent),
         typeof(CenterLaserComponent),
+        typeof(DamageComponent),
         typeof(DestroyComponent),
         typeof(EnemiesHealthListenerComponent),
         typeof(EnemyComponent),
         typeof(HealthComponent),
         typeof(LaserComponent),
+        typeof(MoveComponent),
         typeof(OutOfScreenComponent),
         typeof(UnityRigidbodyComponent),
         typeof(UnityTransformComponent),
         typeof(ViewComponent),
         typeof(ViewControllComponent),
-        typeof(ViewObjectPoolComponent)
+        typeof(ViewObjectPoolComponent),
+        typeof(WaveNumberComponent)
     };
 }

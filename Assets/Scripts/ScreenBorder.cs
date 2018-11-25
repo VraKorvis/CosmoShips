@@ -11,9 +11,7 @@ public class ScreenBorder : MonoBehaviour {
     public float botBorder;
 
     public static event FallowToPlayerEvent OnBorderOut2 = delegate { }; //For test
-
     public static event Action<Transform> OnFallow = delegate { };
-    public static event Action<Transform> OnReturnToCenter = delegate { };
 
     private void Awake() {
         //float dist = Vector3.Distance(new Vector3(0.0f, 5.0f, 0.0f), Camera.main.transform.position);

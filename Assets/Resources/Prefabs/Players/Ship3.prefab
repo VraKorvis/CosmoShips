@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4418051909982482}
   m_Layer: 0
   m_Name: model
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,9 +105,11 @@ GameObject:
   - component: {fileID: 54910684249448030}
   - component: {fileID: 114738015450534524}
   - component: {fileID: 114692352586511464}
+  - component: {fileID: 114463351731155414}
+  - component: {fileID: 114068487085930858}
   m_Layer: 0
   m_Name: Ship3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +263,7 @@ GameObject:
   - component: {fileID: 64803329909529770}
   m_Layer: 0
   m_Name: BB
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -504,7 +506,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1232511731776830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.15393639, y: -12.722334, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4868738711814800}
@@ -1331,6 +1333,33 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300030, guid: df226186ccf21aa4384092ce3c87d038, type: 3}
+--- !u!114 &114068487085930858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1232511731776830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f216c8310fa138f40968271d1f420046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  effects:
+  - {fileID: 1517291512860240, guid: b82ba0eb84f85ba4d9e11a156ba32b34, type: 2}
+--- !u!114 &114463351731155414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1232511731776830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e837668fc63e46d48851757050e67f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _despawnEffects: {fileID: 114068487085930858}
+  _shootVector: {x: 0, y: 1, z: 0}
 --- !u!114 &114692352586511464
 MonoBehaviour:
   m_ObjectHideFlags: 1
